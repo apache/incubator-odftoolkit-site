@@ -72,12 +72,17 @@ h1,h2,h3,h4,h5,h6 {
   text-transform:uppercase;
 }
 
+#clear {
+  overflow: auto;
+  clear: both;
+}
+
 #content {
   margin: 0 50px 20px 50px;
   padding: 0 8px 40px;
   color: #333;
   overflow: auto;
-  width: 95%
+  clear: both;
 }
 
 #content h1,h2,h3,h4,h5,h6 {
@@ -307,7 +312,7 @@ td {
   padding: 0 8px;
   text-align: left;
   overflow: auto;
-  width: 98%;
+  clear: both;
   line-height: 10pt;
 }
 
