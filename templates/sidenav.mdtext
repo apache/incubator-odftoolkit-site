@@ -4,6 +4,13 @@
   - [Incubator page](http://incubator.apache.org/projects/odftoolkit.html)
   - [License](/odftoolkit/license.html)
 
+# Components
+
+ - [ODFDOM](/odftoolkit/odfdom/index.html)
+ - [Simple API] (/odftoolkit/simple/index.html)
+ - [Conformance Tools](/odftoolkit/conformance/ODFValidator.html)
+ - [XSLT Runner](/odftoolkit/xsltrunner/ODFXSLTRunner.html)
+
 # Community
 
   - [Get Involved](/odftoolkit/get-involved.html)
