@@ -57,32 +57,6 @@ sub single_narrative {
     return Template($template)->render(\%args), html => \%args;
 }
 
-# Has the same behavior as the above for foo.page/bar.txt
-# files, parsing them into a bar variable for the template.
-# Otherwise presumes the template is the path.
-
-sub news_page {
-    my %args = @_;
-    my $template = "content$args{path}";
-    $args{breadcrumbs} = breadcrumbs($args{path});
-
-    my $page_path = $template;
-    $page_path =~ s/\.[^.]+$/.page/;
-    if (-d $page_path) {
-        for my $f (grep -f, glob "$page_path/*.mdtext") {
-            $f =~ m!/([^/]+)\.mdtext$! or die "Bad filename: $f\n";
-            $args{$1} = {};
-            read_text_file $f, $args{$1};
-        }
-    }
-
-    for ((fetch_doap_url_list())[0..2]) {
-        push @{$args{projects}}, parse_doap($_);
-    }
-
-    return Template($template)->render(\%args), html => \%args;
-}
-
 # This view is used to wrap html.  It takes a
 # 'template' argument and a 'path' argument.
 # Assuming the path ends in foo.html, any files
