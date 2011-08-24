@@ -156,49 +156,6 @@ sub sitemap {
     return Template($template)->render(\%args), html => \%args;
 }
 
-sub exports {
-    my %args = @_;
-    my $template = "content$args{path}";
-    $args{breadcrumbs} = breadcrumbs($args{path});
-
-    my $page_path = $template;
-    $page_path =~ s/\.[^.]+$/.page/;
-    if (-d $page_path) {
-        for my $f (grep -f, glob "$page_path/*.mdtext") {
-            $f =~ m!/([^/]+)\.mdtext$! or die "Bad filename: $f\n";
-            $args{$1} = {};
-            read_text_file $f, $args{$1};
-        }
-        $args{table} = `xsltproc $page_path/eccnmatrix.xsl $page_path/eccnmatrix.xml`;
-
-    }
-
-    return Template($template)->render(\%args), html => \%args;
-}
-
-sub parse_doap {
-    my $url = shift;
-    my $doap = get $url or die "Can't get $url: $!\n";
-    my ($fh, $filename) = tempfile("XXXXXX");
-    print $fh $doap;
-    close $fh;
-    my $result = eval `xsltproc lib/doap2perl.xsl $filename`;
-    unlink $filename;
-    return $result;
-}
-
-sub fetch_doap_url_list {
-    my $xml = get "http://svn.apache.org/repos/asf/infrastructure/site-tools/trunk/projects/files.xml"
-        or die "Can't get doap file list: $!\n";
-    my ($fh, $filename) = tempfile("XXXXXX");
-    print $fh $xml;
-    close $fh;
-    chomp(my @urls = grep /^http/, `xsltproc lib/list2urls.xsl $filename`);
-    unlink $filename;
-    shuffle \@urls;
-    return @urls;
-}
-
 sub breadcrumbs {
     my @path = split m!/!, shift;
     pop @path;
