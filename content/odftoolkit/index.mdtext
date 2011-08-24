@@ -1,8 +1,17 @@
 Title: Apache ODF Toolkit (Incubating)
 
+The Apache ODF Toolkit is a set of Java modules that allow programmatic creation, 
+scanning and manipulation of [Open Document Format] [1] (ISO/IEC 26300 == ODF) 
+documents. Unlike other approaches which rely on runtime manipulation 
+of heavy-weight editors via an automation interface, the ODF Toolkit 
+is lightweight and ideal for server use. 
+
+
 Apache "ODF Toolkit" is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator.
 Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and
 decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is
 not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has
 yet to be fully endorsed by the ASF.
+
+[1]: http://opendocument.xml.org/
 
