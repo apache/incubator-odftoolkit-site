@@ -1,21 +1,4 @@
 Title: ODF Validator
-
-Notice:    Licensed to the Apache Software Foundation (ASF) under one
-           or more contributor license agreements.  See the NOTICE file
-           distributed with this work for additional information
-           regarding copyright ownership.  The ASF licenses this file
-           to you under the Apache License, Version 2.0 (the
-           "License"); you may not use this file except in compliance
-           with the License.  You may obtain a copy of the License at
-           .
-             http://www.apache.org/licenses/LICENSE-2.0
-           .
-           Unless required by applicable law or agreed to in writing,
-           software distributed under the License is distributed on an
-           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-           KIND, either express or implied.  See the License for the
-           specific language governing permissions and limitations
-           under the License.
 **ODF Validator** is a tool that validates OpenDocument files and checks them for certain conformance criteria.
 
 **ODF Validator** is available as an [online service] [1] and as a 
@@ -34,16 +17,14 @@ To use the '''ODF Validator''', the following steps are required:
 * Choose an arbitrary OpenDocument file &lt;odffile&gt;
 * If you are using JRE 1.5, call the '''ODF Validator''' with
 
-
-    java -jar "&lt;path&gt;/odfvalidator.jar" &lt;odffile&gt;
+    java -jar "<path>/odfvalidator.jar" <odffile>
 
 * If you are using JRE 1.6, call the ODF Validator with
-
 
     java 
       -Djavax.xml.validation.SchemaFactory:http://relaxng.org/ns/structure/1.0=org.iso_relax.verifier.jaxp.validation.RELAXNGSchemaFactoryImpl
       -Dorg.iso_relax.verifier.VerifierFactoryLoader=com.sun.msv.verifier.jarv.FactoryLoaderImpl
-      -jar "&lt;path&gt;/odfvalidator.jar"  &lt;odffile&gt;
+      -jar "<path>/odfvalidator.jar"  <odffile>
 
 ## Usage
 
@@ -60,7 +41,7 @@ In an Java 1.6 environment, the following command line has to be used:
     java
       -Djavax.xml.validation.SchemaFactory:http://relaxng.org/ns/structure/1.0=org.iso_relax.verifier.jaxp.validation.RELAXNGSchemaFactoryImpl
       -Dorg.iso_relax.verifier.VerifierFactoryLoader=com.sun.msv.verifier.jarv.FactoryLoaderImpl
-      -jar "&lt;path&gt;/odfvalidator.jar"
+      -jar "<path>/odfvalidator.jar"
 
 These command lines are abbreviated *odfvalidator* from now on.
 
@@ -68,16 +49,16 @@ The **ODF Validator** may be called with the following options:
 
  
 
-     odfvalidator [-r] [-c|-e|-s] [-d] [-v|-w] [-x &lt;expclude pattern&gt;] 
-                  [-o outputfile] [-1.0|-1.1|-1.2] &lt;odffiles&gt;
-     odfvalidator [-r] [-c|-e|-s] [-d] [-v|-w] [-x &lt;expclude pattern&gt;]
-                  [-o outputfile] -S &lt;schemafile&gt; &lt;odffiles&gt;
-     odfvalidator [-c|-s] [-v|-w] [-d] [-o outputfile] -C &lt;configfile&gt;
-     odfvalidator -g &lt;odffiles&gt;
+     odfvalidator [-r] [-c|-e|-s] [-d] [-v|-w] [-x <expclude pattern>] 
+                  [-o outputfile] [-1.0|-1.1|-1.2] <odffiles>
+     odfvalidator [-r] [-c|-e|-s] [-d] [-v|-w] [-x <expclude pattern>]
+                  [-o outputfile] -S <schemafile> &lt;odffiles>
+     odfvalidator [-c|-s] [-v|-w] [-d] [-o outputfile] -C &lt;configfile>
+     odfvalidator -g <odffiles>
      odfvalidator -h
      odfvalidator -V
 
-If no parameters are specified, the files **&lt;odffiles&gt;** are validated using the schema that belongs to the ODF version of the file. For ODF 1.0 files the ODF 1.0 schema is used, for ODF 1.1 files the ODF 1.1 schema is used, and so on. The version of an ODF file is detected for each file separately.
+If no parameters are specified, the files **<odffiles>** are validated using the schema that belongs to the ODF version of the file. For ODF 1.0 files the ODF 1.0 schema is used, for ODF 1.1 files the ODF 1.1 schema is used, and so on. The version of an ODF file is detected for each file separately.
 
 The options have the following meaning:
 
@@ -171,12 +152,14 @@ If the **-o** option is present, all messages go into the specified file. Otherw
 
 ### Validation using a non-default schema
 
-To specify the schema that is used for **meta-xml**, **content.xml**, **styles.xml** and **settings.xml** on the command line, **ODF Validator** has to be called with the following parameters:
+To specify the schema that is used for **meta-xml**, **content.xml**, 
+**styles.xml** and **settings.xml** on the command line, 
+**ODF Validator** has to be called with the following parameters:
 
  
 
     odfvalidator [-r] [-c|-e|-s] [-d] [-v|-w] [-x &lt;expclude pattern&gt;]
-     [-o outputfile] -S &lt;schemafile&gt; &lt;odffiles&gt;
+     [-o outputfile] -S <schemafile> <odffiles>
 
 **&lt;schemafile&gt;** is the schema that shall be used.
 
@@ -229,17 +212,44 @@ and if the file is not a formula file, then the sub files *content.xml*, *styles
       - The file *META-INF/manifest.xml* is validated with respect to the manifest schema of the selected ODF specification.
       - If the file is an ODF 1.2 file, then the *META-INF/documentsignatures.xml* and *META-INF/macrosignatures.xml* sub files are validated with respect to the digital signatures schema of the ODF 1.2 specification.
       - For all embedded objects in ODF format, the *content.xml*, *styles.xml*, *meta.xml* and *settings.xml* are validated as described for the main document above.
-      - It is checked whether the file itself ans all embedded objects in ODF format contain at least a *content.xml* or *styles.xml* sub file.
+      - It is checked whether the file itself and all embedded objects in ODF format contain at least a *content.xml* or *styles.xml* sub file.
 
 The following actions take place before or during the validation:
 
-     - A DTD document declaration within a *manifest.xml* file is ignored. For the logging level **all**, an information is displayed if this happens. <br/>**Note:** Very early ODF implementations in OpenOffice.org wrongly included a document type declaration. Ignoring the document type enables the validation of the manifest despite of this error.
-     - A namespace &quot;http://openoffice.org/2001/manifest&quot; within a *manifest.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:manifest:1.0&quot;. For the logging level **all**, an information is displayed if this happens. <br/>**Note:** Early ODF implementations in OpenOffice.org used the wrong namespace. Changing it to the correct one enables the validation of the manifest despite the wrong namespace.
-     - Namespaces defined in the <a href="http://www.oasis-open.org/committees/download.php/10765/office-spec-1.0-cd-2.pdf">ODF v1.0 Committee Draft 2</a> are replaced with those of the <a href="http://www.oasis-open.org/specs/index.php#opendocumentv1.0">ODF v1.0 OASIS Standard</a>. For the logging level **all**, an information is displayed if this happens.<br/>**Note:** Changing the namespaces enables the validation of documents that conform to the ODF v1.0 CD2. Such documents have been saved by OpenOffice.org 1.0 beta versions.
-     - The value of *draw:points* attributes is truncated to 2048 characters. For the logging level **all**, an information is displayed if this happens.<br/>**Note:** The truncation of this attribute value avoids a stack overflow in MSV while validating the attribute value against a regular expression.
-     - A namespace &quot;http://openoffice.org/2004/database&quot; within a *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:database:1.0&quot;, and a namespace &quot;http://openoffice.org/2004/office&quot; within a *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:office:1.0&quot;. For the logging level **all**, an information is displayed if this happens.<br/>**Note:** These namespaces were used in OpenOffice.org 2.x database documents, because database documents are included in OpenDocument since version 1.2 only. Changing them enables the validation of  OpenOffice.org 2.x database documents.
-
-
+  - A DTD document declaration within a *manifest.xml* file is ignored.
+    For the logging level **all**, an information is displayed if this
+    happens. <br/>**Note:** Very early ODF implementations in
+    OpenOffice.org wrongly included a document type declaration.
+    Ignoring the document type enables the validation of the manifest
+    despite of this error.
+  - A namespace &quot;http://openoffice.org/2001/manifest&quot; within a
+    *manifest.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:manifest:1.0&quot;. For
+    the logging level **all**, an information is displayed if this
+    happens. <br/>**Note:** Early ODF implementations in OpenOffice.org
+    used the wrong namespace. Changing it to the correct one enables the
+    validation of the manifest despite the wrong namespace.
+  - Namespaces defined in the <a
+    href="http://www.oasis-open.org/committees/download.php/10765/office-spec-1.0-cd-2.pdf">ODF
+    v1.0 Committee Draft 2</a> are replaced with those of the <a
+    href="http://www.oasis-open.org/specs/index.php#opendocumentv1.0">ODF
+    v1.0 OASIS Standard</a>. For the logging level **all**, an
+    information is displayed if this happens.<br/>**Note:** Changing the
+    namespaces enables the validation of documents that conform to the
+    ODF v1.0 CD2. Such documents have been saved by OpenOffice.org 1.0
+    beta versions.
+  - The value of *draw:points* attributes is truncated to 2048
+    characters. For the logging level **all**, an information is
+    displayed if this happens.<br/>**Note:** The truncation of this
+    attribute value avoids a stack overflow in MSV while validating the
+    attribute value against a regular expression.
+  - A namespace &quot;http://openoffice.org/2004/database&quot; within a
+    *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:database:1.0&quot;, and
+    a namespace &quot;http://openoffice.org/2004/office&quot; within a
+    *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:office:1.0&quot;. For
+    the logging level **all**, an information is displayed if this
+    happens.<br/>**Note:** These namespaces were used in OpenOffice.org
+    2.x database documents, because database documents are included in OpenDocument since version 1.2 only. Changing them enables the
+    validation of  OpenOffice.org 2.x database documents.
 
 ## Where do I get the schemas?
 
