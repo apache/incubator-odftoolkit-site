@@ -1,0 +1,60 @@
+__TOC__
+
+=Class Structure in ODFDOM=
+The Java packages reflect the layers of the ODFDOM library.
+
+==Shared Functionality==
+
+Shared by all layers are the basic XML classes as in the <code>org.odftoolkit.odfdom</code> package, like
+;<code>OdfElement</code> 
+:parent of all ODFDOM elements
+;<code>OdfAttribute</code> 
+:parent of all ODFDOM attributes 
+;<code>OdfName</code> 
+:the union of an ODF local name and an ODF namespace, represented by 
+;<code>OdfNamespace</code> 
+:embracing all ODF namespaces (prefixes and URIs) defined in the specification.
+
+Similar used through all layers are the ODF datatypes, to be found in
+;<code>org.odftoolkit.odfdom.type</code>
+:All datatypes defined in the ODF 1.2 specification, mostly overtaken from W3C Schema types, like AnyURI.
+Helper functionality can be found at those types, like in case for AnyURI en/decode() methods.
+
+==The Package/Physical Layer==
+
+These classes are in the <code>org.odftoolkit.odfdom.pkg</code> package to access files from the ODF package.
+The classes you will find here include:
+
+;<code>OdfPackage</code>
+:Allows you to access, insert, delete, load, and save individual entries in a packaged ODF document.
+
+; <code>OdfPackageStream</code>
+:Allows you to write to a member of the ODF document as an output stream.
+
+;<code>OdfXMLHelper</code>
+:Provides utility methods to parse the XML content of a package member and apply an XSLT transformation to it.
+
+==The ODF Typed DOM / XML Layer==
+
+These classes are in general the generated DOM elements and attributes of ODF 1.2. 
+;<code>org.odftoolkit.odfdom.dom.element</code>
+:These classes give you access to the individual ODF elements. Its sub-packages are divided by namespace, so you would find the code for a <code>draw:ellipse</code> element in the <code>org.odftoolkit.odfdom.dom.element.draw.DrawEllipseElement</code> class.
+;<code>org.odftoolkit.odfdom.dom.attribute</code>
+:These classes give you access to the individual ODF attributes  (similar to the elements before). Again its sub-packages are divided by namespace, so you would find the code for a <code>xml:id</code> attribute in the <code>org.odftoolkit.odfdom.dom.attribute.xml.XmlId</code> class.
+
+The third package <code>org.odftoolkit.odfdom.dom.style</code> will vanish in the future (mostly parts will be moved to the DOC layer in an upcoming release).
+
+;<code>org.odftoolkit.odfdom.dom.style</code>
+:These classes and the <code>.props</code> sub-packages give you access to ODF&rsquo;s style families and their properties
+
+If you are using an IDE such as NetBeans or Eclipse, you don't have to memorize this hierarchy; the IDE can generate the proper <code>import</code> statements for you. 
+
+The code in these classes is generated directly from the [http://www.relaxng.org/ Relax NG] (RNG) schema for ODF.
+
+==The ODF Document / Convenience Functionality Layer==
+
+This is the layer that developers will use most often. A sub-level like <code>org.odftoolkit.odfdom.doc.text</code> inherits (currently) from the elements of the <code>org.odftoolkit.odfdom.dom.element.text</code> package. Aside of the namespace prefix an 'Odf' prefix is being used in the beginning. Furthermore is the namespace prefix neglected in case it already exists in the local name. The convenient class for the ODF element <code>table:table</code>, which is represented in the DOM layer by <code>org.odftoolkit.odfdom.table.TableTableElement</code>, is OdfTable and NOT OdfTableTable.
+We encourage developers to create methods for these classes, based on actual use cases of the toolkit.
+
+The entry point for the convenient layer should be in the future the document itself. Some example functions had been added to <code>OdfTextDocument</code> to show this, like <code>newParagraph()</code>, adding a paragraph (ie. <code>text:p</code> element) at the end of the document.
+

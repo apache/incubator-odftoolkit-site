@@ -1,0 +1,215 @@
+=Development=
+
+__TOC__
+
+==Get and Build the Source Code==
+
+# Install [http://mercurial.selenic.com/wiki/ latest Mercurial]
+# Setup Mercurial (optional):<br />Config file <Hg Install Dir>\Mercurial.ini on Windows or <Hg Install Dir>/.hgrc on Unix.<br/>Enhance the default configuration, using GIT diff and enable [http://mercurial.selenic.com/wiki/Win32TextExtension default plugin] avoid different line breaks in the source.<br /><pre>
+[ui]
+username = your Name <yourLoginName@odftoolkit.org>
+;merge = your-merge-program (or internal:merge)
+
+[diff]
+git = 1
+
+[defaults]
+diff=-p -U 8
+
+[extensions]
+# Enables mercurial EOL extension for line break handling
+# See http://mercurial.selenic.com/wiki/EolExtension (bundled since 1.5.4)
+eol =
+
+# It'll remove unknown files and empty directories by default. 
+# Usually you call 'hg update -C' and 'hg purge' in sequence
+# See http://mercurial.selenic.com/wiki/PurgeExtension  (bundled)
+hgext.purge=
+
+[eol]
+# Converts mixed line ending within a file to LF (Unix) format 
+# before adding the file to the source repository
+# See http://mercurial.selenic.com/wiki/EolExtension
+only-consistent = False
+
+</pre>
+# Get the [http://odftoolkit.org/projects/odfdom/sources ODFDOM source code] from the odfdom~developer [http://www.selenic.com/mercurial/wiki/ Mercurial] repository. Please see below for a short introduction to using Mercurial on odftoolkit.org. There's also a more general <a href="{{project help page SourceControl}}">help</a> on how to use source control systems on odftoolkit.org. The command <br /><pre>
+hg clone https://odftoolkit.org/hg/odfdom~developer</pre>will download the repository into a new directory. <br />Please note that by this you'll get the latest changeset. If you for example want stable release 0.8.6, you may want to use<br /><pre>hg clone https://odftoolkit.org/hg/odfdom~developer -r v0.8.6</pre>ODFDOM Developers however always work on the latest changeset.
+
+Now get and install [http://maven.apache.org/ Apache Maven]. On command line test your installation with "mvn -v".
+
+If Maven is correctly installed, change into the project directory and build with command "mvn".
+
+==Set up ODFDOM Development Environment ==
+
+=== Using Netbeans IDE ===
+
+To establish your own ODFDOM development environment:
+
+# Install [http://java.sun.com/javase/downloads/index_jdk5.jsp Java / JDK 5] (you might use [http://java.sun.com/javase/downloads/index.jsp JDK 6] if you do not recontribute)
+# Install [http://netbeans.org NetBeans 6.x]. In case you are new to Netbeans, there are several nice [http://www.netbeans.org/kb/trails/platform.html tutorials] available.
+# Get the source code with Mercurial as described above.
+# Start Netbeans,  choose "File->Open Project.." from the Netbeans menu and select the ODFDOM directory.
+As the ODFDOM source bundle comes together with Netbeans project files, ODFDOM opens as a pre-configured project.
+You still have the opportunity to work solely with [http://maven.apache.org/ Maven] directly on the command line instead having the IDE GUI comfort provided by Netbeans.
+
+Since Netbeans 6.1 the [http://wiki.netbeans.org/MercurialVersionControl Mercurial plugin] is part of the IDE, which help you to track the changes being made and ease providing patches. Select in the menu among 'Versioning' the desired Mercurial commands.
+
+After the commitment of your changed files, you need to pull the latest updates from the server, perhaps merge them with your changes and finally push your changes to the repository using in the menu Versioning->Mercurial->Share->Push Other...
+and adding
+https://myUserName:myPassword@odftoolkit.org/hg/odfdom~developer
+
+=== Using Eclipse IDE ===
+
+You can also set up your own ODFDOM development environment in Eclipse.
+
+# Install [http://java.sun.com/javase/downloads/index_jdk5.jsp Java / JDK 5] (you might use [http://java.sun.com/javase/downloads/index.jsp JDK 6] if you do not recontribute)
+# Install [http://www.eclipse.org Eclipse].
+# Open Eclipse, choose "Window->Preferences->Java->Installed JREs", add JDK 5 as a installed JRE, and check it to add to the build path of a java project by default.
+# Install Maven Plugin for Eclipse, see http://m2eclipse.sonatype.org/installing-m2eclipse.html
+# Install Mercurial Plugin for Eclipse, see http://javaforge.com/project/HGE#download
+# Get the source code with Mercurial as described above.  
+# Import ODFDOM Maven project: Choose "File->Import->Maven->Existing Maven project"
+
+==Command Line Tools==
+
+===Mercurial===
+[http://mercurial.selenic.com/wiki/ Mercurial] is the version control system used for ODFDOM development.
+
+Here a list of the most frequently used commands:
+<pre>
+  // Get source code into a new local repository
+  hg clone https://odftoolkit.org/hg/odfdom~developer [new folder name]
+  
+  // See if there are updates
+  hg in
+  
+  // See if you have local changes
+  hg status
+  
+  // If there are no local changes: Update
+  hg pull
+  hg update
+  
+  // Display the latest 3 entries of the revision history
+  hg log -l 3
+  
+  // Display only the latest entry of the revision history
+  hg tip
+  
+  // Register all locally created or deleted files. 
+  // Please carefully check the output of "hg status" first
+  hg addremove
+  
+  // Safe alternatives
+  hg add <myNewFile>
+  hg remove <myUnnecessaryFile>
+  hg remove -A <myAlreadyDeletedFile>
+
+  // Commit your changes locally and display their revision number
+  hg commit -A -u "your Name" -m "#bug XY# Description of changes"
+  hg tip
+  
+  // Export your locally committed changes as patch
+  hg export -a -g -o ../myChanges.patch <RevisionNumbersOfYourCommit>
+  
+  // Import changes into your local repository
+  hg import --no-commit ../someFile.patch
+
+  // Get help
+  hg help
+  
+  // Get help about a special command
+  hg help <command>
+  hg help export
+  hg help addremove
+  ...
+</pre>
+In case you do changes for a bug or feature request, please export them as a patch and attach them to the bug's entry on the [http://odftoolkit.org/bugzilla/buglist.cgi?product=odfdom&order=bugs.bug_id issue list]. If there's no such entry, please create one first.
+
+That way others will review your patch for you. If everything is ok, the reviewer will push your changes to the global repository. This procedure is the same for all developers and is meant to keep up code quality.
+
+===Maven===
+[http://maven.apache.org/ Maven] is the build manager used for ODFDOM development.
+<pre>
+  // Build the project and create target/odfdom.jar
+  mvn
+  
+  // Workaround: Ignore failed test when building
+  mvn -Dmaven.test.failure.ignore=true clean install
+
+  // Create javadoc
+  mvn javadoc:javadoc
+
+  // Generate DOM layer elements and attributes from RelaxNG
+  mvn clean test -P codegen
+
+  // Generate code coverage documentation in
+  // <PROJECT_DIR>/target/site/cobertura/index.html
+  // see http://mojo.codehaus.org/cobertura-maven-plugin/
+  mvn cobertura:cobertura
+
+</pre>
+
+==Coding Guidelines==
+ODFDOM take advantage of the existing [http://java.sun.com/docs/codeconv/html/CodeConvTOC.doc.html Java Coding Guidelines]. 
+
+===Naming Convention===
+Aside of the [http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html#367 Naming Convention of Java Coding Guideline], we use an 'm' as prefix for member object variables, e.g. "mParentDocument". 
+Note: There should be NO datatype prefix being used as 'i', 's', etc.
+
+===Source Code Format===
+Although Maven may support source code formatting it has not yet been enabled.
+Instead the automated formatting via the IDE is used (e.g. by Netbeans via the context menu - Format).  
+
+===Spaces===
+To allow a customized indentation within the IDE based on the user's taste, the indent shall be done using TABs.
+For instance, Svante uses a 4 whitespace indent by TABs configured within Netbeans.
+
+===Line Feed===
+There have been recently problems with merging sources using Mercurial when working with different platforms (windows/unix).
+For this reason, some additional [[#Get_and_Build_the_Source_Code|Mercurial configuration]]  shall be used to unify the interal line feed handling.
+
+
+==Current and Future Work==
+
+Especially the convenient layer will grow on demand. As ODFDOM should be the base of many future ODF projects, a high quality is desired. Therefore automatic tests are obligatory for all new sources of the Java reference implementation.
+
+The development is being discussed on the [http://odftoolkit.org/projects/odfdom/lists/dev/archive dev mailing list].
+
+While we still plan to deliver quarterly results, we created some large feature groups/headlines for the upcoming versions
+
+In general when building a layered API, it seemed reasonable to start from the
+button to base higher APIs on the stable lower layers:
+
+
+===Version 0.9===
+* Complete ODF 1.2 PKG functionality (package), e.g. 
+** Add PKG validation feature
+* Complete ODF 1.2 DOM functionality, e.g.
+** Style handling refactoring
+** Add DOM validation feature
+** RDF metadata feature
+** Some create child element methods (ie. office:body and style:style element) dependent on attribute value
+* ODF 1.2 DOC API 
+** Create a lean convenient API working on the complete DOM layer, but hiding XML design details of ODF 1.2
+* Complete ODF 1.2 TEST API (largly dependent on DOC API, but should be developed in parallel)
+
+===Version 1.0===
+* PKG performance tweaks
+* DOM performance tweaks
+* important DOC functionality
+* Test coverage
+
+Please see also for [https://odftoolkit.org/bugzilla/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=odfdom&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0= open tasks]
+
+== ODFDOM Code Generator ==
+
+The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which are a typed mapping of the ODF elements on real Java Classes. For the future we also plan to generate ODFDOM e.g. C# ( .NET ) for other programming languages with this generator. Take a look at this page [[ODFDOM-Code-Generator|(ODFDOM Code Generator)]] to see how the generator works in general (will be updated soon). We are moving toward treating the code generator as a separate component. The repository [http://odftoolkit.org/hg/odfdom~relaxng2template] is the new home of the code generator. It may move to its own project on this site at some point.
+
+
+== Other Useful Pages ==
+*[[ODFDOM-Class-Structure|Class Structure in ODFDOM]]
+*[[Convenience Layer Design Ideas]]
+
+<p style="margin: 15px 0px; text-align:center">[[Home|Go back to ODFDOM Wiki Home]]</p>
