@@ -1,9 +1,10 @@
 Title: ODF XSLT Runner
+
 ##Simplify the application of XSLT stylesheets to ODF documents 
 
 **ODF XSLT Runner** is a small Java application that allows you to apply 
 XSLT stylesheets to XML streams included in ODF packages without extracting 
-them from the package. It can be used from the command line. A driver to use 
+them from the package. It can be used from the command line. A [driver][0] to use 
 it within Ant buildfiles is also available.
 
 ## Getting and building ODF XSLT Runner
@@ -109,9 +110,11 @@ adapted after checking out the project.
 
 ## Examples
 
-Example stylesheets can be found on the ODFXSLTRunner Examples page.
+Example stylesheets can be found on the [ODFXSLTRunner Examples][5] page.
 
+[0]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunner.html
 [1]: http://www.w3.org/TR/1999/REC-xslt-19991116#top-level-variables
 [2]: http://www.w3.org/TR/1999/REC-xslt-19991116#document
 [3]: http://java.sun.com/javase/downloads/index.jsp
 [4]: http://xml.apache.org/dist/xerces-j/
+[5]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerExamples.html
