@@ -42,7 +42,7 @@ to "org.odftoolkit.simple".
 | | OdfChartDocument | | ChartDocument |
 | | OdfGraphicsDocument | |  GraphicsDocument |
 | doc.table | OdfTable |table |Table |
-| | OdfTableRow  | Row | |
+| | OdfTableRow  | | Row |
 | | OdfTableColumn | | Column |
 | | OdfTableCell | | Cell |
 | | OdfTableCellRange | | CellRange |
