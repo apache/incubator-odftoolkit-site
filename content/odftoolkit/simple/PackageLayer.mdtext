@@ -36,8 +36,8 @@ to "org.odftoolkit.simple".
 | ODFDOM Package | ODFDOM Class    | Simple Package    | Simple Class |
 |----------------|-----------------|-------------------|--------------|
 | doc            | OdfDocument     | root              | Document     |
-|                | OdfTextDocument | TextDocument      |              |
-| OdfSpreadsheetDocument |         | SpreadsheetDocument |      |
+|                | OdfTextDocument |  | TextDocument      |             
+| | OdfSpreadsheetDocument |         | SpreadsheetDocument |      
 | | OdfPresentationDocument        |               | PresentationDocument |
 | | OdfChartDocument | | ChartDocument |
 | | OdfGraphicsDocument | |  GraphicsDocument |
@@ -47,9 +47,9 @@ to "org.odftoolkit.simple".
 | | OdfTableCell | | Cell |
 | | OdfTableCellRange | | CellRange |
 | doc.presentation | OdfSlide | presentation | Slide |
-| OdfPresentationNotes | | Notes | |
+| | OdfPresentationNotes | | Notes |
 | incubator.meta | OdfOfficeMeta | meta |Meta |
-| | OdfMetaDocumentStatistic | DocumentStatistic | |
+| | OdfMetaDocumentStatistic | | DocumentStatistic | 
 | incubator.search | | common.navigation | |
 | incubator.doc.text | | common | |
 
