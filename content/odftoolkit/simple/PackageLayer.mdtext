@@ -33,25 +33,25 @@ Note: The first column "ODFDOM Package" is relative to
 to "org.odftoolkit.simple".
 
 
-| ODFDOM Package | ODFDOM Class  | Simple Package    | Simple Class |
-|^----------|--------------------|-------------------|--------------|
-| doc | OdfDocument |(root) |Document|
-| | OdfTextDocument | TextDocument |
-| OdfSpreadsheetDocument | | SpreadsheetDocument |
-| | OdfPresentationDocument | | PresentationDocument |
+| ODFDOM Package | ODFDOM Class    | Simple Package    | Simple Class |
+|----------------|-----------------|-------------------|--------------|
+| doc            | OdfDocument     | root              | Document     |
+|                | OdfTextDocument | TextDocument      |              |
+| OdfSpreadsheetDocument |         | SpreadsheetDocument |      |
+| | OdfPresentationDocument        |               | PresentationDocument |
 | | OdfChartDocument | | ChartDocument |
 | | OdfGraphicsDocument | |  GraphicsDocument |
 | doc.table | OdfTable |table |Table |
-| | OdfTableRow  | Row |
+| | OdfTableRow  | Row | |
 | | OdfTableColumn | | Column |
 | | OdfTableCell | | Cell |
 | | OdfTableCellRange | | CellRange |
 | doc.presentation | OdfSlide | presentation | Slide |
-| OdfPresentationNotes | | Notes |
+| OdfPresentationNotes | | Notes | |
 | incubator.meta | OdfOfficeMeta | meta |Meta |
-| | OdfMetaDocumentStatistic | DocumentStatistic |
-| incubator.search | | common.navigation |
-| incubator.doc.text | | common |
+| | OdfMetaDocumentStatistic | DocumentStatistic | |
+| incubator.search | | common.navigation | |
+| incubator.doc.text | | common | |
 
 
 [1]: simple_odf_structure.jpg
