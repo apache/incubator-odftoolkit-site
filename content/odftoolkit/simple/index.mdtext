@@ -1,0 +1,70 @@
+Title: Apache ODF Toolkit(Incubating) - Simple ODF
+Notice:    Licensed to the Apache Software Foundation (ASF) under one
+           or more contributor license agreements.  See the NOTICE file
+           distributed with this work for additional information
+           regarding copyright ownership.  The ASF licenses this file
+           to you under the Apache License, Version 2.0 (the
+           "License"); you may not use this file except in compliance
+           with the License.  You may obtain a copy of the License at
+           .
+             http://www.apache.org/licenses/LICENSE-2.0
+           .
+           Unless required by applicable law or agreed to in writing,
+           software distributed under the License is distributed on an
+           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+           KIND, either express or implied.  See the License for the
+           specific language governing permissions and limitations
+           under the License.
+
+News!
+-----
+**Simple ODF Release 0.6.6**
+
+We released the Simple ODF API version 0.6.6 on Auguest 12th, 2011.
+The improvements in this version focus on bug fix and increasing unit test coverage rate.
+ 
+What is Simple ODF?
+-------------------
+
+Simple ODF, also called Simple Java API for ODF, is a sub-project of ODF Toolkit Union. This is an **easy-to-use**, **high-level** Java API for creating, modifying and extracting data from [Open Document Format (ODF)][1] documents. It is written in pure Java and does not require users to install any document editor on their systems. It is a high level abstraction of the lower-level [ODFDOM API][2].
+
+What can I do with Simple ODF?
+------------------------------
+
+We provide lots of interesting demos to show the ability of Simple ODF. You can see the [demo page][3].
+
+How do I get started?
+---------------------
+
+Firstly, you can see the [getting started guide][4].
+
+Secondly, we recommend [cookbook][5] and [demo][6]. Both of them supply lots of sample code.
+
+Lastly, please reference the newest [javadoc][7], which supplies the API details of Simple ODF.
+
+Where can I get Simple ODF?
+---------------------------
+
+You can go to [downloads page][8]. This page lists the jar, the javadoc and the source code of all the versions.
+
+Need More Infomation?
+-------------------------
+
+If you want to supply suggestion or feedback, please send [e-mail][9] to us.
+
+If you want to report a bug, please create issue on our [bugzilla][10].
+
+If you want to contribute code, please read the [developer guide wiki][11], which introduces how to build the development environment.
+
+
+  [1]: http://en.wikipedia.org/wiki/OpenDocument
+  [2]: http://odftoolkit.org/projects/odfdom/pages/Home
+  [3]: demo/index.html
+  [4]: gettingstartguide.html
+  [5]: cookbook/index.html
+  [6]: demo/index.html
+  [7]: javadoc/index.html
+  [8]: downloads.html
+  [9]: mailto:devinhan@apache.org
+  [10]: http://odftoolkit.org/bugzilla/
+  [11]: http://odftoolkit.org/projects/simple/pages/Home
