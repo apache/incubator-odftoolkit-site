@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="styles/shCoreEclipse.css"/>
+<title>Demos - SimpleODF</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.STYLE2 {font-size: 32px}
+.STYLE3 {font-size: 16px}
+.STYLE4 {font-size: 36px}
+-->
+    </style>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22366020-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="page" align="center">
+  <div id="content" style="width:920px" class="contentpanel">
+    <div id="topheader">
+      <div class="topright"> </div>
+    </div>
+    <div id="menu">
+      <div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
+    </div>
+    <div id="subcontent" align ="left">
+        <div align="left" class="titletext"> <span >
+		<a href="index.html">Simple Demos<a> > 
+		<a href="demo5.html">Demo 4: Multiple Presentations Assembler<a>
+		</span> 
+		</div>
+		
+		<!---------------------------------------------------------------------------------------------------->	
+<div class="contenttitle">
+
+
+    <a name="overview">Overview</a>
+
+
+</div>
+
+
+<div class="bodytext">
+
+
+    <p> If you make a lot of presentations in your daily work, you  know that you don't always  create a presentation from scratch. 
+	Assembling several different presentations together to make a new presentation, e.g. copying several pages from presentation A 
+	and copying another several pages from presentation B, is a common activity for the presentation author.
+    <br> This demo provides a Java application that can assemble  specific pages of presentations together and make one presentation from the command line.
+	<br> Here is an example. I want to make a presentation with the first page from presentation A, 
+    the first page from presentation B and  the first page from presentation C. I can call the following command:
+    <br><code>Java PresentationAssembler -in PresentationA.odp(1) -in PresentationB.odp(1) -in PresentationC.odp(1-2) -out newPresentation.odp</code>
+    <br/> <br/> A new presentation will be generated which is showed in the following picture. You can see, the pictures, the styles and master pages are copied also.<br/> <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img 
+
+
+    src="image/demo5_doc.jpg" ><br/> <br/> In the next section, I will show how easy it is to create this assembling application using the Simple API.  
+
+
+    </p>
+
+
+</div>
+
+
+<hr/>
+
+
+<div class="contenttitle">
+
+
+    <a name="codeintroduction">Code Introduction</a>
+
+
+</div>
+
+
+<div class="bodytext">
+
+    <p>
+    <code>assemble</code> is the method that accepts the command line parameters, analyzes them, and assembles presentations 
+	with the Simple Java API for ODF. In this method, a new presentation is created, and then, pages from other presentation 
+	documents are attached while the command line is being analyzed. Simple Java API for ODF provides very simple methods to
+	copy pages from other presentations:
+	 <br>
+	 <br><code>PresentationDocument.copyForeignSlide(int destIndex, PresentationDocument srcDoc, int srcIndex)</code>
+	 <br>and
+	 <br><code>PresentationDocument.appendPresentation(PresentationDocument srcDoc)</code>.
+	 <br>
+	 <br>After the slides are attached, the first slide of the new presentation is deleted by invoking method 
+	 <code>PresentationDocument.deleteSlideByIndex(int index)</code>. 
+	 This is because the first slide is an empty slide which was created when the new presentation was created with 
+	 method <code>PresentationDocument.newPresentationDocument()</code>
+	
+    </p>
+    <p>Below is the source code of method <code>assemble</code>. Most of the code is used to analyze the command line
+	parameters. Only a few statements are used to attach slides to the new presentation. So you can see how powerful 
+	functions Simple Java API for ODF provides.  </p>
+
+    <!--java code-->
+
+
+    <pre class="brush:java;">
+
+
+	public void assemble(String[] args) throws Exception
+	{
+		String outputFileName="default.odp";
+		int pageIndex = 1;
+		PresentationDocument doc = PresentationDocument.newPresentationDocument();
+		int i=0;
+		while (i < args.length)
+		{
+			String param = args[i];
+			if (param.equals("-out")) //get the output file name
+				outputFileName = args[++i];
+			else if (param.equals("-in")) //get the input file name 
+			{
+				String pageDesc = args[++i];
+				String filename = pageDesc, pagelist;
+				int indexStart = pageDesc.indexOf('('); //get the page numbers
+				int[] srcPages = null;
+				if (indexStart > -1)
+				{
+					filename = pageDesc.substring(0, indexStart);
+					pagelist = pageDesc.substring(indexStart+1, pageDesc.length()-1);
+					srcPages = getPageNumbers(pagelist); //analysis the page number description 
+									                     //and return all page numbers that need to be copied
+				}
+				PresentationDocument sourceDoc = PresentationDocument.loadDocument(new File(filename));
+				if (srcPages==null)
+				{
+					doc.appendPresentation(sourceDoc);
+					pageIndex += sourceDoc.getSlideCount();
+				} else for(int j=0;j < srcPages.length;j++)
+				{
+					doc.copyForeignSlide(pageIndex, sourceDoc, srcPages[j]);
+					pageIndex++;
+				}
+			}
+			i++;
+		}
+		doc.deleteSlideByIndex(0);
+		doc.save(outputFileName);
+		doc.close();
+	}
+
+
+    </pre>
+
+
+</p>
+
+
+<p>
+
+
+</p>
+
+
+</div>
+
+
+<hr/>
+
+
+<div class="contenttitle">
+
+
+    <a name="download">Download</a>
+
+
+</div>
+
+
+<div class="bodytext">
+
+
+    <p>
+
+
+    Powered by the Simple Java API for ODF version  <a target="_new" href="../downloads.html"><img src="../images/link.png"></img>0.4.5</a>.
+
+
+    </p>
+
+
+    <p>
+
+
+    You can download the code of this demo from <a href="PresentationAssembler.zip">here</a>.
+
+
+    </p>
+
+
+</div>
+<!---------------------------------------------------------------------------------------------------->		
+		
+		    </div>
+    <div id="footer" class="smallgraytext"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact Us</a> </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+<script type="text/javascript" src="scripts/shCore.js"></script>  
+
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>  
+
+<script type="text/javascript"> SyntaxHighlighter.all();</script> 
+
+
+

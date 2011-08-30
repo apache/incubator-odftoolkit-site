@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="styles/shCoreEclipse.css"/>
+<title>Demos - SimpleODF</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.STYLE2 {font-size: 32px}
+.STYLE3 {font-size: 16px}
+.STYLE4 {font-size: 36px}
+-->
+</style>
+<script type="text/javascript" src="scripts/shCore.js"></script>  
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>  
+<script type="text/javascript"> SyntaxHighlighter.all();</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22366020-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="page" align="center">
+<div id="content" style="width:920px" class="contentpanel">
+<div id="topheader">
+    <div class="topright"> </div>
+</div>
+<div id="menu">
+<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
+</div>
+<div id="subcontent" align ="left">
+        <div align="left" class="titletext"> <span>
+		<a href="index.html">Simple Demos<a> > 
+		<a href="demo10.html">Demo 9: Automatically Formatting a Document<a>
+	</span> 
+</div>
+<!---------------------------------------------------------------------------------------------------->	
+<div class="contenttitle">
+    <a name="overview">Overview</a>
+</div>
+<div class="bodytext">
+    <p>	The Simple Java API for ODF has enhanced features to support document formatting in version 0.6.5. It supplies methods for manipulating headings, page breaks, hyperlinks, comments, font and alignment. This demo shows how to use these features to help document formatting.<br/><br/>	It's a common scenario that we need apply some  styles to plain text to improve its appearance. In this demo, a text document is created using plain text from a text file. While reading content, paragraphs whose  length  is less than 20 characters are changed to headings with a new font style. "Version" and "date" information is  set as right alignment and gray text. Each line which matches an URL  will be applied as a hyperlink. Each heading and its following paragraphs are considered as a chapter. There will be a page break after page line count larger than a predefined value. Then verify word spelling and add comments as tip to those which may have a spelling mistake. The last one is a security check. After these processes, the plain text has been changed into a formatted document.<br/><br/>	This picture shows part of the generated document. The new document looks orderly and beautiful than before.<br/><br/>
+	<img src="image/demo10.png"></img><br/><br/>
+	</p>
+</div>
+<hr/>
+<div class="contenttitle">
+    <a name="codeintroduction">Code Introduction</a>
+</div>
+<div class="bodytext">
+    <p>
+	There code of this demo is very clear. Firstly, we open the data source and create a text document. Secondly, we create paragraph for each line. Thirdly, we set different style for different content. Then we do spell and security check with the help of Navigation API. Comments are given if suspicious words are found.  Finally, the new created document is saved. <br/><br/>
+    <!--java code-->
+    <pre class="brush:java;">
+	    BufferedReader reader = new BufferedReader(new InputStreamReader(FormatParagraphDemo.class.getResourceAsStream("text.txt")));
+		String in = reader.readLine();
+		TextDocument doc = TextDocument.newTextDocument();
+		int lineCount = 0;
+		int pageLineCount = 0;
+		Paragraph refParagraph = null;
+		while (in != null) {
+			in = in.trim();
+			Paragraph paragraph = doc.addParagraph(in);
+			lineCount++;
+			pageLineCount++;
+			switch (lineCount) {
+			case 1:
+				paragraph
+						.setHorizontalAlignment(HorizontalAlignmentType.CENTER);
+				paragraph.setFont(new Font("Arial", FontStyle.BOLD, 16));
+				paragraph.applyHeading();
+				break;
+			case 2:
+			case 3:
+				paragraph.setHorizontalAlignment(HorizontalAlignmentType.RIGHT);
+				paragraph.setFont(new Font("Tahoma", FontStyle.ITALIC, 10,
+						Color.GRAY));
+				break;
+			default:
+				if (in.startsWith("http://")) {
+					paragraph.applyHyperlink(new URI(in));
+				}
+				if (in.length() < 20) {
+					paragraph.applyHeading();
+					paragraph.setFont(new Font("Arial", FontStyle.BOLD, 12));
+					if (pageLineCount > 16) {
+						doc.addPageBreak(refParagraph);
+						pageLineCount = 0;
+					}
+				}
+			}
+			refParagraph = paragraph;
+			in = reader.readLine();
+
+		}
+		// spell check
+		TextNavigation navigation1 = new TextNavigation("lower-level", doc);
+		while (navigation1.hasNext()) {
+			TextSelection selection = (TextSelection) navigation1
+					.nextSelection();
+			selection.addComment(
+					"Please change 'lower-level' with 'lower level'.",
+					"SpellChecker");
+		}
+		// security check
+		TextNavigation navigation2 = new TextNavigation("confidential", doc);
+		if (navigation2.hasNext()) {
+			TextSelection selection = (TextSelection) navigation2
+					.nextSelection();
+			selection
+					.addComment(
+							"This is a confidential document, please don't redistribute.",
+							"SecurityChecker");
+		}
+		doc.save("format_text.odt");
+    </pre>
+</p>
+</div>
+<hr/>
+<div class="contenttitle">
+    <a name="download">Download</a>
+</div>
+<div class="bodytext">
+  <p>
+    Powered by the Simple Java API for ODF version  <a target="_new" href="../downloads.html"><img src="../images/link.png"></img>0.6.5</a>.
+  </p>
+  <p>
+    You can download the code of this demo from <a href="demo10.zip"><img src="../images/link.png"></img>here</a>.
+  </p></div>
+<!---------------------------------------------------------------------------------------------------->		
+</div>
+<div id="footer" class="smallgraytext"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact Us</a> </div>
+</div>
+</div>
+</body>
+</html> 
+
+
+

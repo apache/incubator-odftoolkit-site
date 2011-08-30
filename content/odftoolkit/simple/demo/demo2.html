@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
+
+
+<link type="text/css" rel="stylesheet" href="styles/shCoreEclipse.css"/>
+
+<title>Demos - SimpleODF</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.STYLE2 {font-size: 32px}
+.STYLE3 {font-size: 16px}
+.STYLE4 {font-size: 36px}
+-->
+    </style>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22366020-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="page" align="center">
+  <div id="content" style="width:920px" class="contentpanel">
+    <div id="topheader">
+      <div class="topright"> </div>
+    </div>
+    <div id="menu">
+      <div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
+    </div>
+    <div id="subcontent" align ="left">
+        <div align="left" class="titletext"> <span >
+		<a href="index.html">Simple Demos<a> > 
+		<a href="demo2.html">Demo 1: Persentation Extraction and Combination<a>
+		</span> 
+		</div>
+		
+		<!---------------------------------------------------------------------------------------------------->	
+<div class="contenttitle">
+
+<a name="overview">Overview of Presentation Combination</a>
+
+</div>
+
+<div class="bodytext">
+
+<p>To show the operation of Presentation in Simple API, the Presentation Codmbination demo 
+
+is used which combine two independent presentation documents together and extract the notes
+
+ of each slide out to a Text document. 
+
+</p>
+
+<p>
+
+Here the original presentation documents "Pres1.odp" and "Pres2.odp" are used. Pres1.odp presents some basic concepts of XML and Pres2.odp presents some basic aspects of HTML. Both of them have their own cover page with the same slide name "Cover" at the front and an End page with the same slide name "end" at the end of the document. To combine these two presentation documents together, the following steps are used here.
+
+ <ol>
+
+ <li>Delete the last page of "Pres1.odp".</li>
+
+ <li>Change the slide name of the cover page for each presentation document.</li>
+
+ <li>Append "Pres2.odp" to the end of "Pres1.odp".</li>
+
+ <li>Add a new slide at the front of the combined presentation document as the new cover page.</li>
+
+ <li>Add title and notes to the new cover page.</li>
+
+ <li>Extract the notes from each slide in the presentation document and save them into a text document.</li>
+
+ <li>Save the combined document and the text document.</li>
+
+ </ol>
+
+</p>
+
+<p>
+
+The contents of the text document which contains the notes of the presentation document
+
+is shown in the following picture, where each note is identified by the corresponding slide name.
+
+<br/>
+
+<img src="image/ExtractedNotes.JPG" >
+
+</p>
+
+</div>
+
+<hr/>
+
+<div class="contenttitle">
+
+<a name="codeintroduction">Code Introduction</a>
+
+</div>
+
+<div class="bodytext">
+
+<p> 
+
+To generate this sample, the Presentation and Text package in Simple API 
+
+will be used. The related operations contains: load the existing presentation document, 
+
+append one presentation to the end of another one, delete slide in the presentation, add 
+
+new slide in the presentation, get certain slide in the presentation, add new notes to 
+
+the slide, create a new text document, add new paragraph in the text document, etc.
+
+</p>
+
+
+
+<p>
+
+Seven functions exist in the resource: main(), Getpresentation(), ProcSlide(),
+
+ titleofExtractnotes(), ExtractNotes(), FillExtractnotes() and saveDocument(). Each of them
+
+ will be explained briefly in the following paragraphs.
+
+</p>
+
+
+
+<p>
+
+First three variables should be used to hold the two presentation document
+
+and the text document.
+
+<!--java code-->
+
+<pre class="brush:java;">
+
+PresentationDocument presentationdoc;
+
+PresentationDocument presentationdoc2;
+
+TextDocument Extractednotes;
+
+</pre>
+
+</p>
+
+
+
+<p>
+
+In function Getpresentation(), the two presentation documents are loaded so that 
+
+they can be operated by Simple API, and the text document is created to save the extracted notes.
+
+The codes are shown below:
+
+<!--java code-->
+
+<pre class="brush:java;">  
+
+public void Getpresentation() {
+
+	try {
+
+		presentationdoc=PresentationDocument.loadDocument("Pres1.odp");		
+
+		presentationdoc2=PresentationDocument.loadDocument("Pres2.odp");  
+
+	} catch (Exception e) {
+
+		System.err.println("Unable to load document.");
+
+		System.err.println(e.getMessage());  
+
+	}
+
+	try{
+
+	Extractednotes=TextDocument.newTextDocument();			
+
+	}
+
+	catch (Exception e) {
+
+		System.err.println("Unable to create text document.");
+
+    	System.err.println(e.getMessage());  
+
+	}
+
+}
+
+</pre> 
+
+</p>
+
+
+
+<p>
+
+In function ProcSlide(), five main operations are used to process the document: 
+
+delete extra slide (deleteSlideByIndex, deleteSlideByName), change slide name (setSlideName),
+
+combine these two presentations together (appendPresentation), add a new cover for the new 
+
+combined document (newSlide), add title and notes for the new slide. Here the function 
+
+getSlideCount() is used to get the slide number of the specified presentation document,
+
+getSlideByName()and getSlideByIndex() are used to get the specified slide, getNotesPage() 
+
+and setTextContent() are used to add notes for the added slide. In order to add text to the 
+
+title frame, a DrawTextBoxElement should be used to get the editable component.
+
+The codes are shown below:
+
+<!--java code-->
+
+<pre class="brush:java;">  
+
+Slide slide;
+
+Notes notes;
+
+int count=presentationdoc.getSlideCount();
+
+presentationdoc.deleteSlideByIndex(count-1);	
+
+//presentationdoc.deleteSlideByName("end");
+
+slide=presentationdoc.getSlideByIndex(0);
+
+slide.setSlideName("XML Cover");
+
+slide=presentationdoc2.getSlideByName("Cover");
+
+slide.setSlideName("HTML Cover");
+
+presentationdoc.appendPresentation(presentationdoc2);
+
+slide=presentationdoc.newSlide(0, "Cover", SlideLayout.TITLE_ONLY);	
+
+notes=slide.getNotesPage();
+
+notes.addText("This is the cover of the new presentation document");
+
+DrawTextBoxElement textbox=(DrawTextBoxElement)slide.getOdfElement().getFirstChild().getFirstChild();
+
+textbox.newTextPElement().setTextContent("Combined Presentation");
+
+</pre> 
+
+</p>
+
+
+
+<p>
+
+In function titleofExtractnotes(), the title of the text document which is used 
+
+to save the notes of each slide is added. And in function ExtractNotes(), the notes of each slide
+
+ will be extracted (getTextContent), the function FillExtractnotes() will be called if the 
+
+ notes exists. Here function getSlideByIndex() is used to obtain the corresponding slide, 
+
+ getSlideName() is used to obtain the name of the specified slide in order to identify the notes.
+
+ The codes are shown below:
+
+<!--java code-->
+
+<pre class="brush:java;">  
+
+slide=presentationdoc.getSlideByIndex(i);
+
+String slidename=slide.getSlideName();
+
+notes=slide.getNotesPage();	
+
+if(!notes.getOdfElement().getTextContent().isEmpty())
+
+{
+
+	String notestring=notes.getOdfElement().getTextContent().toString().trim();
+
+	FillExtractnotes(notestring,slidename);
+
+}
+
+
+
+</pre> 
+
+</p>
+
+
+
+<p>
+
+In function FillExtractnotes, the notes will be added to the text document. Here the slide
+
+name is used as the identity and is followed by the corresponding notes, function newParagraph() 
+
+is used to add a new paragraph in the text document. The codes are shown below:
+
+<!--java code-->
+
+<pre class="brush:java;">  
+
+OdfTextParagraph para =Extractednotes.newParagraph();
+
+para.setProperty(OdfParagraphProperties.MarginTop, "0.25cm");
+
+para.setTextContent("Notes of "+slidename+":");				
+
+para=Extractednotes.newParagraph();
+
+para.setProperty(OdfParagraphProperties.TextAlign,"justify");
+
+para.setTextContent("  "+notestext);
+
+</pre> 
+
+</p>
+
+
+
+<p>
+
+In function saveDocument(), the new combined presentation document and the text document
+
+which contains the notes will be saved. The codes are shown below:
+
+<!--java code-->
+
+<pre class="brush:java;">  
+
+public void saveDocument(){ 	
+
+   try
+
+   {
+
+	   presentationdoc.save("Presentationsample.odp");
+
+	   presentationdoc.close();
+
+	   Extractednotes.save("Extractednotes.odt");
+
+	   Extractednotes.close();
+
+   }
+
+   catch(Exception e){
+
+	   System.err.println("Unable to save document.");
+
+       System.err.println(e.getMessage());  
+
+   }	   
+
+}
+
+</pre> 
+
+</p>
+
+
+
+</div>
+
+<hr/>
+
+
+
+<div class="contenttitle"><a name="download">Download</a></div>
+
+<div class="bodytext">
+
+<p> Powered by Simple API version <a target="_new" href="../downloads.html"><img src="../images/link.png"></img>0.3.5</a>.</p>
+
+<p> You can download the code of this sample from <a Href="PresentationCombination.zip"><img src="../images/link.png"></img>here</a>.</p>
+
+</div>
+
+<!---------------------------------------------------------------------------------------------------->		
+		
+		
+     
+    </div>
+    <div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="#">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+<script type="text/javascript" src="scripts/shCore.js"></script>  
+
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>  
+
+<script type="text/javascript"> SyntaxHighlighter.all();</script> 
+
+

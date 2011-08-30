@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="styles/shCoreEclipse.css"/>
+<title>Demos - SimpleODF</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.STYLE2 {font-size: 32px}
+.STYLE3 {font-size: 16px}
+.STYLE4 {font-size: 36px}
+-->
+</style>
+<script type="text/javascript" src="scripts/shCore.js"></script>  
+<script type="text/javascript" src="scripts/shBrushJava.js"></script>  
+<script type="text/javascript"> SyntaxHighlighter.all();</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22366020-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="page" align="center">
+  <div id="content" style="width:920px" class="contentpanel">
+    <div id="topheader">
+      <div class="topright"> </div>
+    </div>
+    <div id="menu">
+      <div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
+    </div>
+    <div id="subcontent" align ="left">
+        <div align="left" class="titletext"> <span >
+		<a href="index.html">Simple Demos<a> > 
+		<a href="demo6.html">Demo 5: Booking Sheet with Text Box<a>
+		</span> 
+		</div>
+		
+		<!---------------------------------------------------------------------------------------------------->	
+<div class="contenttitle">
+    <a name="overview">Overview</a>
+</div>
+<div class="bodytext">
+    <p>This demo shows the power of text box and paragraph support in Simple ODF.<br/>
+	The background of this demo is that a travel agency has to help customers book hotel. They have a spreadsheet file in hand, which records all of the visitors' information. They need to generate an order form with the requirements of hotel reservation using these data. A order form template has been supplied. This program generates order forms for all the visitors based on records of passengers in spreadsheet and the given template.<br/><br/>
+<img src="image/demo6.png" ><br/><br/> 
+</p>
+</div>
+<hr/>
+<div class="contenttitle">
+    <a name="codeintroduction">Code Introduction</a>
+</div>
+<div class="bodytext">
+    <p>
+	There code of this demo is very simple. First, load template document and spreadsheet separately. Secondly, iterate data table and create new section and paragraph. The Text Boxes in the paragraph are also cloned. All of them are iterated and filled information from data table.<br/>
+	Data items counts are also computed. These counts are wrote to the bottom table of the sheet.<br/>
+    <!--java code-->
+    <pre class="brush:java;">
+	public static void main(String[] args) {
+		try {
+			// load template document
+			TextDocument doc = TextDocument.loadDocument("DemoTemplate.odt");
+			Table roomtable = doc.getTableByName("RoomTable");
+			roomtable.remove();
+			Section templateSection = doc.getSectionByName("SectionForm");
+			// load passenger data document
+			SpreadsheetDocument data = SpreadsheetDocument.loadDocument("Passengers.ods");
+			Table table = data.getTableByName("passenger");
+			int count = table.getRowCount();
+			int type1Count = 0, type2Count = 0, type3Count = 0;
+			for (int i = 1; i < count; i++) {
+				Row row = table.getRowByIndex(i);
+				for (int j = 0; j < 6; j++) {
+					Paragraph para = templateSection.getParagraphByIndex(j,	false);
+					Textbox nameBox = para.getTextboxIterator().next();
+					String content = row.getCellByIndex(j).getDisplayText();
+					nameBox.setTextContent(content);
+					if (j == 5) {
+						if (content.equals("Deluxe Room"))
+							type1Count++;
+						else if (content.equals("Studio/Junior Suite"))
+							type2Count++;
+						else if (content.equals("Executive Suite"))
+							type3Count++;
+					}
+				}
+				doc.appendSection(templateSection, false);
+				doc.addParagraph(null);
+			}
+			templateSection.remove();
+			roomtable.getCellByPosition(2, 1).setStringValue(type1Count + "");
+			roomtable.getCellByPosition(2, 2).setStringValue(type2Count + "");
+			roomtable.getCellByPosition(2, 3).setStringValue(type3Count + "");
+
+			doc.getContentRoot().appendChild(roomtable.getOdfElement());
+			doc.save("output.odt");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+    </pre>
+</p>
+</div>
+<hr/>
+<div class="contenttitle">
+    <a name="download">Download</a>
+</div>
+<div class="bodytext">
+  <p>
+    Powered by the Simple Java API for ODF version  <a target="_new" href="../downloads.html"><img src="../images/link.png"></img>0.5</a>.
+  </p>
+  <p>
+    You can download the code of this demo from <a href="TextboxDemo.zip"><img src="../images/link.png"></img>here</a>.
+  </p>
+</div>
+<!---------------------------------------------------------------------------------------------------->		
+</div>
+<div id="footer" class="smallgraytext"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact Us</a> </div>
+</div>
+</div>
+</body>
+</html> 
+
+
+
