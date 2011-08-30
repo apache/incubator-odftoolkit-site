@@ -1,20 +1,5 @@
-Title:Getting Start Guide
-Notice:    Licensed to the Apache Software Foundation (ASF) under one
-           or more contributor license agreements.  See the NOTICE file
-           distributed with this work for additional information
-           regarding copyright ownership.  The ASF licenses this file
-           to you under the Apache License, Version 2.0 (the
-           "License"); you may not use this file except in compliance
-           with the License.  You may obtain a copy of the License at
-           .
-             http://www.apache.org/licenses/LICENSE-2.0
-           .
-           Unless required by applicable law or agreed to in writing,
-           software distributed under the License is distributed on an
-           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-           KIND, either express or implied.  See the License for the
-           specific language governing permissions and limitations
-           under the License.
+Getting Start Guide
+-------------------
 
 This start guide shows how to use the Simple ODF API to create a text document with image, paragraph, list and table in OpenDocument format (ODF). In about 40 lines of code, you will be able to produce an OpenDocument Format text document named HelloWorld.odt that looks like this:
 
@@ -38,7 +23,7 @@ In addition, you need to download [the resource file][5] of this demo.
 We write all of the code needed to create the document in the HelloWorld class. For simplicity, the code is wrapped in main method directly, package declaration is omitted and hard code is also included in this program. 
  
 
-import java.net.URI;
+	import java.net.URI;
 
 	import org.odftoolkit.simple.TextDocument;
 	import org.odftoolkit.simple.table.Cell;
@@ -77,7 +62,7 @@ import java.net.URI;
 
 The TextDocument class has these convenient methods: 
 
-    // Creates a new text document that contains an empty paragraph.
+        // Creates a new text document that contains an empty paragraph.
     	TextDocument.newTextDocument();
     	// Puts the image at the given location at the end of the document.
     	TextDocument.newImage(URI location)
@@ -103,8 +88,8 @@ You can download the code and resources of this demo from [here][5].
  
 
 
-  [1]: images/helloworld.png
+  [1]: helloworld.png
   [2]: http://odftoolkit.org/projects/simple/downloads/download/0.6.6/simple-odf-0.6.6.jar
   [3]: http://repo1.maven.org/maven2/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar
   [4]: http://xerces.apache.org/mirrors.cgi
-  [5]: http://simple.odftoolkit.org/helloworld.zip
+  [5]: helloworld.zip
