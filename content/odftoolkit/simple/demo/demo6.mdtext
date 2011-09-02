@@ -2,7 +2,7 @@
 
 **Overview**   
 
-This demo shows the power of text box and paragraph support in Simple ODF.   
+This demo shows the power of text box and paragraph support in Simple API.   
 
 The background of this demo is that a travel agency has to help customers book hotel. They have a spreadsheet file in hand, which records all of the visitors' information. They need to generate an order form with the requirements of hotel reservation using these data. A order form template has been supplied. This program generates order forms for all the visitors based on records of passengers in spreadsheet and the given template.    
 
@@ -57,6 +57,7 @@ Data items counts are also computed. These counts are wrote to the bottom table 
 	}
 
 **Download**   
+
 Powered by the Simple Java API for ODF version  <a target="_new" href="../downloads.html">0.5</a>.  
 You can download the code of this demo from <a href="TextboxDemo.zip">here</a>.
 
