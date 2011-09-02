@@ -2,7 +2,7 @@
 
 **Overview**  
 
-The Simple Java API for ODF has enhanced features to support document formatting in version 0.6.5. It supplies methods for manipulating headings, page breaks, hyperlinks, comments, font and alignment. This demo shows how to use these features to help document formatting.  
+Simple API enhanced features to support document formatting in version 0.6.5. It supplies methods for manipulating headings, page breaks, hyperlinks, comments, font and alignment. This demo shows how to use these features to help document formatting.  
 
 It's a common scenario that we need apply some  styles to plain text to improve its appearance. In this demo, a text document is created using plain text from a text file. While reading content, paragraphs whose  length  is less than 20 characters are changed to headings with a new font style. "Version" and "date" information is  set as right alignment and gray text. Each line which matches an URL  will be applied as a hyperlink. Each heading and its following paragraphs are considered as a chapter. There will be a page break after page line count larger than a predefined value. Then verify word spelling and add comments as tip to those which may have a spelling mistake. The last one is a security check. After these processes, the plain text has been changed into a formatted document.  
 
@@ -78,8 +78,8 @@ There code of this demo is very clear. Firstly, we open the data source and crea
 
 **Download**
 
-    Powered by the Simple Java API for ODF version [0.6.5][3].
-    You can download the code of this demo from [here][4].
+Powered by the Simple Java API for ODF version [0.6.5][3].  
+You can download the code of this demo from [here][4].
 
 
   [1]: index.html
