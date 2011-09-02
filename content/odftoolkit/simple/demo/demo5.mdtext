@@ -9,7 +9,7 @@ This demo provides a Java application that can assemble  specific pages of prese
 
 Here is an example. I want to make a presentation with the first page from presentation A, the first page from presentation B and  the first page from presentation C. I can call the following command:   
 
-<code>Java PresentationAssembler -in PresentationA.odp(1) -in PresentationB.odp(1) -in PresentationC.odp(1-2) -out newPresentation.odp</code>     
+<code>java PresentationAssembler -in PresentationA.odp(1) -in PresentationB.odp(1) -in PresentationC.odp(1-2) -out newPresentation.odp</code>     
 
 A new presentation will be generated which is showed in the following picture. You can see, the pictures, the styles and master pages are copied too.  
 
