@@ -1,98 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<link type="text/css" rel="stylesheet" href="styles/shCoreEclipse.css"/>
-<title>Demos - SimpleODF</title>
-<style type="text/css">
-<!--
-.STYLE1 {
-	color: #FFFFFF;
-	font-size: 24px;
-}
-.STYLE2 {font-size: 32px}
-.STYLE3 {font-size: 16px}
-.STYLE4 {font-size: 36px}
--->
-</style>
-<script type="text/javascript" src="scripts/shCore.js"></script>  
-<script type="text/javascript" src="scripts/shBrushJava.js"></script>  
-<script type="text/javascript"> SyntaxHighlighter.all();</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22366020-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</head>
-<body>
-<div id="page" align="center">
-  <div id="content" style="width:920px" class="contentpanel">
-    <div id="topheader">
-      <div class="topright"> </div>
-    </div>
-    <div id="menu">
-      <div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-    </div>
-    <div id="subcontent" align ="left">
-        <div align="left" class="titletext"> <span >		<a href="index.html">Simple Demos<a> > 
-		<a href="demo8.html">Demo 7: Add 2D barcode image to a slide<a>
-		</span> 
-		</div>
-		
-		<!---------------------------------------------------------------------------------------------------->	
-<div class="contenttitle">
-    <a name="overview">Overview</a>
-</div>
-<div class="bodytext">
-    <p>This demo shows the power of image and metadata support in Simple ODF.<br /><br/>
-	A 2D bar code is a special image that can be scanned by a smart phone or a dedicated scanner. It could contain a URL, a books ISBN number a vCard for a person's contact, information, etc. It makes it easy to transfer information into a smartphone from a physical object, like a printed document, or a newspaper or magazine.<br /><br/>	In this demo, the contact information of a document's author has been put in the metadata of a presentation document, with an ODF editor, such as IBM Lotus Symphony. The contact information in the metadata is extracted with the Simple ODF API, and wrapped into JSON object. Then a RESTful web service is called to generate a 2D bar code image based on this JSON object. 	The bar code image is then added to the first slide of this presentation using the Simple ODF API.<br /><br/>		This picture shows how the contact information is added to the metadata of this document.<br /><br/>
-<img src="image/demo8_metadata.bmp" ></img><br/><br />This picture shows the 2D bar code image added to the first slide of this presentation document.<br /><br/> <img src="image/demo8_slide.bmp" ></img><br/>
-</p>
-</div>
-<hr/>
-<div class="contenttitle">
-    <a name="codeintroduction">Code Introduction</a>
-</div>
-<div class="bodytext">
-    <p>
-	There code of this demo is very simple. First, we load the presentation document, and extract the metadata with Simple ODF API. Second, we invoke the web service to generate the bar code image and get the URI of this image. 
-	Finally, we get the subtitle text box in the first slide, add an image just below of this subtitle text box. Please note how FrameRectangle is used to specify the image position.<br /><br/>
-    <!--java code-->
-    <pre class="brush:java;">
-	public static void main(String[] args) {
-		try {			//load the presentation			PresentationDocument presentation = PresentationDocument.loadDocument("Demotemplate.odp");			//get the metadata			Meta metaData = new Meta(presentation.getMetaDom());			String creator = metaData.getCreator();			String mailto = metaData.getUserDefinedDataValue("Email");			String phoneno = metaData.getUserDefinedDataValue("Phone");			//invoke the 2D barcode service, and get the url			BarcodeImageGeneration demo = new BarcodeImageGeneration();			String url = demo.invokepost(creator,mailto,phoneno);						//Add the image to the first slide			Slide slide = presentation.getSlideByIndex(0);			Textbox subtitleBox = slide.getTextboxByUsage(PresentationClass.SUBTITLE).get(0);			FrameRectangle subtitleRect = subtitleBox.getRectangle();			Image image = Image.newImage(slide, new URI(url));			FrameRectangle imageRect = image.getRectangle();			imageRect.setX(subtitleRect.getX()+(subtitleRect.getWidth()-imageRect.getWidth())/2);			imageRect.setY(subtitleRect.getY()+subtitleRect.getHeight());			image.setRectangle(imageRect);						presentation.save("output.odp");		} catch (Exception e) {			e.printStackTrace();		}
-	}
-    </pre>
-</p>
-</div>
-<hr/>
-<div class="contenttitle">
-    <a name="download">Download</a>
-</div>
-<div class="bodytext">
-  <p>
-    Powered by the Simple Java API for ODF version  <a target="_new" href="../downloads.html"><img src="../images/link.png"></img>0.5.5</a>.
-  </p>
-  <p>
-    You can download the code of this demo from <a href="TwoDBarcodeDemo.zip"><img src="../images/link.png"></img>here</a>.
-  </p>
-  <p>    The dependent library jslib.zip can be downloaded from <a href="http://puzzle.dl.sourceforge.net/sourceforge/xulmaker/jslib.zip"><img src="../images/link.png"></img>here</a>.  </p></div>
-<!---------------------------------------------------------------------------------------------------->		
-</div>
-<div id="footer" class="smallgraytext"> <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html> 
-
-
+[**Demos**][1] > <b>Add 2D barcode image to a slide</b>   
 
+**Overview**    
+
+This demo shows the power of image and metadata support in Simple API.  
+
+A 2D bar code is a special image that can be scanned by a smart phone or a dedicated scanner. It could contain a URL, a books ISBN number a vCard for a person's contact, information, etc. It makes it easy to transfer information into a smartphone from a physical object, like a printed document, or a newspaper or magazine.   
+
+In this demo, the contact information of a document's author has been put in the metadata of a presentation document, with an ODF editor, such as IBM Lotus Symphony. The contact information in the metadata is extracted with the Simple ODF API, and wrapped into JSON object. Then a RESTful web service is called to generate a 2D bar code image based on this JSON object.    
+ 
+The bar code image is then added to the first slide of this presentation using the Simple API.   
+	
+This picture shows how the contact information is added to the metadata of this document.    
+
+![image1][2]
+
+This picture shows the 2D bar code image added to the first slide of this presentation document.<br /><br/> 
+![image2][3]   
+
+**Code Introduction**  
+
+There code of this demo is very simple. First, we load the presentation document, and extract the metadata with Simple ODF API. Second, we invoke the web service to generate the bar code image and get the URI of this image.    
+
+Finally, we get the subtitle text box in the first slide, add an image just below of this subtitle text box. Please note how FrameRectangle is used to specify the image position.    
+
+	public static void main(String[] args) {
+
+		try {
+			//load the presentation
+			PresentationDocument presentation = PresentationDocument.loadDocument("Demotemplate.odp");
+			//get the metadata
+			Meta metaData = new Meta(presentation.getMetaDom());
+			String creator = metaData.getCreator();
+			String mailto = metaData.getUserDefinedDataValue("Email");
+			String phoneno = metaData.getUserDefinedDataValue("Phone");
+
+			//invoke the 2D barcode service, and get the url
+			BarcodeImageGeneration demo = new BarcodeImageGeneration();
+			String url = demo.invokepost(creator,mailto,phoneno);
+			
+			//Add the image to the first slide
+			Slide slide = presentation.getSlideByIndex(0);
+			Textbox subtitleBox = slide.getTextboxByUsage(PresentationClass.SUBTITLE).get(0);
+			FrameRectangle subtitleRect = subtitleBox.getRectangle();
+			Image image = Image.newImage(slide, new URI(url));
+			FrameRectangle imageRect = image.getRectangle();
+			imageRect.setX(subtitleRect.getX()+(subtitleRect.getWidth()-imageRect.getWidth())/2);
+			imageRect.setY(subtitleRect.getY()+subtitleRect.getHeight());
+			image.setRectangle(imageRect);
+			
+			presentation.save("output.odp");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+**Download**  
+
+Powered by the Simple Java API for ODF version [0.5.5][4].   
+You can download the code of this demo from [here][5].  
+The dependent library jslib.zip can be downloaded from [here][6].
+
+
+  [1]: index.html
+  [2]: image/demo8_metadata.bmp
+  [3]: image/demo8_slide.bmp
+  [4]: ../downloads.html
+  [5]: TwoDBarcodeDemo.zip
+  [6]: http://puzzle.dl.sourceforge.net/sourceforge/xulmaker/jslib.zip
