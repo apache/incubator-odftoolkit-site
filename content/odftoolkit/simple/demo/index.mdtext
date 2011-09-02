@@ -76,7 +76,7 @@ The demos of simple java API for ODF project are shown here. Each demo contains 
 <br/>
 <li>
 <b>Navigation API in Hotel Receipt</b><br/><br/>
-<div id="demotd"><div><a href="demo3.html"><img src="image/Generated ODT small.jpg"></img></div>
+<div id="demotd"><div><a href="demo3.html"><img src="image/Generated ODT small.jpg"/></a></div>
 <br/>
 <div>This demo is a simple template application about hotel receipt. By loading the configuration file and navigating the hotel receipt template, this demo could generate the ODF documents. 
 </div>
