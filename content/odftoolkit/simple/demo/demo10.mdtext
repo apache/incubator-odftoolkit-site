@@ -14,7 +14,7 @@ This picture shows part of the generated document. The new document looks orderl
 
 There code of this demo is very clear. Firstly, we open the data source and create a text document. Secondly, we create paragraph for each line. Thirdly, we set different style for different content. Then we do spell and security check with the help of Navigation API. Comments are given if suspicious words are found.  Finally, the new created document is saved.  
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(FormatParagraphDemo.class.getResourceAsStream("text.txt")));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(this.class.getResourceAsStream("text.txt")));
     		String in = reader.readLine();
     		TextDocument doc = TextDocument.newTextDocument();
     		int lineCount = 0;
