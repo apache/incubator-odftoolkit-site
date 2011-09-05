@@ -1,4 +1,4 @@
-Getting Start Guide
+**Getting Start Guide**
 -------------------
 
 This start guide shows how to use the Simple ODF API to create a text document with image, paragraph, list and table in OpenDocument format (ODF). In about 40 lines of code, you will be able to produce an OpenDocument Format text document named HelloWorld.odt that looks like this:
@@ -89,7 +89,7 @@ You can download the code and resources of this demo from [here][5].
 
 
   [1]: helloworld.png
-  [2]: http://odftoolkit.org/projects/simple/downloads/download/0.6.6/simple-odf-0.6.6.jar
-  [3]: http://repo1.maven.org/maven2/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar
+  [2]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.6.jar
+  [3]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/odfdom-0.8.7.jar
   [4]: http://xerces.apache.org/mirrors.cgi
   [5]: helloworld.zip
