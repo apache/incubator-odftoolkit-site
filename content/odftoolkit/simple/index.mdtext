@@ -18,20 +18,20 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 
 News!
 -----
-**Simple ODF Release 0.6.6**
+**Simple API Release 0.6.6**
 
-We released the Simple ODF API version 0.6.6 on Auguest 12th, 2011.
+We released the Simple API version 0.6.6 on Auguest 12th, 2011.
 The improvements in this version focus on bug fix and increasing unit test coverage rate.
  
-What is Simple ODF?
+What is Simple API?
 -------------------
 
-Simple ODF, also called Simple Java API for ODF, is a sub-project of ODF Toolkit Union. This is an **easy-to-use**, **high-level** Java API for creating, modifying and extracting data from [Open Document Format (ODF)][1] documents. It is written in pure Java and does not require users to install any document editor on their systems. It is a high level abstraction of the lower-level [ODFDOM API][2].
+Simple API, also called Simple Java API for ODF, is a sub-project of ODF Toolkit Union. This is an **easy-to-use**, **high-level** Java API for creating, modifying and extracting data from [Open Document Format (ODF)][1] documents. It is written in pure Java and does not require users to install any document editor on their systems. It is a high level abstraction of the lower-level [ODFDOM API][2].
 
-What can I do with Simple ODF?
+What can I do with Simple API?
 ------------------------------
 
-We provide lots of interesting demos to show the ability of Simple ODF. You can see the [demo page][3].
+We provide lots of interesting demos to show the ability of Simple API. You can see the [demo page][3].
 
 How do I get started?
 ---------------------
@@ -40,9 +40,9 @@ Firstly, you can see the [getting started guide][4].
 
 Secondly, we recommend [cookbook][5] and [demo][6]. Both of them supply lots of sample code.
 
-Lastly, please reference the newest [javadoc][7], which supplies the API details of Simple ODF.
+Lastly, please reference the newest [javadoc][7], which supplies more details of Simple API.
 
-Where can I get Simple ODF?
+Where can I get Simple API?
 ---------------------------
 
 You can go to [downloads page][8]. This page lists the jar, the javadoc and the source code of all the versions.
