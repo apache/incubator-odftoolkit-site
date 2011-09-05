@@ -1,55 +1,29 @@
-Title: Apache ODF Toolkit(Incubating) - Downloads
-Notice:    Licensed to the Apache Software Foundation (ASF) under one
-           or more contributor license agreements.  See the NOTICE file
-           distributed with this work for additional information
-           regarding copyright ownership.  The ASF licenses this file
-           to you under the Apache License, Version 2.0 (the
-           "License"); you may not use this file except in compliance
-           with the License.  You may obtain a copy of the License at
-           .
-             http://www.apache.org/licenses/LICENSE-2.0
-           .
-           Unless required by applicable law or agreed to in writing,
-           software distributed under the License is distributed on an
-           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-           KIND, either express or implied.  See the License for the
-           specific language governing permissions and limitations
-           under the License.
-
            
 Downloads
 ---------
-In this page, you can download different versions of Simple API.
+In this page, you can download different release versions of Simple API before moved to Apache.
  
 **Current Version**
 
-The current release of Simple ODF API is version 0.6.6( Binary| Java Doc| Source Code).
+The current release of Simple API is version 0.6.6( [Binary][1]| [Java Doc][2]| [Source Code][3]).
 
-We released the Simple ODF API version 0.6.6 on Auguest 12th, 2011.
+We released the Simple API version 0.6.6 on Auguest 12th, 2011.
 The improvements in this version focus on bug fix and increasing unit test coverage rate.
-Simple ODF has been accepted as Apache incubator project and the move process has been started. The security features (encryption and digital signatures) will be included in Apache version. Thanks all of the contributors and users, please continue to pay attention to us in Apache.
+Simple API has been accepted as Apache incubator project and the move process has been started. The security features (encryption and digital signatures) will be included in Apache version. Thanks all of the contributors and users, please continue to pay attention to us in Apache.
 
 The full release notes can be found here.
 
 **Older Versions**
 
-version 0.6.5( Binary| Java Doc| Source Code)
-
-version 0.6( Binary| Java Doc| Source Code)
-
-version 0.5.5( Binary| Java Doc| Source Code)
-
-version 0.5( Binary| Java Doc| Source Code)
-
-version 0.4.5( Binary| Java Doc| Source Code)
-
-version 0.4( Binary| Java Doc| Source Code)
-
-version 0.3.5( Binary| Java Doc| Source Code)
-
-version 0.3( Binary| Java Doc| Source Code)
-
-version 0.2( Binary| Java Doc| Source Code)
+  - version 0.6.5( [Binary][4]| [Java Doc][5]| [Source Code][6])  
+  - version 0.6( [Binary][7]| [Java Doc][8]| [Source Code][9])  
+  - version 0.5.5( [Binary][10]| [Java Doc][11]| [Source Code][12])  
+  - version 0.5( [Binary][13]| [Java Doc][14]| [Source Code][15])  
+  - version 0.4.5( [Binary][16]| [Java Doc][17]| [Source Code][18])  
+  - version 0.4( [Binary][19]| [Java Doc][20]| [Source Code][21])  
+  - version 0.3.5( [Binary][22]| [Java Doc][23]| [Source Code][24])  
+  - version 0.3( [Binary][25]| [Java Doc][26]| [Source Code][27])  
+  - version 0.2( [Binary][28]| [Java Doc][29]| [Source Code][30])  
 
 **Project roadmap and schedule(Update)**
 
@@ -60,6 +34,39 @@ The Simple ODF API adhears to the "Release Early and Often" development philosop
 * Version 0.4 at the end of Jan, 2011 with additional high-level text methods;
 * Version 0.5 at the end of March, 2011 with text box and fields methods;
 * Version 0.6 at the end of May, 2011 with chart methods;
+* Version 0.6.5 at the start of July, 2011 with text document format features;
 * Version 0.6.6 at the middle of August, 2011 with bugs fixed;
 * More work will be started in Apache. 
   
+
+
+  [1]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.6.jar
+  [2]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.6-javadoc.jar
+  [3]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.6-sources.jar
+  [4]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.5.jar
+  [5]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.5-javadoc.jar
+  [6]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.5-sources.jar
+  [7]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6.jar
+  [8]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6-javadoc.jar
+  [9]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.6-sources.jar
+  [10]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5.5.jar
+  [11]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5.5-javadoc.jar
+  [12]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5.5-sources.jar
+  [13]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5.jar
+  [14]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5-javadoc.zip
+  [15]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.5-sources.zip
+  [16]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4.5.jar
+  [17]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4.5-javadoc.zip
+  [18]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4.5-sources.zip
+  [19]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4.jar
+  [20]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4-javadoc.zip
+  [21]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.4-sources.zip
+  [22]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3.5.jar
+  [23]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3.5-javadoc.zip
+  [24]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3.5-sources.zip
+  [25]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3.jar
+  [26]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3-javadoc.zip
+  [27]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.3-sources.zip
+  [28]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.2.jar
+  [29]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.2-javadoc.zip
+  [30]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/simple-odf-0.2-sources.zip
