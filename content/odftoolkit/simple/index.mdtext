@@ -20,51 +20,61 @@ News!
 -----
 **Simple API Release 0.6.6**
 
-We released the Simple API version 0.6.6 on Auguest 12th, 2011.
-The improvements in this version focus on bug fix and increasing unit test coverage rate.
+We are pleased to announce the release of Simple API version 0.6.6 on Auguest 12th. The improvements in this version include:
+
+  - Two critical bugs in the Navigation API are fixed, as well as several other issues.   
+  - Page columns, a page layout feature in text documents, are supported. 
+  - Unit test coverage rate increased. This work improves the stability of our API.
+
+You can download it [here][1]. The full release notes can be found [here][2]. 
  
 What is Simple API?
 -------------------
 
-Simple API, also called Simple Java API for ODF, is a sub-project of ODF Toolkit Union. This is an **easy-to-use**, **high-level** Java API for creating, modifying and extracting data from [Open Document Format (ODF)][1] documents. It is written in pure Java and does not require users to install any document editor on their systems. It is a high level abstraction of the lower-level [ODFDOM API][2].
+Simple API, also called Simple Java API for ODF, is a sub-project of ODF Toolkit Union. This is an **easy-to-use**, **high-level** Java API for creating, modifying and extracting data from [Open Document Format (ODF)][3] documents. It is written in pure Java and does not require users to install any document editor on their systems. It is a high level abstraction of the lower-level [ODFDOM API][4].
 
 What can I do with Simple API?
 ------------------------------
 
-We provide lots of interesting demos to show the ability of Simple API. You can see the [demo page][3].
+We provide lots of interesting demos to show the ability of Simple API. You can see the [demo page][5].
 
 How do I get started?
 ---------------------
 
-Firstly, you can see the [getting started guide][4].
+Firstly, you can see the [getting started guide][6].
 
-Secondly, we recommend [cookbook][5] and [demo][6]. Both of them supply lots of sample code.
+Secondly, we recommend [cookbook][7] and [demo][8]. Both of them supply lots of sample code.
 
-Lastly, please reference the newest [javadoc][7], which supplies more details of Simple API.
+Lastly, please reference the newest [javadoc][9], which supplies more details of Simple API.
 
 Where can I get Simple API?
 ---------------------------
 
-You can go to [downloads page][8]. This page lists the jar, the javadoc and the source code of all the versions.
+You can go to [downloads page][10]. This page lists the jar, the javadoc and the source code of all the versions.
 
 Need More Infomation?
 -------------------------
 
-If you want to supply suggestion or feedback, please send [e-mail][9] to us.
+If you want to supply suggestion or feedback, please send [e-mail][11] to us.
 
-If you want to report a bug, please create issue on our [bugzilla][10].
+If you want to report a bug, please create issue on our [bugzilla][12].
 
-If you want to contribute code, please read the [developer guide wiki][11], which introduces how to build the development environment.
+If you want to contribute code, please read the [developer guide wiki][13], which introduces how to build the development environment.   
+
+If you want to dive into this project, please reference the [document page][14], which lists lots of useful materials.
 
 
-  [1]: http://en.wikipedia.org/wiki/OpenDocument
-  [2]: http://odftoolkit.org/projects/odfdom/pages/Home
-  [3]: demo/index.html
-  [4]: gettingstartguide.html
-  [5]: cookbook/index.html
-  [6]: demo/index.html
-  [7]: javadoc/index.html
-  [8]: downloads.html
-  [9]: mailto:devinhan@apache.org
-  [10]: http://odftoolkit.org/bugzilla/
-  [11]: http://odftoolkit.org/projects/simple/pages/Home
+  [1]: downloads.html
+  [2]: document/ReleaseNotes.html
+  [3]: http://en.wikipedia.org/wiki/OpenDocument
+  [4]: ../odfdom/index.html
+  [5]: demo/index.html
+  [6]: gettingstartguide.html
+  [7]: cookbook/index.html
+  [8]: demo/index.html
+  [9]: document/javadoc/index.html
+  [10]: downloads.html
+  [11]: mailto:devinhan@apache.org
+  [12]: http://odftoolkit.org/bugzilla/
+  [13]: http://odftoolkit.org/projects/simple/pages/Home
+  [14]: document/index.html
