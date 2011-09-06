@@ -1,262 +1,175 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-22366020-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-</head>
-<body scroll="no">
-<div id="page" align="center">
-<div id="content" style="width:920px" class="contentpanel">
-<div id="topheader">
-<div class="topright"> </div>
-</div>
-<div id="menu">
-<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-</div>
-<div id="subcontent" align ="left">
-<div align="left" class="titletext"> <span >
-<a href="../documents.html">Documents</a> > 
-<a href="index.html">Cookbook</a>
-</span>
-</div>
-<div class="contenttitle" id="Text">
-<br/>
-<a href="#Text" >Text</a>
+<p><strong><a href="../index.html">Documents</a></strong> > 
+<strong><a href="index.html">Cookbook</a></strong></p><a href="#Text" >Text</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Text Document.html">Text Document</a>
+ <li><a href="Text Document.html">Text Document</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Overview">Overview</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Generate TextDocument">Generate TextDocument</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Get TextDocument">Get TextDocument</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Paragraph">Paragraph</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Section">Section</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#List">List</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Header and Footer">Header and Footer</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Text Box">Text Box</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Image">Image</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Span">Span</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Text Document.html#Page Break">Page Break</a></li>
+ <li><a href="Text Document.html#Overview">Overview</a></li>
+ <li><a href="Text Document.html#Generate TextDocument">Generate TextDocument</a></li>
+ <li><a href="Text Document.html#Get TextDocument">Get TextDocument</a></li>
+ <li><a href="Text Document.html#Paragraph">Paragraph</a></li>
+ <li><a href="Text Document.html#Section">Section</a></li>
+ <li><a href="Text Document.html#List">List</a></li>
+ <li><a href="Text Document.html#Header and Footer">Header and Footer</a></li>
+ <li><a href="Text Document.html#Text Box">Text Box</a></li>
+ <li><a href="Text Document.html#Image">Image</a></li>
+ <li><a href="Text Document.html#Span">Span</a></li>
+ <li><a href="Text Document.html#Page Break">Page Break</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Presentation">
-<br/>
 <a href="#Presentation" >Presentation</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Presentation Document.html">Presentation Document</a>
+ <li><a href="Presentation Document.html">Presentation Document</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Presentation Document.html#Create Presentation Document">Create Presentation Document</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Presentation Document.html#Get Presentation Document">Get Presentation Document</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Presentation Document.html#Change Presentation Mode">Change Presentation Mode</a></li>
+ <li><a href="Presentation Document.html#Create Presentation Document">Create Presentation Document</a></li>
+ <li><a href="Presentation Document.html#Get Presentation Document">Get Presentation Document</a></li>
+ <li><a href="Presentation Document.html#Change Presentation Mode">Change Presentation Mode</a></li>
   </ul>
  </li>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Slide.html">Slide</a>
+ <li><a href="Slide.html">Slide</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Add Slide">Add Slide</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Get Slide">Get Slide</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Set/Get Slide Name/Index">Set/Get Slide Name/Index</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Copy Slide">Copy Slide</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Move/Delete Slide">Move/Delete Slide</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Add Text to Slide">Add Text to Slide</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Slide.html#Add Image to Slide">Add Image to Slide</a></li>
+ <li><a href="Slide.html#Add Slide">Add Slide</a></li>
+ <li><a href="Slide.html#Get Slide">Get Slide</a></li>
+ <li><a href="Slide.html#Set/Get Slide Name/Index">Set/Get Slide Name/Index</a></li>
+ <li><a href="Slide.html#Copy Slide">Copy Slide</a></li>
+ <li><a href="Slide.html#Move/Delete Slide">Move/Delete Slide</a></li>
+ <li><a href="Slide.html#Add Text to Slide">Add Text to Slide</a></li>
+ <li><a href="Slide.html#Add Image to Slide">Add Image to Slide</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Table">
-<br/>
 <a href="#Table" >Table</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Table.html">Table</a>
+ <li><a href="Table.html">Table</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Table.html#Overview">Overview</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Table.html#Create Table">Create Table</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Table.html#Find Table">Find Table</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Table.html#Delete Table">Delete Table</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Table.html#Set Table">Set Table</a></li>
+ <li><a href="Table.html#Overview">Overview</a></li>
+ <li><a href="Table.html#Create Table">Create Table</a></li>
+ <li><a href="Table.html#Find Table">Find Table</a></li>
+ <li><a href="Table.html#Delete Table">Delete Table</a></li>
+ <li><a href="Table.html#Set Table">Set Table</a></li>
   </ul>
  </li>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Column and Row.html">Column and Row</a>
+ <li><a href="Column and Row.html">Column and Row</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Column and Row.html#Get Column/Row">Get Column/Row</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Column and Row.html#Append or Insert Column/Row">Append or Insert Column/Row</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Column and Row.html#Remove Columns/Rows">Remove Columns/Rows</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Column and Row.html#Set Column/Row">Set Column/Row</a></li>
+ <li><a href="Column and Row.html#Get Column/Row">Get Column/Row</a></li>
+ <li><a href="Column and Row.html#Append or Insert Column/Row">Append or Insert Column/Row</a></li>
+ <li><a href="Column and Row.html#Remove Columns/Rows">Remove Columns/Rows</a></li>
+ <li><a href="Column and Row.html#Set Column/Row">Set Column/Row</a></li>
   </ul>
  </li>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Cell.html">Cell</a>
+ <li><a href="Cell.html">Cell</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell.html#Get Cell">Get Cell</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell.html#Control Cell Attributes">Control Cell Attributes</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set Cell Value Type">Get&Set Cell Value Type</a></li>
+ <li><a href="Cell.html#Get Cell">Get Cell</a></li>
+ <li><a href="Cell.html#Control Cell Attributes">Control Cell Attributes</a></li>
+ <li><a href="Cell.html#Get&Set Cell Value Type">Get&Set Cell Value Type</a></li>
   <ul>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set boolean type Cell">Get&Set boolean type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set currency type Cell">Get&Set currency type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set date type Cell">Get&Set date type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set float type Cell">Get&Set float type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set percentage type Cell">Get&Set percentage type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Get&Set string type Cell">Get&Set string type Cell</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Deal with the Time Value">Deal with the Time Value</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Cell.html#Something about Display Text">Something about Display Text</a></li>
+    <li><a href="Cell.html#Get&Set boolean type Cell">Get&Set boolean type Cell</a></li>
+    <li><a href="Cell.html#Get&Set currency type Cell">Get&Set currency type Cell</a></li>
+    <li><a href="Cell.html#Get&Set date type Cell">Get&Set date type Cell</a></li>
+    <li><a href="Cell.html#Get&Set float type Cell">Get&Set float type Cell</a></li>
+    <li><a href="Cell.html#Get&Set percentage type Cell">Get&Set percentage type Cell</a></li>
+    <li><a href="Cell.html#Get&Set string type Cell">Get&Set string type Cell</a></li>
+    <li><a href="Cell.html#Deal with the Time Value">Deal with the Time Value</a></li>
+    <li><a href="Cell.html#Something about Display Text">Something about Display Text</a></li>
   </ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell.html#Set image">Set image</a></li>
+ <li><a href="Cell.html#Set image">Set image</a></li>
   </ul>
  </li>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Cell Range.html">Cell Range</a>
+ <li><a href="Cell Range.html">Cell Range</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell Range.html#Get CellRange">Get CellRange</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell Range.html#Merge Text Table">Merge Text Table</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell Range.html#Merge Text Column">Merge Text Column</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell Range.html#Merge Text Row">Merge Text Row</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Cell Range.html#Merge SpreadSheet">Merge SpreadSheet</a></li>
+ <li><a href="Cell Range.html#Get CellRange">Get CellRange</a></li>
+ <li><a href="Cell Range.html#Merge Text Table">Merge Text Table</a></li>
+ <li><a href="Cell Range.html#Merge Text Column">Merge Text Column</a></li>
+ <li><a href="Cell Range.html#Merge Text Row">Merge Text Row</a></li>
+ <li><a href="Cell Range.html#Merge SpreadSheet">Merge SpreadSheet</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Chart">
-<br/>
 <a href="#Chart" >Chart</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Charts.html">Charts</a>
+ <li><a href="Charts.html">Charts</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Charts.html#Overview">Overview</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Charts.html#Create charts">Create charts</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Charts.html#Update charts">Update charts</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Charts.html#Get and delete charts">Get and delete charts</a></li>
+ <li><a href="Charts.html#Overview">Overview</a></li>
+ <li><a href="Charts.html#Create charts">Create charts</a></li>
+ <li><a href="Charts.html#Update charts">Update charts</a></li>
+ <li><a href="Charts.html#Get and delete charts">Get and delete charts</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Style">
-<br/>
 <a href="#Style" >Style</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Style Handling.html">Style Handling</a>
+ <li><a href="Style Handling.html">Style Handling</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Style Handling.html#Overview">Overview</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Style Handling.html#Font handling">Font handling</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Style Handling.html#Advanced font handling">Advanced font handling</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Style Handling.html#Border handling">Border handling</a></li>
+ <li><a href="Style Handling.html#Overview">Overview</a></li>
+ <li><a href="Style Handling.html#Font handling">Font handling</a></li>
+ <li><a href="Style Handling.html#Advanced font handling">Advanced font handling</a></li>
+ <li><a href="Style Handling.html#Border handling">Border handling</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Navigation">
-<br/>
 <a href="#Navigation" >Navigation</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html">Manipulate TextSearch</a>
+ <li><a href="Manipulate TextSearch.html">Manipulate TextSearch</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#TextNavigation">TextNavigation</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#TextSelection">TextSelection</a></li>
+ <li><a href="Manipulate TextSearch.html#TextNavigation">TextNavigation</a></li>
+ <li><a href="Manipulate TextSearch.html#TextSelection">TextSelection</a></li>
   <ul>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Get Index/Text of TextSelection">Get Index/Text of TextSelection</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Cut String">Cut String</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Paste String">Paste String</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Replace String">Replace String</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Add Reference to String">Add Reference to String</a></li>
- <li class="bodytext" style="text-indent:100px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#Add Comment">Add Comment</a></li>
+    <li><a href="Manipulate TextSearch.html#Get Index/Text of TextSelection">Get Index/Text of TextSelection</a></li>
+    <li><a href="Manipulate TextSearch.html#Cut String">Cut String</a></li>
+    <li><a href="Manipulate TextSearch.html#Paste String">Paste String</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String">Replace String</a></li>
+    <li><a href="Manipulate TextSearch.html#Add Reference to String">Add Reference to String</a></li>
+    <li><a href="Manipulate TextSearch.html#Add Comment">Add Comment</a></li>
   </ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#FieldSelection">FieldSelection</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate TextSearch.html#TextStyleNavigation">TextStyleNavigation</a></li>
+ <li><a href="Manipulate TextSearch.html#FieldSelection">FieldSelection</a></li>
+ <li><a href="Manipulate TextSearch.html#TextStyleNavigation">TextStyleNavigation</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="TextExtractor">
-<br/>
 <a href="#TextExtractor" >TextExtractor</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="TextExtractor.html">TextExtractor</a>
+ <li><a href="TextExtractor.html">TextExtractor</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="TextExtractor.html#Get Text">Get Text</a></li>
+ <li><a href="TextExtractor.html#Get Text">Get Text</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Field">
-<br/>
 <a href="#Field" >Field</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Fields.html">Fields</a>
+ <li><a href="Fields.html">Fields</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Variable Field">Variable Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Condition Field">Condition Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Hidden Field">Hidden Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Cross Reference Field">Cross Reference Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Chapter Field">Chapter Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Title and Subject Field">Title and Subject Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Author Field">Author Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Page Number Field">Page Number Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Page Number Field">Page Number Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Date Field">Date Field</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Fields.html#Time Field">Time Field</a></li>
+ <li><a href="Fields.html#Variable Field">Variable Field</a></li>
+ <li><a href="Fields.html#Condition Field">Condition Field</a></li>
+ <li><a href="Fields.html#Hidden Field">Hidden Field</a></li>
+ <li><a href="Fields.html#Cross Reference Field">Cross Reference Field</a></li>
+ <li><a href="Fields.html#Chapter Field">Chapter Field</a></li>
+ <li><a href="Fields.html#Title and Subject Field">Title and Subject Field</a></li>
+ <li><a href="Fields.html#Author Field">Author Field</a></li>
+ <li><a href="Fields.html#Page Number Field">Page Number Field</a></li>
+ <li><a href="Fields.html#Page Number Field">Page Number Field</a></li>
+ <li><a href="Fields.html#Date Field">Date Field</a></li>
+ <li><a href="Fields.html#Time Field">Time Field</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<div class="contenttitle" id="Metadata">
-<br/>
 <a href="#Metadata" >Metadata</a>
 <hr/>
-</div>
-<div class="bodytext">
 <ul>
- <li class="bodytext" style="font-size:16px"><img src="../images/link.png"></img><a href="Manipulate Metadata.html">Manipulate Metadata</a>
+ <li><a href="Manipulate Metadata.html">Manipulate Metadata</a>
   <ul>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate Metadata.html#Overview">Overview</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate Metadata.html#Get Meta object">Get Meta object</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate Metadata.html#Access metadata">Access metadata</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate Metadata.html#Access the user defined element">Access the user defined element</a></li>
- <li class="bodytext" style="text-indent:50px;"><img src="../images/link.png"></img><a href="Manipulate Metadata.html#Access the document statistics">Access the document statistics</a></li>
+ <li><a href="Manipulate Metadata.html#Overview">Overview</a></li>
+ <li><a href="Manipulate Metadata.html#Get Meta object">Get Meta object</a></li>
+ <li><a href="Manipulate Metadata.html#Access metadata">Access metadata</a></li>
+ <li><a href="Manipulate Metadata.html#Access the user defined element">Access the user defined element</a></li>
+ <li><a href="Manipulate Metadata.html#Access the document statistics">Access the document statistics</a></li>
   </ul>
  </li>
 </ul>
-</div>
-<br/>
-</div>
-<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html>
