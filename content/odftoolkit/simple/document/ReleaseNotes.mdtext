@@ -1,8 +1,5 @@
 Title: Simple API Release Notes
 
-**Simple API Release Notes**
-----------------------------
-
 **Release 0.6.6**  
 *Auguest 12th 2011*
 
@@ -95,44 +92,31 @@ We also make some enhancements based on user requests:
 ***API changes since 0.5.5 Release***   
 
 Method Change List  
-Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
+Note: The first column 'Java class' package is relative to 'org.odftoolkit'.     
 
-{|- border="1"
-!Previous Class
-!Previous Method
-!New Class
-!New Method
-|-
-|simple.table.Table
-|long getWidth()
-|simple.table.Table
-|double getWidth()
-|-
-|simple.table.Table
-|void setWidth(long)
-|simple.table.Table
-|void setWidth(double)
-|-
-|simple.table.Column
-|long getWidth()
-|simple.table.Column
-|double getWidth()
-|-
-|simple.table.Column
-|void  setWidth(long)
-|simple.table.Column
-|void  setWidth(double)
-|-
-|simple.table.Row
-|long getHeight()
-|simple.table.Table
-|double getHeight()
-|-
-|simple.table.Table
-|void setHeight(long)
-|simple.table.Table
-|void setHeight(double)
-|}
+<table>
+<tr>
+<td>Previous Class</td><td>Previous Method</td><td>New Class</td><td>New Method</td>
+</tr>
+<tr>
+<td>simple.table.Table</td><td>long getWidth()</td><td>simple.table.Table</td><td>double getWidth()</td>
+</tr>
+<tr>
+<td>simple.table.Table</td><td>void setWidth(long)</td><td>simple.table.Table</td><td>void setWidth(double)</td>
+</tr>
+<tr>
+<td>simple.table.Column</td><td>long getWidth()</td><td>simple.table.Column</td><td>double getWidth()</td>
+</tr>
+<tr>
+<td>simple.table.Column</td><td>void  setWidth(long)</td><td>simple.table.Column</td><td>void  setWidth(double)</td>
+</tr>
+<tr>
+<td>simple.table.Row</td><td>long getHeight()</td><td>simple.table.Table</td><td>double getHeight()</td>
+</tr>
+<tr>
+<td>simple.table.Table</td><td>void setHeight(long)</td><td>simple.table.Table</td><td>void setHeight(double)</td>
+</tr>
+</table>
 
 **Release 0.5.5**    
 *April 30th 2011*   
@@ -160,26 +144,21 @@ We also made some useful enhancements based on user requests:
  - [Bug 329][36] -  Unable to set the column widths of a table with precision. 
  - [Bug 333][37] -  Provide convenient methods for image and text span.
 
-***API changes since 0.5 Release***
-=====Method Change List=====
+***API changes since 0.5 Release***  
+ 
+Method Change List      
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
-
-{|- border="1"
-!Previous Class
-!Previous Method
-!New Class
-!New Method
-|-
-|simple.table.Cell
-|void  setImage(URI)
-|simple.table.Cell
-|Image  setImage(URI)
-|-
-|simple.table.Cell
-|Image  getImage()
-|simple.table.Cell
-|BufferedImage  getBufferedImage()
-|}
+<table>
+<tr>
+<td>Previous Class</td><td>Previous Method</td><td>New Class</td><td>New Method</td>
+</tr>
+<tr>
+<td>simple.table.Cell</td><td>void  setImage(URI)</td><td>simple.table.Cell</td><td>Image  setImage(URI)</td>
+</tr>
+<tr>
+<td>simple.table.Cell</td><td>Image  getImage()</td><td>simple.table.Cell</td><td>BufferedImage  getBufferedImage()</td>
+</tr>
+</table>
 
 **Release 0.5**   
 *April 2nd 2011*   
@@ -210,22 +189,17 @@ You can implement powerful document generation scenarios with these API. You can
 Method Change List   
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
 
-{|- border="1"
-!Previous Class
-!Previous Method
-!New Class
-!New Method
-|-
-|simple.table.CellStyleHandler
-|getCellStyleElementForRead()
-|simple.style.DefaultStyleHandler
-|getStyleElementForRead()
-|-
-|simple.table.CellStyleHandler
-|getCellStyleElementForWrite()
-|simple.style.DefaultStyleHandler
-|getStyleElementForWrite()
-|}
+<table>
+<tr>
+<td>Previous Class</td><td>Previous Method</td><td>New Class</td><td>New Method</td>
+</tr>
+<tr>
+<td>simple.table.CellStyleHandler</td><td>getCellStyleElementForRead()</td><td>simple.style.DefaultStyleHandler</td><td>getStyleElementForRead()</td>
+</tr>
+<tr>
+<td>simple.table.CellStyleHandler</td><td>getCellStyleElementForWrite()</td><td>simple.style.DefaultStyleHandler</td><td>getStyleElementForWrite()</td>
+</tr>
+</table>
 
 **Release 0.4.5**   
 *March 4th 2011*    
@@ -297,75 +271,64 @@ The enum's defined in org.odftoolkit.simple.style.StyleTypeDefinitions have chan
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
 
-{|- border="1"
-!Class
-!Enum Previous name
-!Enum New name
-|-
-|org.odftoolkit.simple.style.StyleTypeDefinitions
-|SimpleFontStyle
-|FontStyle
-|-
-|
-|SimpleHorizontalAlignmentType
-|HorizontalAlignmentType
-|-
-|
-|SimpleVerticalAlignmentType
-|VerticalAlignmentType
-|-
-|
-|SimpleCellBordersType
-|CellBordersType
-|}
+<table>
+<tr>
+<td>Class</td><td>Enum Previous name</td><td>Enum New name</td>
+</tr>
+<tr>
+<td>style.StyleTypeDefinitions</td><td>SimpleFontStyle</td><td>FontStyle</td>
+</tr>
+<tr>
+<td></td><td>SimpleHorizontalAlignmentType</td><td>HorizontalAlignmentType</td>
+</tr>
+<tr>
+<td></td><td>SimpleVerticalAlignmentType</td><td>VerticalAlignmentType</td>
+</tr>
+<tr>
+<td></td><td>SimpleCellBordersType</td><td>CellBordersType</td>
+</tr>
+</table>
 
 Method name change list     
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
 
-{|- border="1"
-!Class
-!Previous method
-!New method
-|-
-|common.navigation.Navigation
-|getCurrentItem()
-|nextSelection()
-|-
-|common.navigation.TextNavigation
-|getCurrentItem()
-|nextSelection()
-|-
-|common.navigation.TextStyleNavigation
-|getCurrentItem()
-|nextSelection()
-|-
-|style.Font
-|setSimpleFontStyle(StyleTypeDefinitions$SimpleFontStyle)
-|setFontStyle(StyleTypeDefinitions$FontStyle)
-|-
-|
-|StyleTypeDefinitions$SimpleFontStyle  getSimpleFontStyle()
-|StyleTypeDefinitions$FontStyle  getFontStyle()
-|}
+<table>
+<tr>
+<td>Class</td><td>Previous method</td><td>New method</td>
+</tr>
+<tr>
+<td>common.navigation.Navigation</td><td>getCurrentItem()</td><td>nextSelection()</td>
+</tr>
+<tr>
+<td>common.navigation.TextNavigation</td><td>getCurrentItem()</td><td>nextSelection()</td>
+</tr>
+<tr>
+<td>common.navigation.TextStyleNavigation</td><td>getCurrentItem()</td><td>nextSelection()</td>
+</tr>
+<tr>
+<td>style.Font</td><td>setSimpleFontStyle(StyleTypeDefinitions$SimpleFontStyle)</td><td>setFontStyle(StyleTypeDefinitions$FontStyle)</td>
+</tr>
+<tr>
+<td></td><td>StyleTypeDefinitions.SimpleFontStyle  getSimpleFontStyle()</td><td>StyleTypeDefinitions$FontStyle  getFontStyle()</td>
+</tr>
+</table>
 
 Method deleted    
 The locale handling methods in org.odftoolkit.simple.style.Font have been removed in order to simplify the API. Users who want to use advanced functions can use the suggested substitute.
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
 
-{|- border="1"
-!Class
-!deleted method
-!suggested substitute
-|-
-|style.Font
-|Locale setLocale()
-|CellStyleHandler.setFont(Font font, Locale language)
-|-
-|style.Font
-|Locale getLocale()
-|CellStyleHandler.getCountry(ScriptType type),CellStyleHandler.getLanguage(ScriptType type)
-|}
+<table>
+<tr>
+<td>Class</td><td>deleted method</td><td>suggested substitute</td>
+</tr>
+<tr>
+<td>style.Font</td><td>Locale setLocale()</td><td>CellStyleHandler.setFont(Font font, Locale language)</td>
+</tr>
+<tr>
+<td>style.Font</td><td>Locale getLocale()</td><td>CellStyleHandler.getCountry(ScriptType type),CellStyleHandler.getLanguage(ScriptType type)</td>
+</tr>
+</table>
 
 **Release 0.3**  
 *December 1st 2010*    
@@ -386,42 +349,29 @@ There are also a few updates in table cell functions: some functions are enhance
 Package/Class Change List    
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
 
-{|- border="1"
-!Previous Package
-!Previous Class
-!New Package
-!New Class
-|-
-|simple.text.search
-|Navigation
-|simple.common.navigation
-|Navigation
-|-
-|
-|Selection
-|
-|Selection
-|-
-|
-|TextNavigation
-|
-|TextNavigation
-|-
-|
-|TextSelection
-|
-|TextSelection
-|-
-|
-|TextStyleNavigation
-|
-|TextStyleNavigation
-|-
-|
-|InvalidNavigationException
-|
-|InvalidNavigationException
-|}
+<table>
+<tr>
+<td>Previous Package</td><td>Previous Class</td><td>New Package</td><td>New Class</td>
+</tr>
+<tr>
+<td>simple.text.search</td><td>Navigation</td><td>simple.common.navigation</td><td>Navigation</td>
+</tr>
+<tr>
+<td></td><td>Selection</td><td></td><td>Selection</td>
+</tr>
+<tr>
+<td></td><td>TextNavigation</td><td></td><td>TextNavigation</td>
+</tr>
+<tr>
+<td></td><td>TextSelection</td><td></td><td>TextSelection</td>
+</tr>
+<tr>
+<td></td><td>TextStyleNavigation</td><td></td><td>TextStyleNavigation</td>
+</tr>
+<tr>
+<td></td><td>InvalidNavigationException</td><td></td><td>InvalidNavigationException</td>
+</tr>
+</table>
 
 **Release 0.2**   
 
