@@ -1,40 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Fields</title>
- <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-22366020-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-</head>
-<body>
-<div id="page" align="center">
-<div id="content" style="width:920px" class="contentpanel">
-<div id="topheader">
-<div class="topright"> </div>
-</div>
-<div id="menu">
-<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-</div>
-<div id="subcontent" align ="left">
-<div align="left" class="titletext"> <span >
-<a href="../documents.html">Documents</a> > 
-<a href="index.html">Cookbook</a> ><a href="Fields.html">Fields</a>
-</span>
-</div>
+<strong><a href="../index.html">Documents</a></strong> > <strong><a href="index.html">Cookbook</a></strong> ><strong><a href="Fields.html">Fields</a></strong>
 <div class="navigation">
  <ul>
   <li><a href="TextExtractor.html">previous</a></li>
@@ -42,11 +6,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
  </ul>
 </div>
 <br/>
-<div class="contenttitle" id="Variable Field">
-<br/>
-<a href="#Variable Field" >Variable Field</a>
+<strong><a href="#Variable Field" >Variable Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			You can use the following code to create a variable field, and set the value.
 </div>
@@ -63,11 +24,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			simpleVariableField.updateField("user variable content", null);<br/>
 			simpleVariableField.displayField(paragraph.getOdfElement());<br/>
 </pre>
-<br/><div class="contenttitle" id="Condition Field">
-<br/>
-<a href="#Condition Field" >Condition Field</a>
+<br/><strong><a href="#Condition Field" >Condition Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a condition field.
 </div>
@@ -76,11 +34,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			<span class='javaclass'>ConditionField</span> conditionField = <span class='javaclass'>Fields</span>.createConditionField(newParagraph.getOdfElement(), "test_con_variable == \"true\"",<br/>
 					"trueText", "falseText");<br/>
 </pre>
-<br/><div class="contenttitle" id="Hidden Field">
-<br/>
-<a href="#Hidden Field" >Hidden Field</a>
+<br/><strong><a href="#Hidden Field" >Hidden Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a hidden field.
 </div>
@@ -88,11 +43,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			newParagraph = doc.addParagraph("<span class='javaclass'>Hide</span> <span class='javaclass'>Text</span> <span class='javaclass'>Field</span> <span class='javaclass'>Test</span>:");<br/>
 			conditionField = <span class='javaclass'>Fields</span>.createHiddenTextField(newParagraph.getOdfElement(), "test_con_variable == \"true\"", "hiddenText");<br/>
 </pre>
-<br/><div class="contenttitle" id="Cross Reference Field">
-<br/>
-<a href="#Cross Reference Field" >Cross Reference Field</a>
+<br/><strong><a href="#Cross Reference Field" >Cross Reference Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a reference field.
 </div>
@@ -107,22 +59,16 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <br/><pre class='code' id="code5">
 			referenceField.appendReferenceTo(doc.addParagraph("<span class='javaclass'>User</span> <span class='javaclass'>Reference</span> <span class='javaclass'>Field</span>:").getOdfElement(), <span class='javaclass'>ReferenceField</span>.<span class='javaclass'>DisplayType</span>.<span class='javaclass'>TEXT</span>);<br/>
 </pre>
-<br/><div class="contenttitle" id="Chapter Field">
-<br/>
-<a href="#Chapter Field" >Chapter Field</a>
+<br/><strong><a href="#Chapter Field" >Chapter Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a chapter field.
 </div>
 <br/><pre class='code' id="code6">
 			<span class='javaclass'>ChapterField</span> chapterField = <span class='javaclass'>Fields</span>.createChapterField(doc.addParagraph("<span class='javaclass'>Chapter</span>:").getOdfElement());<br/>
 </pre>
-<br/><div class="contenttitle" id="Title and Subject Field">
-<br/>
-<a href="#Title and Subject Field" >Title and Subject Field</a>
+<br/><strong><a href="#Title and Subject Field" >Title and Subject Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a title field.
 </div>
@@ -135,11 +81,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <br/><pre class='code' id="code8">
 			<span class='javaclass'>SubjectField</span> subjectField = <span class='javaclass'>Fields</span>.createSubjectField(doc.addParagraph("<span class='javaclass'>The</span> <span class='javaclass'>Subject</span>:").getOdfElement());<br/>
 </pre>
-<br/><div class="contenttitle" id="Author Field">
-<br/>
-<a href="#Author Field" >Author Field</a>
+<br/><strong><a href="#Author Field" >Author Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a author initial field and a author name field.
 </div>
@@ -147,11 +90,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			<span class='javaclass'>AuthorField</span> authorField = <span class='javaclass'>Fields</span>.createAuthorInitialsField(doc.addParagraph("<span class='javaclass'>The</span> initials of the author :").getOdfElement());<br/>
 			authorField = <span class='javaclass'>Fields</span>.createAuthorNameField(doc.addParagraph("<span class='javaclass'>Author</span>:").getOdfElement());<br/>
 </pre>
-<br/><div class="contenttitle" id="Page Number Field">
-<br/>
-<a href="#Page Number Field" >Page Number Field</a>
+<br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a current page number field.
 </div>
@@ -167,11 +107,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			numberField = <span class='javaclass'>Fields</span>.createPreviousPageNumberField(doc.addParagraph("<span class='javaclass'>Previous</span> <span class='javaclass'>Page</span> <span class='javaclass'>Number</span>:").getOdfElement());<br/>
 			numberField = <span class='javaclass'>Fields</span>.createNextPageNumberField(doc.addParagraph("<span class='javaclass'>Next</span> <span class='javaclass'>Page</span> <span class='javaclass'>Number</span>:").getOdfElement());<br/>
 </pre>
-<br/><div class="contenttitle" id="Page Number Field">
-<br/>
-<a href="#Page Number Field" >Page Number Field</a>
+<br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a page count field, and set the number format.
 </div>
@@ -179,11 +116,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			<span class='javaclass'>PageCountField</span> countField = <span class='javaclass'>Fields</span>.createPageCountField(doc.addParagraph("<span class='javaclass'>Page</span> <span class='javaclass'>Count</span>:").getOdfElement());<br/>
 			countField.setNumberFormat(<span class='javaclass'>NumberFormat</span>.UPPERCASE_LATIN_ALPHABET);<br/>
 </pre>
-<br/><div class="contenttitle" id="Date Field">
-<br/>
-<a href="#Date Field" >Date Field</a>
+<br/><strong><a href="#Date Field" >Date Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a date field, and set the format.
 </div>
@@ -191,11 +125,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			<span class='javaclass'>DateField</span> dateField = <span class='javaclass'>Fields</span>.createDateField(doc.addParagraph("<span class='javaclass'>Date</span>:").getOdfElement());<br/>
 			dateField.formatDate("yy-<span class='javaclass'>MM</span>-dd");<br/>
 </pre>
-<br/><div class="contenttitle" id="Time Field">
-<br/>
-<a href="#Time Field" >Time Field</a>
+<br/><strong><a href="#Time Field" >Time Field</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 			Following code can be used to create a time field, and set the format.
 </div>
@@ -211,10 +142,3 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
   <li><a href="#">top</a></li>
  </ul>
 </div>
-<br/>
-</div>
-<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html>

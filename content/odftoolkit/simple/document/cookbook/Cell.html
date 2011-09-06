@@ -1,40 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Cell</title>
- <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-22366020-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-</head>
-<body>
-<div id="page" align="center">
-<div id="content" style="width:920px" class="contentpanel">
-<div id="topheader">
-<div class="topright"> </div>
-</div>
-<div id="menu">
-<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-</div>
-<div id="subcontent" align ="left">
-<div align="left" class="titletext"> <span >
-<a href="../documents.html">Documents</a> > 
-<a href="index.html">Cookbook</a> ><a href="Cell.html">Cell</a>
-</span>
-</div>
+<strong><a href="../index.html">Documents</a></strong> > <strong><a href="index.html">Cookbook</a></strong> ><strong><a href="Cell.html">Cell</a></strong>
 <div class="navigation">
  <ul>
   <li><a href="Column and Row.html">previous</a></li>
@@ -42,11 +6,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
  </ul>
 </div>
 <br/>
-<div class="contenttitle" id="Get Cell">
-<br/>
-<a href="#Get Cell" >Get Cell</a>
+<strong><a href="#Get Cell" >Get Cell</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 If you want to get the specified cell in a table,you can use the getCellByPosition method of Table.
 </div>
@@ -83,11 +44,8 @@ The code below shows how you can do that:
 	 <span class='javaclass'>Row</span> row1=cell.getTableRow();<br/>
 	 <span class='javaclass'>Column</span> column1=cell.getTableColumn();<br/>
 </pre>
-<br/><div class="contenttitle" id="Control Cell Attributes">
-<br/>
-<a href="#Control Cell Attributes" >Control Cell Attributes</a>
+<br/><strong><a href="#Control Cell Attributes" >Control Cell Attributes</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 Use the getStyleName() method you can get the style name of the cell.
 </div>
@@ -182,11 +140,8 @@ RemoveContent remove all of the cell while the removeTextContent only remove the
 	   cell.removeContent();<br/>
 	   cell.removeTextContent();<br/>
 </pre>
-<br/><div class="contenttitle" id="Get&Set Cell Value Type">
-<br/>
-<a href="#Get&Set Cell Value Type" >Get&Set Cell Value Type</a>
+<br/><strong><a href="#Get&Set Cell Value Type" >Get&Set Cell Value Type</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 	 The cell value can have different types,for the setValueType method:	 the parameter can be 	 <ul><li>"boolean"</li>	 <li>"currency"</li>	 <li>"date"</li>	 <li>"float"</li>         <li>"percentage"</li>	 <li>"string"</li>	 <li>"time"</li>	 <li>"void"</li>	 </ul>	 If the parameter type is not a valid cell type, an IllegalArgumentException will be thrown.
 </div>
@@ -197,11 +152,8 @@ RemoveContent remove all of the cell while the removeTextContent only remove the
 <br/><div class="bodytext">
 For the following getXXXValue() method:it gets the cell value as xxx type.An IllegalArgumentException will be thrown if the cell type is not xxx.
 </div>
-<div class="contenttitle2" id="Get&Set boolean type Cell">
-<br/>
 <a href="#Get&Set boolean type Cell" >Get&Set boolean type Cell</a>
 <hr/>
-</div>
 <div class="bodytext">
 	For setBooleanValue method:it sets the cell value as a boolean and sets the value type to be boolean.
 </div>
@@ -209,11 +161,8 @@ For the following getXXXValue() method:it gets the cell value as xxx type.An Ill
 	   <span class='basic'>boolean</span> booleanValue=cell.getBooleanValue();<br/>
 	   cell.setBooleanValue(booleanValue);<br/>
 </pre>
-<br/><div class="contenttitle2" id="Get&Set currency type Cell">
-<br/>
-<a href="#Get&Set currency type Cell" >Get&Set currency type Cell</a>
+<br/><a href="#Get&Set currency type Cell" >Get&Set currency type Cell</a>
 <hr/>
-</div>
 <div class="bodytext">
 For the following getting methods,if the value type is not "currency", an IllegalArgumentException will be thrown.
 </div>
@@ -231,38 +180,26 @@ You can also set currency value and currency format.Please note the overall form
 	   cell.setCurrencyValue(100.00, "<span class='javaclass'>USD</span>");<br/>
 	   cell.setCurrencyFormat("$", "$#,##0.00");<br/>
 </pre>
-<br/><div class="contenttitle2" id="Get&Set date type Cell">
-<br/>
-<a href="#Get&Set date type Cell" >Get&Set date type Cell</a>
+<br/><a href="#Get&Set date type Cell" >Get&Set date type Cell</a>
 <hr/>
-</div>
 <br/><pre class='code' id="code18">
 	   <span class='javaclass'>Calendar</span> dateValue=cell.getDateValue(); <br/>
 	   cell.setDateValue(<span class='modifier'>new</span> <span class='javaclass'>GregorianCalendar</span>(2010,5,1));<br/>
 </pre>
-<br/><div class="contenttitle2" id="Get&Set float type Cell">
-<br/>
-<a href="#Get&Set float type Cell" >Get&Set float type Cell</a>
+<br/><a href="#Get&Set float type Cell" >Get&Set float type Cell</a>
 <hr/>
-</div>
 <br/><pre class='code' id="code19">
 	  <span class='basic'>double</span> floatValue=cell.getDoubleValue();  <br/>
 	  cell.setDoubleValue(<span class='modifier'>new</span> <span class='javaclass'>Double</span>(22.99f));<br/>
 </pre>
-<br/><div class="contenttitle2" id="Get&Set percentage type Cell">
-<br/>
-<a href="#Get&Set percentage type Cell" >Get&Set percentage type Cell</a>
+<br/><a href="#Get&Set percentage type Cell" >Get&Set percentage type Cell</a>
 <hr/>
-</div>
 <br/><pre class='code' id="code20">
 	  <span class='basic'>double</span> percentageValue=cell.getPercentageValue();<br/>
 	  cell.setPercentageValue(0.89);<br/>
 </pre>
-<br/><div class="contenttitle2" id="Get&Set string type Cell">
-<br/>
-<a href="#Get&Set string type Cell" >Get&Set string type Cell</a>
+<br/><a href="#Get&Set string type Cell" >Get&Set string type Cell</a>
 <hr/>
-</div>
 <div class="bodytext">
 If the cell type is not string, the display text will be returned.
 </div>
@@ -270,11 +207,8 @@ If the cell type is not string, the display text will be returned.
 	  <span class='javaclass'>String</span> stringValue=cell.getStringValue();   <br/>
 	  cell.setStringValue("simple");<br/>
 </pre>
-<br/><div class="contenttitle2" id="Deal with the Time Value">
-<br/>
-<a href="#Deal with the Time Value" >Deal with the Time Value</a>
+<br/><a href="#Deal with the Time Value" >Deal with the Time Value</a>
 <hr/>
-</div>
 <div class="bodytext">
 If you want to get the string type of time value,you can format it:
 </div>
@@ -283,11 +217,8 @@ If you want to get the string type of time value,you can format it:
 	  <span class='javaclass'>SimpleDateFormat</span> simpleFormat = <span class='modifier'>new</span> <span class='javaclass'>SimpleDateFormat</span>("'<span class='javaclass'>PT</span>'<span class='javaclass'>HH</span>'H'mm'M'ss'S'");<br/>
           <span class='javaclass'>String</span>  timeString= simpleFormat.format(cell.getTimeValue().getTime());<br/>
 </pre>
-<br/><div class="contenttitle2" id="Something about Display Text">
-<br/>
-<a href="#Something about Display Text" >Something about Display Text</a>
+<br/><a href="#Something about Display Text" >Something about Display Text</a>
 <hr/>
-</div>
 <div class="bodytext">
           Please note the display text in ODF viewer might be different from the value set by this method,	  because the displayed text in ODF viewer is calculated and set by editor. 
 </div>
@@ -295,11 +226,8 @@ If you want to get the string type of time value,you can format it:
 	  <span class='javaclass'>String</span> displayText=cell.getDisplayText();<br/>
 	  cell.setDisplayText(displayText);<br/>
 </pre>
-<br/><div class="contenttitle" id="Set image">
-<br/>
-<a href="#Set image" >Set image</a>
+<br/><strong><a href="#Set image" >Set image</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		From version 0.5.5, we support high level APIs for images.	    You can use following codes to set an image to a cell.
 </div>
@@ -325,10 +253,3 @@ If you want to get the string type of time value,you can format it:
   <li><a href="#">top</a></li>
  </ul>
 </div>
-<br/>
-</div>
-<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html>

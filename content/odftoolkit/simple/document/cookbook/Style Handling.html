@@ -1,40 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Style Handling</title>
- <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-22366020-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-</head>
-<body>
-<div id="page" align="center">
-<div id="content" style="width:920px" class="contentpanel">
-<div id="topheader">
-<div class="topright"> </div>
-</div>
-<div id="menu">
-<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-</div>
-<div id="subcontent" align ="left">
-<div align="left" class="titletext"> <span >
-<a href="../documents.html">Documents</a> > 
-<a href="index.html">Cookbook</a> ><a href="Style Handling.html">Style Handling</a>
-</span>
-</div>
+<strong><a href="../index.html">Documents</a></strong> > <strong><a href="index.html">Cookbook</a></strong> ><strong><a href="Style Handling.html">Style Handling</a></strong>
 <div class="navigation">
  <ul>
   <li><a href="Charts.html">previous</a></li>
@@ -42,19 +6,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
  </ul>
 </div>
 <br/>
-<div class="contenttitle" id="Overview">
-<br/>
-<a href="#Overview" >Overview</a>
+<strong><a href="#Overview" >Overview</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 Style handling methods provide convenient methods to set font and borders.
 </div>
-<div class="contenttitle" id="Font handling">
-<br/>
-<a href="#Font handling" >Font handling</a>
+<strong><a href="#Font handling" >Font handling</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		The most simple method to define font settings is to create a font		object, and set it to a cell object.		The below code snippet defines a font object to describe "Arial"		italic font with size "12pt" and black color,		and then set it to a cell. The font will work for western characters		by default.
 </div>
@@ -75,11 +33,8 @@ Style handling methods provide convenient methods to set font and borders.
 		<span class='javaclass'>StyleTypeDefinitions</span>.<span class='javaclass'>FontStyle</span> fontStyle = theFont.getFontStyle();<br/>
 		<span class='javaclass'>Color</span> fontColor = theFont.getColor();<br/>
 </pre>
-<br/><div class="contenttitle" id="Advanced font handling">
-<br/>
-<a href="#Advanced font handling" >Advanced font handling</a>
+<br/><strong><a href="#Advanced font handling" >Advanced font handling</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		<i>CellStyleHandler</i> can help you to achieve advanced functions.		In Open Document Format, there can be different font settings for		different script types. 		For example, a font setting for English characters and another font		setting for Chinese characters.		If you want to define the font setting for other script types, you		can reference to below codes.		The below code snippet defines a font for Chinese characters.
 </div>
@@ -95,11 +50,8 @@ Style handling methods provide convenient methods to set font and borders.
 		<span class='javaclass'>Font</span> chineseFont = styleHandler.getFont(<span class='javaclass'>Document</span>.<span class='javaclass'>ScriptType</span>.<span class='javaclass'>CJK</span>);<br/>
 		<span class='javaclass'>Font</span> complexFont = styleHandler.getFont(<span class='javaclass'>Document</span>.<span class='javaclass'>ScriptType</span>.<span class='javaclass'>CTL</span>);<br/>
 </pre>
-<br/><div class="contenttitle" id="Border handling">
-<br/>
-<a href="#Border handling" >Border handling</a>
+<br/><strong><a href="#Border handling" >Border handling</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		The most simple way to set border is to create a border object and		then set it to a cell object.		Below code snippet illustrates how to set a cell object with four		borders.
 </div>
@@ -141,10 +93,3 @@ Style handling methods provide convenient methods to set font and borders.
   <li><a href="#">top</a></li>
  </ul>
 </div>
-<br/>
-</div>
-<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html>

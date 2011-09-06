@@ -1,40 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Charts</title>
- <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-22366020-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-</head>
-<body>
-<div id="page" align="center">
-<div id="content" style="width:920px" class="contentpanel">
-<div id="topheader">
-<div class="topright"> </div>
-</div>
-<div id="menu">
-<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
-</div>
-<div id="subcontent" align ="left">
-<div align="left" class="titletext"> <span >
-<a href="../documents.html">Documents</a> > 
-<a href="index.html">Cookbook</a> ><a href="Charts.html">Charts</a>
-</span>
-</div>
+<strong><a href="../index.html">Documents</a></strong> > <strong><a href="index.html">Cookbook</a></strong> ><strong><a href="Charts.html">Charts</a></strong>
 <div class="navigation">
  <ul>
   <li><a href="Cell Range.html">previous</a></li>
@@ -42,19 +6,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
  </ul>
 </div>
 <br/>
-<div class="contenttitle" id="Overview">
-<br/>
-<a href="#Overview" >Overview</a>
+<strong><a href="#Overview" >Overview</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 	    Since 0.6, Simple ODF provides methods to manipulate charts in text document, spreadsheet document and presentation document.		You can create, update and delete charts with these methods.
 </div>
-<div class="contenttitle" id="Create charts">
-<br/>
-<a href="#Create charts" >Create charts</a>
+<strong><a href="#Create charts" >Create charts</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		We all know, a chart is associated with a table. In order to create a chart, you must determine the data set of this chart.		The data set can be a cell range of a table, for example:
 </div>
@@ -114,11 +72,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		chart = slide.createChart("<span class='javaclass'>Count</span> of <span class='javaclass'>Visits</span>", spreadsheetDoc,<br/>
 				cellRange, <span class='basic'>true</span>, <span class='basic'>true</span>, <span class='basic'>false</span>, <span class='basic'>null</span>);<br/>
 </pre>
-<br/><div class="contenttitle" id="Update charts">
-<br/>
-<a href="#Update charts" >Update charts</a>
+<br/><strong><a href="#Update charts" >Update charts</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		You can update charts properties, for example, the title, axis title, chart type, whether to apply 3D effect, whether to use legend with API.		For example:
 </div>
@@ -135,11 +90,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <br/><pre class='code' id="code8">
 		chart.setChartData(<span class='modifier'>new</span> <span class='javaclass'>DataSet</span>(<span class='javaclass'>CellRangeAddressList</span>.valueOf("A.A1:A.C4"), spreadsheetDoc, true, true, true));<br/>
 </pre>
-<br/><div class="contenttitle" id="Get and delete charts">
-<br/>
-<a href="#Get and delete charts" >Get and delete charts</a>
+<br/><strong><a href="#Get and delete charts" >Get and delete charts</a></strong>
 <hr/>
-</div>
 <div class="bodytext">
 		You can get charts by title e.g.
 </div>
@@ -174,10 +126,3 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
   <li><a href="#">top</a></li>
  </ul>
 </div>
-<br/>
-</div>
-<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
-</div>
-</div>
-</body>
-</html>
