@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Manipulate Metadata</title>
+ <link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-22366020-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body>
+<div id="page" align="center">
+<div id="content" style="width:920px" class="contentpanel">
+<div id="topheader">
+<div class="topright"> </div>
+</div>
+<div id="menu">
+<div align="left" class="smallwhitetext"> <a href="../index.html" class="home"> </a> <a href="../downloads.html" class="download"></a> <a href="../documents.html" class="document"></a> <a href="../demo/index.html" class="sample"> </a> </div>
+</div>
+<div id="subcontent" align ="left">
+<div align="left" class="titletext"> <span >
+<a href="../documents.html">Documents</a> > 
+<a href="index.html">Cookbook</a> ><a href="Manipulate Metadata.html">Manipulate Metadata</a>
+</span>
+</div>
+<div class="navigation">
+ <ul>
+  <li><a href="Fields.html">previous</a></li>
+  <li><a href="Text Document.html">next</a></li>
+ </ul>
+</div>
+<br/>
+<div class="contenttitle" id="Overview">
+<br/>
+<a href="#Overview" >Overview</a>
+<hr/>
+</div>
+<div class="bodytext">
+     This <a href="">Meta</a> API supports to access and set document metadata. It covers the metadata definitions in <a href="http:docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part1.html#a_4_Metadata">ODF Specification 1.2 Committee Draft05</a>
+</div>
+<div class="contenttitle" id="Get Meta object">
+<br/>
+<a href="#Get Meta object" >Get Meta object</a>
+<hr/>
+</div>
+<div class="bodytext">
+     First you load an ODF text document(for example),then get the meta file DOM and then use the meta DOM to create an instance of     the Meta. Use Meta you can access all the supported elements.
+</div>
+<br/><pre class='code' id="code0">
+	<span class='javaclass'>TextDocument</span> doc = (<span class='javaclass'>TextDocument</span>) <span class='javaclass'>TextDocument</span>.loadDocument("testtable.odt");<br/>
+	<span class='javaclass'>OdfFileDom</span> metadom = doc.getMetaDom();<br/>
+	<span class='javaclass'>Meta</span> metadata = <span class='modifier'>new</span> <span class='javaclass'>Meta</span>(metadom);<br/>
+</pre>
+<br/><div class="contenttitle" id="Access metadata">
+<br/>
+<a href="#Access metadata" >Access metadata</a>
+<hr/>
+</div>
+<div class="bodytext">
+     After creating the Meta instance,you can use it to manipulate the metadata:     for example, you can set a value for the &lt;meta:generator&gt; like this:
+</div>
+<br/><pre class='code' id="code1">
+	metadata.setGenerator("<span class='javaclass'>OpenOffice</span>.org/3.0$Win32 <span class='javaclass'>OpenOffice</span>.org_project/300m15$<span class='javaclass'>Build</span>-9379");<br/>
+</pre>
+<br/><div class="bodytext">
+     The &lt;meta:keyword&gt; may contain many keywords, you can set the whole list of keywords and add one keyword as you want.     the api currently do not provide the direct method for deleting one keyword ,you can get the keyword list first,and then     delete the keyword,finally set the list to the element.
+</div>
+<br/><pre class='code' id="code2">
+       metadata.addKeyword("java");<br/>
+      <span class='javaclass'>List</span>&lt;<span class='javaclass'>String</span>&gt; keywords=metadata.getKeywords();<br/>
+      keywords.remove("java");<br/>
+      metadata.setKeywords(keywords);<br/>
+</pre>
+<br/><div class="contenttitle" id="Access the user defined element">
+<br/>
+<a href="#Access the user defined element" >Access the user defined element</a>
+<hr/>
+</div>
+<div class="bodytext">
+    To manipulate the user defined data,you should get the list of their names,and then use the names to     update the data or its datatype or delete the whole user defined data.    you can use the setUserDefinedData(String name, String type, String value) method to update data,if the    name not exists in the document,the method will add the new user defined data.
+</div>
+<br/><pre class='code' id="code3">
+      <span class='javaclass'>List</span>&lt;<span class='javaclass'>String</span>&gt; names=metadata.getUserDefinedDataNames();<br/>
+      <span class='control'>for</span> (<span class='javaclass'>String</span> name : names) {<br/>
+	  metadata.removeUserDefinedDataByName(name);<br/>
+      }<br/>
+      <span class='javaclass'>String</span> key="newId";<br/>
+<span class='comments'>      //org.odftoolkit.odfdom.dom.attribute.meta.MetaValueTypeAttribute.Value</span>
+      metadata.setUserDefinedData(key, <span class='javaclass'>Value</span>.<span class='javaclass'>STRING</span>.toString(), "new001");<br/>
+<span class='comments'>      //update the  datatype</span>
+      metadata.setUserDefinedDataType(key, <span class='javaclass'>Value</span>.<span class='javaclass'>BOOLEAN</span>.toString());<br/>
+<span class='comments'>      //update the data value</span>
+      metadata.setUserDefinedDataValue(key, "false");<br/>
+      <br/>
+<span class='comments'>      //get the datatype</span>
+      <span class='javaclass'>String</span> dataType=metadata.getUserDefinedDataType(key);<br/>
+<span class='comments'>      //get the data value</span>
+      <span class='javaclass'>String</span> dataValue=metadata.getUserDefinedDataValue(key);    <br/>
+</pre>
+<br/><div class="contenttitle" id="Access the document statistics">
+<br/>
+<a href="#Access the document statistics" >Access the document statistics</a>
+<hr/>
+</div>
+<div class="bodytext">
+    if you want to access the document statistics,you should get a DocumentStatistic instance,    if the return is null,it means that this ODF document doesn't have any document statistic information,you should    create a document statistics object.
+</div>
+<br/><pre class='code' id="code4">
+	<span class='javaclass'>DocumentStatistic</span> stat = metadata.getDocumentStatistic();<br/>
+	<span class='control'>if</span>(stat==<span class='basic'>null</span>) {<br/>
+	    stat=<span class='modifier'>new</span> <span class='javaclass'>DocumentStatistic</span>(metadata.getOfficeMetaElement().newMetaDocumentStatisticElement());<br/>
+	}<br/>
+	<br/>
+	stat.setCellCount(3);<br/>
+	<span class='javaclass'>Integer</span> cellCount=stat.getCellCount();<br/>
+</pre>
+<br/><br/> 
+<div class="navigation">
+ <ul>
+  <li><a href="Fields.html">previous</a></li>
+  <li><a href="Text Document.html">next</a></li>
+  <li><a href="#">top</a></li>
+ </ul>
+</div>
+<br/>
+</div>
+<div id="footer" class="smallgraytext"> <a href="../index.html">Home</a> | <a href="../index.html">About Us</a> | <a href="mailto:Daisy@odftoolkit.org">Contact Us</a> </div>
+</div>
+</div>
+</body>
+</html>
