@@ -58,27 +58,20 @@ An interesting [demo][15] is uploaded to the website to show how to use these ne
 Method Change List   
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.   
 
-{|- border="1"
-!Previous Class
-!Previous Method
-!New Class
-!New Method
-|-
-|simple.text.Paragraph
-|TextPElement  getOdfElement()
-|simple.text.Paragraph
-|TextParagraphElementBase  getOdfElement()
-|-
-|simple.text.Paragraph
-|DefaultStyleHandler  getStyleHandler()
-|simple.text.Paragraph
-|ParagraphStyleHandler  getStyleHandler()
-|-
-|simple.text.Paragraph
-|Paragraph getInstanceof(TextPElement)
-|simple.text.Paragraph
-|Paragraph getInstanceof(TextParagraphElementBase)
-|}
+<table>
+<tr>
+<td>Previous Class</td><td>Previous Method</td><td>New Class</td><td>New Method</td>
+</tr>
+<tr>
+<td>simple.text.Paragraph</td><td>TextPElement  getOdfElement()</td><td>simple.text.Paragraph</td><td>TextParagraphElementBase  getOdfElement()</td>
+</tr>
+<tr>
+<td>simple.text.Paragraph</td><td>DefaultStyleHandler  getStyleHandler()</td><td>simple.text.Paragraph</td><td>ParagraphStyleHandler  getStyleHandler()</td>
+</tr>
+<tr>
+<td>simple.text.Paragraph</td><td>Paragraph getInstanceof(TextPElement)</td><td>simple.text.Paragraph</td><td>Paragraph getInstanceof(TextParagraphElementBase)</td>
+</tr>
+</table>
 
 **Release 0.6**   
 *June 1st 2011*
@@ -94,9 +87,9 @@ We also make some enhancements based on user requests:
 
 ***Resolved Issues*** 
   
- - [Bug 332][22]-  Nice to have means to set table cell widths and heights with sub-millimeter precision.
- - [Bug 260][23]-  Table cell validate function.
- - [Bug 243][24]-  SpreadsheetDocument needs helper functions to get to Table.
+ - [Bug 332][22] -  Nice to have means to set table cell widths and heights with sub-millimeter precision.
+ - [Bug 260][23] -  Table cell validate function.
+ - [Bug 243][24] -  SpreadsheetDocument needs helper functions to get to Table.
  - [Bug 330][25] -  Supply Chart API Features.
 
 ***API changes since 0.5.5 Release***   
@@ -155,17 +148,17 @@ We also made some useful enhancements based on user requests:
 
 ***Resolved Issues*** 
    
- - [Bug 256][27]-  JavaDoc should be deployed via Maven to the Simple website.  
- - [Bug 269][28]-  Desirable column width is calculated in characters on the basis of the size of the data that will go into the table.
- - [Bug 273][29]-  The performance of getRowList/getColumnList is too low, if there is a row element with 65535 repeat number.
- - [Bug 309][30]-  Supply method to set the header/footer visible or not.
- - [Bug 311][31]-  Insert several paragraphs in a cell or several different text in the same paragraph in a cell. 
- - [Bug 312][32]-  Allow to set alignment of image in a table cell. 
- - [Bug 326][33]-  Something is missing in order to move the object on the sheet.
- - [Bug 327][34]-  Problem with the adding of tables in Footer.
- - [Bug 328][35]-  Performance problem in CellRange constructor when Table.getRowCount() is large.
- - [Bug 329][36]-  Unable to set the column widths of a table with precision. 
- - [Bug 333][37]-  Provide convenient methods for image and text span.
+ - [Bug 256][27] -  JavaDoc should be deployed via Maven to the Simple website.  
+ - [Bug 269][28] -  Desirable column width is calculated in characters on the basis of the size of the data that will go into the table.
+ - [Bug 273][29] -  The performance of getRowList/getColumnList is too low, if there is a row element with 65535 repeat number.
+ - [Bug 309][30] -  Supply method to set the header/footer visible or not.
+ - [Bug 311][31] -  Insert several paragraphs in a cell or several different text in the same paragraph in a cell. 
+ - [Bug 312][32] -  Allow to set alignment of image in a table cell. 
+ - [Bug 326][33] -  Something is missing in order to move the object on the sheet.
+ - [Bug 327][34] -  Problem with the adding of tables in Footer.
+ - [Bug 328][35] -  Performance problem in CellRange constructor when Table.getRowCount() is large.
+ - [Bug 329][36] -  Unable to set the column widths of a table with precision. 
+ - [Bug 333][37] -  Provide convenient methods for image and text span.
 
 ***API changes since 0.5 Release***
 =====Method Change List=====
@@ -201,20 +194,20 @@ You can implement powerful document generation scenarios with these API. You can
 
 ***Resolved Issues***
 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=307 Bug 307] -  Table.getColumnByIndex() throws NullPointerException.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=308 Bug 308] -  Remove padding from table in header/footer.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=314 Bug 314] -  Navigation API should support find/replace in a specific OdfElement range
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=315 Bug 315] -  Add Field API to Simple ODF
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=316 Bug 316] -  Access to header and footer to Standard and First Page.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=317 Bug 317] -  Table.getColumnCount() doesn't work when exists table:table-columns
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=318 Bug 318] -  Provide paragraph functions and its style handling functions.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=319 Bug 319] -  Provide frame and text box API.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=320 Bug 320] -  Section should provide methods to access paragraph.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=323 Bug 323] -  VariableContainer should have a method to get its VariableFields.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=324 Bug 324] -  Table unnamed causes a NullPointerException.
+ - [Bug 307][38] -  Table.getColumnByIndex() throws NullPointerException.
+ - [Bug 308][39] -  Remove padding from table in header/footer.
+ - [Bug 314][40] -  Navigation API should support find/replace in a specific OdfElement range
+ - [Bug 315][41] -  Add Field API to Simple ODF
+ - [Bug 316][42] -  Access to header and footer to Standard and First Page.
+ - [Bug 317][43] -  Table.getColumnCount() doesn't work when exists table:table-columns
+ - [Bug 318][44] -  Provide paragraph functions and its style handling functions.
+ - [Bug 319][45] -  Provide frame and text box API.
+ - [Bug 320][46] -  Section should provide methods to access paragraph.
+ - [Bug 323][47] -  VariableContainer should have a method to get its VariableFields.
+ - [Bug 324][48] -  Table unnamed causes a NullPointerException.
 
-***API changes since 0.4.5 Release***
-=====Method Change List=====
+***API changes since 0.4.5 Release***  
+Method Change List   
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
 
 {|- border="1"
@@ -241,69 +234,65 @@ We are pleased to announce the release of the Simple Java API for ODF version 0.
 
  - We are now using ODFDOM 0.8.7 
  - We have added initial support  for footers and headers. Now you can simply get the footer and header of text document and add table/image/string content to footer and header. 
- - We have also improved the performance of copying slides from other presentations (foreign slides). The time to copy a single slide is decreased by 20%, and the time to copy slides with referenced resources is decreased much more. A sample to show the function of copying slides from foreign documents is available in the [http://simple.odftoolkit.org/demo/demo5.html website]. 
+ - We have also improved the performance of copying slides from other presentations (foreign slides). The time to copy a single slide is decreased by 20%, and the time to copy slides with referenced resources is decreased much more. A sample to show the function of copying slides from foreign documents is available in the [website][49]. 
 
 ***Resolved Issues***
 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=224 Bug 224] -  Setting note for individual cell
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=254 Bug 254] -  Update Simple API to support ODFDOM 0.8.7
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=274 Bug 274] -  Create row/column/cell with/without repeat number
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=275 Bug 275] -  Append row/column with/without previous row/column style
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=276 Bug 276] -  Cell format type can be auto calculated according to the style of cell
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=278 Bug 278] -  Adding border to created cell, OutOfMemoryError was throwed about 11,000 records
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=284 Bug 284] -  Cell.getFont() throws NullPointerException
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=290 Bug 290] -  Table API doesn't work for Presentation Document 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=295 Bug 295] -  The Simple API does not work with JDK5
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=303 Bug 303] -  Performance tuning for foreign slide copy
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=304 Bug 304] -  Support image and text in footer and header
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=305 Bug 305] -  A bug that occurs when resizing the column width of a table to 0
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=306 Bug 306] -  Errors when Locale is set to Germany
+ - [Bug 224][50] -  Setting note for individual cell
+ - [Bug 254][51] -  Update Simple API to support ODFDOM 0.8.7
+ - [Bug 274][52] -  Create row/column/cell with/without repeat number
+ - [Bug 275][53] -  Append row/column with/without previous row/column style
+ - [Bug 276][54] -  Cell format type can be auto calculated according to the style of cell
+ - [Bug 278][55] -  Adding border to created cell, OutOfMemoryError was throwed about 11,000 records
+ - [Bug 284][56] -  Cell.getFont() throws NullPointerException
+ - [Bug 290][57] -  Table API doesn't work for Presentation Document 
+ - [Bug 295][58] -  The Simple API does not work with JDK5
+ - [Bug 303][59] -  Performance tuning for foreign slide copy
+ - [Bug 304][60] -  Support image and text in footer and header
+ - [Bug 305][61] -  A bug that occurs when resizing the column width of a table to 0
+ - [Bug 306][62] -  Errors when Locale is set to Germany
 
 There is no API changes in this version.
 
 **Release 0.4**  
 *January 31st 2011*    
 
-We are pleased to announce that we are releasing version 0.4 of the Simple Java API for ODF today. In this version, we have added powerful list functions. With these new methods, you can easily add lists to text document and presentation document, with numbering, bullets, or graphic bullets. An interesting code sample of this API is available in the [http://simple.odftoolkit.org/demo/demo4.html website]. 
-
-We have also introduced methods to get, copy and paste sections in text documents.  Copying and pasting sections are useful when you want to clone a section of a template multiple times for different data. The introduce of list and section functions has been added to [http://simple.odftoolkit.org/cookbook/Manipulate%20Text%20Document.html#Manipulate%20Section Cookbook] for your reference.
-
+We are pleased to announce that we are releasing version 0.4 of the Simple Java API for ODF today. In this version, we have added powerful list functions. With these new methods, you can easily add lists to text document and presentation document, with numbering, bullets, or graphic bullets. An interesting code sample of this API is available in the [website][63].   
+We have also introduced methods to get, copy and paste sections in text documents.  Copying and pasting sections are useful when you want to clone a section of a template multiple times for different data. The introduce of list and section functions has been added to [cookbook][64] for your reference.    
 Also, along with various bug fixes we have greatly improved the performance of the table API. Now creating a large table by adding one row after another is 20 times faster than before. 
-
 
 There is no API changes in this version.
 
 ***Resolved Issues***
 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=279 Bug 279] -  The performance of Table API need enhance, some methods cost too much time
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=280 Bug 280] -  Supply List API Support in Simple API
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=285 Bug 285] -  Supply text through line and under line setting support to Font
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=291 Bug 291] -  Provide high level methods for section
+ - [Bug 279][65] -  The performance of Table API need enhance, some methods cost too much time
+ - [Bug 280][66] -  Supply List API Support in Simple API
+ - [Bug 285][67] -  Supply text through line and under line setting support to Font
+ - [Bug 291][68] -  Provide high level methods for section
 
 **Release 0.3.5**  
 *December 24th 2010*    
 
-Today we released a new version of the Simple Java API for ODF:  Release 0.3.5. In this version, we have improved the navigation, text extraction, table and style handling features by fixing bugs and improving the JavaDoc. We also fixed a memory leak issue related to tables.
-
-You may notice that there are no new features in this month's release.  Our intent is to alternate "bug fixing" releases with "new feature" release.  So next month will be a new feature release (0.4) followed by a bug fixing release (0.4.5), etc.
+Today we released a new version of the Simple Java API for ODF:  Release 0.3.5. In this version, we have improved the navigation, text extraction, table and style handling features by fixing bugs and improving the JavaDoc. We also fixed a memory leak issue related to tables.    
+You may notice that there are no new features in this month's release. Our intent is to alternate "bug fixing" releases with "new feature" release. So next month will be a new feature release (0.4) followed by a bug fixing release (0.4.5), etc.
 
 ***Resolved Issues***
 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=250 Bug 250] -  Table.newTable(Document document, int numRows, int numCols) does not work well  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=251 Bug 251] -  Table.appendRows throws ClassCastException  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=253 Bug 253] -  Column.setWidth() don't work for new created table  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=255 Bug 255] -  cell.setFormatString() and column.setWidth() throw exceptions  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=258 Bug 258] -  Where documentation says "deprecated" new preferred way should be given  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=259 Bug 259] -  Setting font style to a spreadsheet cell is incorrectly inherited  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=261 Bug 261] -  JavaDoc for the TextExtractor needs a lot more prose  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=262 Bug 262] -  JavaDoc for TextNavigation match() method is confusing  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=266 Bug 266] -  hasNext() method of TextNavigation apparently is REQUIRED and should not be  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=267 Bug 267] -  String returned by TextExtractor.getText() has a carriage return (ASCII 13) at the start  
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=271 Bug 271] -  Comments of Table Style API
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=272 Bug 272] -  Static Map variables in Table lead memory leak
+ - [Bug 250][69] -  Table.newTable(Document document, int numRows, int numCols) does not work well  
+ - [Bug 251][70] -  Table.appendRows throws ClassCastException  
+ - [Bug 253][71] -  Column.setWidth() don't work for new created table  
+ - [Bug 255][72] -  cell.setFormatString() and column.setWidth() throw exceptions  
+ - [Bug 258][73] -  Where documentation says "deprecated" new preferred way should be given  
+ - [Bug 259][74] -  Setting font style to a spreadsheet cell is incorrectly inherited  
+ - [Bug 261][75] -  JavaDoc for the TextExtractor needs a lot more prose  
+ - [Bug 262][76] -  JavaDoc for TextNavigation match() method is confusing  
+ - [Bug 266][77] -  hasNext() method of TextNavigation apparently is REQUIRED and should not be  
+ - [Bug 267][78] -  String returned by TextExtractor.getText() has a carriage return (ASCII 13) at the start  
+ - [Bug 271][79] -  Comments of Table Style API
+ - [Bug 272][80] -  Static Map variables in Table lead memory leak
 
 ***API changes since 0.3 Release***  
-=====Enum name change list=====
+Enum name change list   
 The enum's defined in org.odftoolkit.simple.style.StyleTypeDefinitions have changed. The prefix "Simple" has been removed.
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
@@ -330,7 +319,7 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.simpl
 |CellBordersType
 |}
 
-=====Method name change list=====
+Method name change list     
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
 
 {|- border="1"
@@ -359,7 +348,7 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.simpl
 |StyleTypeDefinitions$FontStyle  getFontStyle()
 |}
 
-=====Method deleted=====
+Method deleted    
 The locale handling methods in org.odftoolkit.simple.style.Font have been removed in order to simplify the API. Users who want to use advanced functions can use the suggested substitute.
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.simple'.
@@ -381,22 +370,20 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.simpl
 **Release 0.3**  
 *December 1st 2010*    
 
-We are pleased to announce the 2nd release of the Simple Java API for ODF.  In this release. we provided easy-to-use functions for setting the text and border styles in tables, as a first taste of a high-level style API. 
-
-We also enhanced the navigation functions. Now the navigation functions work for text, spreadsheet, presentation and chart document. [http://simple.odftoolkit.org/sample/demo3.html An instructive sample]  has been added to the website to demonstrate these powerful functions. 
-
+We are pleased to announce the 2nd release of the Simple Java API for ODF. In this release. we provided easy-to-use functions for setting the text and border styles in tables, as a first taste of a high-level style API.    
+We also enhanced the navigation functions. Now the navigation functions work for text, spreadsheet, presentation and chart document. [An instructive sample][81] has been added to the website to demonstrate these powerful functions.    
 There are also a few updates in table cell functions: some functions are enhanced and some functions are marked as "Deprecated". More details are described below.
 
 ***Resolved Issues***   
 
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=246 Bug 246] -  Extend the navigation API under simple.text.search to spreadsheet and presentation.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=247 Bug 247] -  Provide table methods for presentation document.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=248 Bug 248] -  setHorizontalAlignment and setVerticalAlignment do not work for new created table.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=249 Bug 249] -  getRowCount() doesn't work if table:table-rows or table:table-group exits.
- - [https://odftoolkit.org/bugzilla/show_bug.cgi?id=252 Bug 252] -  Provide high level style methods for table.	
+ - [Bug 246][82]-  Extend the navigation API under simple.text.search to spreadsheet and presentation.
+ - [Bug 247][83]-  Provide table methods for presentation document.
+ - [Bug 248][84]-  setHorizontalAlignment and setVerticalAlignment do not work for new created table.
+ - [Bug 249][85]-  getRowCount() doesn't work if table:table-rows or table:table-group exits.
+ - [Bug 252][86]-  Provide high level style methods for table.	
 
 ***API changes since 0.2 Release***   
-=====Package/Class Change List=====
+Package/Class Change List    
 Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
 
 {|- border="1"
@@ -438,8 +425,7 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit'.
 
 **Release 0.2**   
 
-Simple Java API for ODF 0.2 has been released on Nov 1th, with table, presentation, and metadata convenient methods moved from ODFDOM into a new package structure. Better documents are provided in this release. The cookbook, JavaDoc and demo codes can be found. You can download the binary jar file from downloads page.
-
+Simple Java API for ODF 0.2 has been released on Nov 1th, with table, presentation, and metadata convenient methods moved from ODFDOM into a new package structure. Better documents are provided in this release. The cookbook, JavaDoc and demo codes can be found. You can download the binary jar file from downloads page.   
 Go to PackageLayer to get an overall introduction of package structure and the API changes from ODFDOM.
 
 
@@ -479,4 +465,53 @@ Go to PackageLayer to get an overall introduction of package structure and the A
   [34]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=327
   [35]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=328
   [36]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=329
-  [37]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=333 
+  [37]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=333
+  [38]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=307
+  [39]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=308
+  [40]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=314
+  [41]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=315
+  [42]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=316
+  [43]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=317
+  [44]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=318
+  [45]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=319
+  [46]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=320
+  [47]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=323
+  [48]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=324
+  [49]: ../demo/demo5.html
+  [50]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=224
+  [51]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=254
+  [52]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=274
+  [53]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=275
+  [54]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=276
+  [55]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=278
+  [56]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=284
+  [57]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=290
+  [58]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=295
+  [59]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=303
+  [60]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=304
+  [61]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=305
+  [62]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=306
+  [63]: ../demo/demo4.html
+  [64]: cookbook/Manipulate%20Text%20Document.html#Manipulate%20Section
+  [65]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=279
+  [66]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=280
+  [67]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=285
+  [68]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=291
+  [69]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=250
+  [70]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=251
+  [71]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=253
+  [72]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=255
+  [73]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=258
+  [74]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=259
+  [75]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=261
+  [76]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=262
+  [77]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=266
+  [78]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=267
+  [79]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=271
+  [80]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=272
+  [81]: demo/demo3.html
+  [82]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=246
+  [83]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=247
+  [84]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=248
+  [85]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=249
+  [86]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=252 
