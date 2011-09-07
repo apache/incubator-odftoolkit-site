@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Get CellRange" >Get CellRange</a></strong>
+<br/><strong><a href="#Get CellRange" >Get CellRange</a></strong>
 <div class="bodytext">
 You can get cell range by providing start and end index of the column and row,or just provide start and end address of the cell(if you are using the spreadsheet.)
 </div>
@@ -14,7 +14,7 @@ You can get cell range by providing start and end index of the column and row,or
 	    <span class='javaclass'>CellRange</span> cellRange = table.getCellRangeByPosition(1, 0, 2, 0);<br/>
 	    <span class='javaclass'>CellRange</span> cellRangeAdd = table.getCellRangeByPosition("$E1","$E6");<br/>
 </pre>
-<br/><strong><a href="#Merge Text Table" >Merge Text Table</a></strong>
+<br/><br/><strong><a href="#Merge Text Table" >Merge Text Table</a></strong>
 <div class="bodytext">
 The code below merges all of the selected cells into one:
 </div>
@@ -23,7 +23,7 @@ The code below merges all of the selected cells into one:
 	    <span class='javaclass'>CellRange</span> cellrange = table1.getCellRangeByPosition(0, 0, table1.getColumnCount()-1, table1.getRowCount()-1);<br/>
 	    cellRange.merge();<br/>
 </pre>
-<br/><strong><a href="#Merge Text Column" >Merge Text Column</a></strong>
+<br/><br/><strong><a href="#Merge Text Column" >Merge Text Column</a></strong>
 <div class="bodytext">
 The code below shows how to merge the cells of the first column into one ：
 </div>
@@ -32,7 +32,7 @@ The code below shows how to merge the cells of the first column into one ：
 	    	<span class='javaclass'>CellRange</span> firstColumn = table1.getCellRangeByPosition(0, 0, 0, table1.getRowCount()-1);<br/>
 	    	firstColumn.merge();<br/>
 </pre>
-<br/><strong><a href="#Merge Text Row" >Merge Text Row</a></strong>
+<br/><br/><strong><a href="#Merge Text Row" >Merge Text Row</a></strong>
 <div class="bodytext">
 The code below shows how to merge the cells of the first 2 rows into one ：
 </div>
@@ -42,7 +42,7 @@ The code below shows how to merge the cells of the first 2 rows into one ：
     	        <span class='javaclass'>CellRange</span> firstTwoRow = table1.getCellRangeByPosition(0, 0, table1.getColumnCount()-1, 1);<br/>
     	        firstTwoRow.merge();<br/>
 </pre>
-<br/><strong><a href="#Merge SpreadSheet" >Merge SpreadSheet</a></strong>
+<br/><br/><strong><a href="#Merge SpreadSheet" >Merge SpreadSheet</a></strong>
 <div class="bodytext">
 Merge a spreadsheet's cell is the same as text document.Especially,when getting the cell range of spreadsheet,you can use special address instead of index.
 </div>

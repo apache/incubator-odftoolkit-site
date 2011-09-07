@@ -6,11 +6,11 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Overview" >Overview</a></strong>
+<br/><strong><a href="#Overview" >Overview</a></strong>
 <div class="bodytext">
  This <a href="">Table</a> API supports to manipulate tables in text and spreadsheet documents. It covers the table definition in <a href="http:docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part1.html#a_9_Tables">ODF Specification 1.2 Committee Draft05</a>
 </div>
-<strong><a href="#Create Table" >Create Table</a></strong>
+<br/><strong><a href="#Create Table" >Create Table</a></strong>
 <div class="bodytext">
 Let's create an empty table first.By default,the code below create a table with 5 columns and 2 rows.
 </div>
@@ -48,7 +48,7 @@ You can also fill table with string values while creating it, to do this you sho
      	<span class='javaclass'>Table</span> table4 = <span class='javaclass'>Table</span>.newTable(document, rowlabels, columnlabels, stringData);<br/>
      	table4.setTableName("stringTable");<br/>
 </pre>
-<br/><strong><a href="#Find Table" >Find Table</a></strong>
+<br/><br/><strong><a href="#Find Table" >Find Table</a></strong>
 <div class="bodytext">
 To get all the tables in the document,you can do like this:
 </div>
@@ -61,14 +61,14 @@ If you want to get a single table,you can use the table name to find it.If it's 
 <br/><pre class='code' id="code5">
         <span class='javaclass'>Table</span> emptyTable=document.getTableByName("table1");<br/>
 </pre>
-<br/><strong><a href="#Delete Table" >Delete Table</a></strong>
+<br/><br/><strong><a href="#Delete Table" >Delete Table</a></strong>
 <br/><pre class='code' id="code6">
         <span class='javaclass'>Table</span> table = document.getTableByName("<span class='javaclass'>DeletedTable</span>");<br/>
         <span class='control'>if</span> (table != <span class='basic'>null</span>) {<br/>
      	table.remove();<br/>
         }<br/>
 </pre>
-<br/><strong><a href="#Set Table" >Set Table</a></strong>
+<br/><br/><strong><a href="#Set Table" >Set Table</a></strong>
 <div class="bodytext">
 You can set or update table name,which can be regarded as table identifier in a document.
 </div>

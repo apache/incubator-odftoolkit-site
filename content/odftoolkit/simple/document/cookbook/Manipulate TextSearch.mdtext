@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#TextNavigation" >TextNavigation</a></strong>
+<br/><strong><a href="#TextNavigation" >TextNavigation</a></strong>
 <div class="bodytext">
 		First an ODF text document is needed to test the navigation operation. The following codes shows two main functions of TextNavigation		:hasNext() and getCurrentItem(). The first parameter of the TextNavigation constructor is the matched pattern String, and the second is		the navigation scope.
 </div>
@@ -22,7 +22,7 @@
 			<span class='javaclass'>System</span>.out.println(item1);<br/>
 		}		<br/>
 </pre>
-<br/><strong><a href="#TextSelection" >TextSelection</a></strong>
+<br/><br/><strong><a href="#TextSelection" >TextSelection</a></strong>
 <a href="#Get Index/Text of TextSelection" >Get Index/Text of TextSelection</a>
 <div class="bodytext">
 		Run the following codes will get the text content of the searched String "good" and the corresponding index in 		the text document.
@@ -103,7 +103,7 @@ The following codes replace all the string "replacesource" with the string "repl
 			selection.addComment("<span class='javaclass'>Please</span> change 'natwork' with 'network'.",	"<span class='javaclass'>SpellChecker</span>");<br/>
 		}<br/>
 </pre>
-<br/><strong><a href="#FieldSelection" >FieldSelection</a></strong>
+<br/><br/><strong><a href="#FieldSelection" >FieldSelection</a></strong>
 <div class="bodytext">
 		Field Selection is a decorator class of TextSelection, which help user replace a text content with field.		Following code can be used to search the document content, and replace with a simple field.
 </div>
@@ -144,7 +144,7 @@ The following codes replace all the string "replacesource" with the string "repl
 		<span class='javaclass'>VariableField</span> userVariableField = <span class='javaclass'>Fields</span>.createUserVariableField(doc, "selection_user_variable", "test");<br/>
 		fieldSelection.replaceWithVariableField(userVariableField);<br/>
 </pre>
-<br/><strong><a href="#TextStyleNavigation" >TextStyleNavigation</a></strong>
+<br/><br/><strong><a href="#TextStyleNavigation" >TextStyleNavigation</a></strong>
 <div class="bodytext">
 		Similar with TextNavigation, TextStyleNavigation has two main functions: getCurrentItem() and		hasNext() which is shown in the following codes. The input parameter of TextStyleNavigation constructor		is a map of OdfStyleProperty, so here a TreeMap "searchProps" which contains the Style properties is used		to construct the TextStyleNavigation object.
 </div>

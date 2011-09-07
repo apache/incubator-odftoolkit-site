@@ -1,5 +1,5 @@
 <strong><a href="../index.html">Documents</a></strong> > 
-<strong><a href="index.html">Cookbook</a></strong>   <br/><br/><strong><a href="#Text" >Text</a></strong>
+<strong><a href="index.html">Cookbook</a></strong>   <br/><br/><br/><strong><a href="#Text" >Text</a></strong>
 <ul>
  <li><a href="Text Document.html">Text Document</a>
   <ul>
@@ -17,7 +17,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Presentation" >Presentation</a></strong>
+<br/><strong><a href="#Presentation" >Presentation</a></strong>
 <ul>
  <li><a href="Presentation Document.html">Presentation Document</a>
   <ul>
@@ -38,7 +38,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Table" >Table</a></strong>
+<br/><strong><a href="#Table" >Table</a></strong>
 <ul>
  <li><a href="Table.html">Table</a>
   <ul>
@@ -85,7 +85,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Chart" >Chart</a></strong>
+<br/><strong><a href="#Chart" >Chart</a></strong>
 <ul>
  <li><a href="Charts.html">Charts</a>
   <ul>
@@ -96,7 +96,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Style" >Style</a></strong>
+<br/><strong><a href="#Style" >Style</a></strong>
 <ul>
  <li><a href="Style Handling.html">Style Handling</a>
   <ul>
@@ -107,7 +107,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Navigation" >Navigation</a></strong>
+<br/><strong><a href="#Navigation" >Navigation</a></strong>
 <ul>
  <li><a href="Manipulate TextSearch.html">Manipulate TextSearch</a>
   <ul>
@@ -126,7 +126,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#TextExtractor" >TextExtractor</a></strong>
+<br/><strong><a href="#TextExtractor" >TextExtractor</a></strong>
 <ul>
  <li><a href="TextExtractor.html">TextExtractor</a>
   <ul>
@@ -134,7 +134,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Field" >Field</a></strong>
+<br/><strong><a href="#Field" >Field</a></strong>
 <ul>
  <li><a href="Fields.html">Fields</a>
   <ul>
@@ -152,7 +152,7 @@
   </ul>
  </li>
 </ul>
-<strong><a href="#Metadata" >Metadata</a></strong>
+<br/><strong><a href="#Metadata" >Metadata</a></strong>
 <ul>
  <li><a href="Manipulate Metadata.html">Manipulate Metadata</a>
   <ul>

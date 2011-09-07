@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Get Cell" >Get Cell</a></strong>
+<br/><strong><a href="#Get Cell" >Get Cell</a></strong>
 <div class="bodytext">
 If you want to get the specified cell in a table,you can use the getCellByPosition method of Table.
 </div>
@@ -43,7 +43,7 @@ The code below shows how you can do that:
 	 <span class='javaclass'>Row</span> row1=cell.getTableRow();<br/>
 	 <span class='javaclass'>Column</span> column1=cell.getTableColumn();<br/>
 </pre>
-<br/><strong><a href="#Control Cell Attributes" >Control Cell Attributes</a></strong>
+<br/><br/><strong><a href="#Control Cell Attributes" >Control Cell Attributes</a></strong>
 <div class="bodytext">
 Use the getStyleName() method you can get the style name of the cell.
 </div>
@@ -138,7 +138,7 @@ RemoveContent remove all of the cell while the removeTextContent only remove the
 	   cell.removeContent();<br/>
 	   cell.removeTextContent();<br/>
 </pre>
-<br/><strong><a href="#Get&Set Cell Value Type" >Get&Set Cell Value Type</a></strong>
+<br/><br/><strong><a href="#Get&Set Cell Value Type" >Get&Set Cell Value Type</a></strong>
 <div class="bodytext">
 	 The cell value can have different types,for the setValueType method:	 the parameter can be 	 <ul><li>"boolean"</li>	 <li>"currency"</li>	 <li>"date"</li>	 <li>"float"</li>         <li>"percentage"</li>	 <li>"string"</li>	 <li>"time"</li>	 <li>"void"</li>	 </ul>	 If the parameter type is not a valid cell type, an IllegalArgumentException will be thrown.
 </div>
@@ -215,7 +215,7 @@ If you want to get the string type of time value,you can format it:
 	  <span class='javaclass'>String</span> displayText=cell.getDisplayText();<br/>
 	  cell.setDisplayText(displayText);<br/>
 </pre>
-<br/><strong><a href="#Set image" >Set image</a></strong>
+<br/><br/><strong><a href="#Set image" >Set image</a></strong>
 <div class="bodytext">
 		From version 0.5.5, we support high level APIs for images.	    You can use following codes to set an image to a cell.
 </div>

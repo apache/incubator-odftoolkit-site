@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Variable Field" >Variable Field</a></strong>
+<br/><strong><a href="#Variable Field" >Variable Field</a></strong>
 <div class="bodytext">
 			You can use the following code to create a variable field, and set the value.
 </div>
@@ -23,7 +23,7 @@
 			simpleVariableField.updateField("user variable content", null);<br/>
 			simpleVariableField.displayField(paragraph.getOdfElement());<br/>
 </pre>
-<br/><strong><a href="#Condition Field" >Condition Field</a></strong>
+<br/><br/><strong><a href="#Condition Field" >Condition Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a condition field.
 </div>
@@ -32,7 +32,7 @@
 			<span class='javaclass'>ConditionField</span> conditionField = <span class='javaclass'>Fields</span>.createConditionField(newParagraph.getOdfElement(), "test_con_variable == \"true\"",<br/>
 					"trueText", "falseText");<br/>
 </pre>
-<br/><strong><a href="#Hidden Field" >Hidden Field</a></strong>
+<br/><br/><strong><a href="#Hidden Field" >Hidden Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a hidden field.
 </div>
@@ -40,7 +40,7 @@
 			newParagraph = doc.addParagraph("<span class='javaclass'>Hide</span> <span class='javaclass'>Text</span> <span class='javaclass'>Field</span> <span class='javaclass'>Test</span>:");<br/>
 			conditionField = <span class='javaclass'>Fields</span>.createHiddenTextField(newParagraph.getOdfElement(), "test_con_variable == \"true\"", "hiddenText");<br/>
 </pre>
-<br/><strong><a href="#Cross Reference Field" >Cross Reference Field</a></strong>
+<br/><br/><strong><a href="#Cross Reference Field" >Cross Reference Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a reference field.
 </div>
@@ -55,14 +55,14 @@
 <br/><pre class='code' id="code5">
 			referenceField.appendReferenceTo(doc.addParagraph("<span class='javaclass'>User</span> <span class='javaclass'>Reference</span> <span class='javaclass'>Field</span>:").getOdfElement(), <span class='javaclass'>ReferenceField</span>.<span class='javaclass'>DisplayType</span>.<span class='javaclass'>TEXT</span>);<br/>
 </pre>
-<br/><strong><a href="#Chapter Field" >Chapter Field</a></strong>
+<br/><br/><strong><a href="#Chapter Field" >Chapter Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a chapter field.
 </div>
 <br/><pre class='code' id="code6">
 			<span class='javaclass'>ChapterField</span> chapterField = <span class='javaclass'>Fields</span>.createChapterField(doc.addParagraph("<span class='javaclass'>Chapter</span>:").getOdfElement());<br/>
 </pre>
-<br/><strong><a href="#Title and Subject Field" >Title and Subject Field</a></strong>
+<br/><br/><strong><a href="#Title and Subject Field" >Title and Subject Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a title field.
 </div>
@@ -75,7 +75,7 @@
 <br/><pre class='code' id="code8">
 			<span class='javaclass'>SubjectField</span> subjectField = <span class='javaclass'>Fields</span>.createSubjectField(doc.addParagraph("<span class='javaclass'>The</span> <span class='javaclass'>Subject</span>:").getOdfElement());<br/>
 </pre>
-<br/><strong><a href="#Author Field" >Author Field</a></strong>
+<br/><br/><strong><a href="#Author Field" >Author Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a author initial field and a author name field.
 </div>
@@ -83,7 +83,7 @@
 			<span class='javaclass'>AuthorField</span> authorField = <span class='javaclass'>Fields</span>.createAuthorInitialsField(doc.addParagraph("<span class='javaclass'>The</span> initials of the author :").getOdfElement());<br/>
 			authorField = <span class='javaclass'>Fields</span>.createAuthorNameField(doc.addParagraph("<span class='javaclass'>Author</span>:").getOdfElement());<br/>
 </pre>
-<br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
+<br/><br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a current page number field.
 </div>
@@ -99,7 +99,7 @@
 			numberField = <span class='javaclass'>Fields</span>.createPreviousPageNumberField(doc.addParagraph("<span class='javaclass'>Previous</span> <span class='javaclass'>Page</span> <span class='javaclass'>Number</span>:").getOdfElement());<br/>
 			numberField = <span class='javaclass'>Fields</span>.createNextPageNumberField(doc.addParagraph("<span class='javaclass'>Next</span> <span class='javaclass'>Page</span> <span class='javaclass'>Number</span>:").getOdfElement());<br/>
 </pre>
-<br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
+<br/><br/><strong><a href="#Page Number Field" >Page Number Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a page count field, and set the number format.
 </div>
@@ -107,7 +107,7 @@
 			<span class='javaclass'>PageCountField</span> countField = <span class='javaclass'>Fields</span>.createPageCountField(doc.addParagraph("<span class='javaclass'>Page</span> <span class='javaclass'>Count</span>:").getOdfElement());<br/>
 			countField.setNumberFormat(<span class='javaclass'>NumberFormat</span>.UPPERCASE_LATIN_ALPHABET);<br/>
 </pre>
-<br/><strong><a href="#Date Field" >Date Field</a></strong>
+<br/><br/><strong><a href="#Date Field" >Date Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a date field, and set the format.
 </div>
@@ -115,7 +115,7 @@
 			<span class='javaclass'>DateField</span> dateField = <span class='javaclass'>Fields</span>.createDateField(doc.addParagraph("<span class='javaclass'>Date</span>:").getOdfElement());<br/>
 			dateField.formatDate("yy-<span class='javaclass'>MM</span>-dd");<br/>
 </pre>
-<br/><strong><a href="#Time Field" >Time Field</a></strong>
+<br/><br/><strong><a href="#Time Field" >Time Field</a></strong>
 <div class="bodytext">
 			Following code can be used to create a time field, and set the format.
 </div>

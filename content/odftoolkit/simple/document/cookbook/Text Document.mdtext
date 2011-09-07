@@ -6,11 +6,11 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Overview" >Overview</a></strong>
+<br/><strong><a href="#Overview" >Overview</a></strong>
 <div class="bodytext">
 Till now, we support high level APIs to manipulate text document, paragraph, section, list, footer, header, textbox and span.
 </div>
-<strong><a href="#Generate TextDocument" >Generate TextDocument</a></strong>
+<br/><strong><a href="#Generate TextDocument" >Generate TextDocument</a></strong>
 <div class="bodytext">
 		There are typically four kinds of Text Documents with different modes can be generated: text document,		master document, template document and web document.
 </div>
@@ -31,7 +31,7 @@ The following codes generates an empty text document.
 	    <span class='javaclass'>TextDocument</span> documentMedia1=<span class='javaclass'>TextDocument</span>.newTextDocument(<span class='javaclass'>OdfMediaType</span>.TEXT_MASTER);<br/>
 	    <span class='javaclass'>TextDocument</span> documentMedia2=<span class='javaclass'>TextDocument</span>.newTextMasterDocument();<br/>
 </pre>
-<br/><strong><a href="#Get TextDocument" >Get TextDocument</a></strong>
+<br/><br/><strong><a href="#Get TextDocument" >Get TextDocument</a></strong>
 <div class="bodytext">
 	    We can get the existing Text Document by using the loadDocument function like follows.	    The loadDocument function has four kinds of parameters: File, InputStream, OdfPackageDocument and	    String. Here the one with string parameter is used as an example.
 </div>
@@ -44,7 +44,7 @@ Also we can change the mode of one text document by using the following codes:
 <br/><pre class='code' id="code3">
 	    document2.changeMode(<span class='javaclass'>OdfMediaType</span>.TEXT_WEB);<br/>
 </pre>
-<br/><strong><a href="#Paragraph" >Paragraph</a></strong>
+<br/><br/><strong><a href="#Paragraph" >Paragraph</a></strong>
 <div class="bodytext">
 	    To add a new paragraph to a text document, the following codes can be used,	    the first one add an empty paragraph to the end of the document, and the second one	    add a new paragraph with the corresponding texts to the document.
 </div>
@@ -103,7 +103,7 @@ The following code is to add a comment at the front of the paragraph.
 <span class='comments'>		// applyHeading(), heading level is 3.</span>
 		para1.applyHeading(<span class='basic'>true</span>, 3);<br/>
 </pre>
-<br/><strong><a href="#Section" >Section</a></strong>
+<br/><br/><strong><a href="#Section" >Section</a></strong>
 <div class="bodytext">
 	    From version 0.4, we support high level APIs for section. 	    You can use the following code to get a section by name:
 </div>
@@ -144,7 +144,7 @@ The following code is to add a comment at the front of the paragraph.
 <br/><pre class='code' id="code16">
 		aSection.remove();<br/>
 </pre>
-<br/><strong><a href="#List" >List</a></strong>
+<br/><br/><strong><a href="#List" >List</a></strong>
 <div class="bodytext">
 	    From version 0.4, we support high level APIs for list.		You can use the following code to create a list. The two methods are same.
 </div>
@@ -288,7 +288,7 @@ The following code is to add a comment at the front of the paragraph.
 <br/><pre class='code' id="code34">
 		item.addList();<br/>
 </pre>
-<br/><strong><a href="#Header and Footer" >Header and Footer</a></strong>
+<br/><br/><strong><a href="#Header and Footer" >Header and Footer</a></strong>
 <div class="bodytext">
 	    From version 0.4.5, we support high level APIs for footer and header.		You can use the following code to get the header and footer. 
 </div>
@@ -317,7 +317,7 @@ The following code is to add a comment at the front of the paragraph.
 		cellByPosition.setFont(myFont);<br/>
 		cellByPosition.setCellBackgroundColor(<span class='javaclass'>Color</span>.<span class='javaclass'>YELLOW</span>);<br/>
 </pre>
-<br/><strong><a href="#Text Box" >Text Box</a></strong>
+<br/><br/><strong><a href="#Text Box" >Text Box</a></strong>
 <div class="bodytext">
 	    From version 0.5, we support high level APIs for text box.		Below codes will create a text box and add it to the text 		document with a paragraph as the anchor position.		The FrameRectangle specifies an area and the position of this text box.
 </div>
@@ -351,7 +351,7 @@ The following code is to add a comment at the front of the paragraph.
 <br/><pre class='code' id="code42">
 		paragraph.removeTextbox(myBox);<br/>
 </pre>
-<br/><strong><a href="#Image" >Image</a></strong>
+<br/><br/><strong><a href="#Image" >Image</a></strong>
 <div class="bodytext">
 	    From version 0.5.5, we support high level APIs for images.		Below codes will create a image and add it to a document with a paragraph as the anchor position.
 </div>
@@ -383,7 +383,7 @@ The following code is to add a comment at the front of the paragraph.
 		handler.setHorizontalRelative(<span class='javaclass'>HorizontalRelative</span>.<span class='javaclass'>PAGE</span>);<br/>
 		handler.setVerticalRelative(<span class='javaclass'>VerticalRelative</span>.<span class='javaclass'>PAGE</span>);<br/>
 </pre>
-<br/><strong><a href="#Span" >Span</a></strong>
+<br/><br/><strong><a href="#Span" >Span</a></strong>
 <div class="bodytext">
 	    From version 0.5.5, we support high level APIs for span.		You can create a span based on a text selection.		With span, you can set a different style to this small unit.
 </div>
@@ -401,7 +401,7 @@ The following code is to apply a hyperlink to this span.
 <br/><pre class='code' id="code48">
 		span.applyHyperlink(<span class='modifier'>new</span> <span class='javaclass'>URI</span>("ftp://ftpserver"));<br/>
 </pre>
-<br/><strong><a href="#Page Break" >Page Break</a></strong>
+<br/><br/><strong><a href="#Page Break" >Page Break</a></strong>
 <div class="bodytext">
 	    From version 0.6.5, we support page break feature.		You can add page break at the end of text document or after a reference paragraph.		It may help you well format your document.
 </div>

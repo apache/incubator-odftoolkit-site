@@ -6,11 +6,11 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Overview" >Overview</a></strong>
+<br/><strong><a href="#Overview" >Overview</a></strong>
 <div class="bodytext">
 Style handling methods provide convenient methods to set font and borders.
 </div>
-<strong><a href="#Font handling" >Font handling</a></strong>
+<br/><strong><a href="#Font handling" >Font handling</a></strong>
 <div class="bodytext">
 		The most simple method to define font settings is to create a font		object, and set it to a cell object.		The below code snippet defines a font object to describe "Arial"		italic font with size "12pt" and black color,		and then set it to a cell. The font will work for western characters		by default.
 </div>
@@ -31,7 +31,7 @@ Style handling methods provide convenient methods to set font and borders.
 		<span class='javaclass'>StyleTypeDefinitions</span>.<span class='javaclass'>FontStyle</span> fontStyle = theFont.getFontStyle();<br/>
 		<span class='javaclass'>Color</span> fontColor = theFont.getColor();<br/>
 </pre>
-<br/><strong><a href="#Advanced font handling" >Advanced font handling</a></strong>
+<br/><br/><strong><a href="#Advanced font handling" >Advanced font handling</a></strong>
 <div class="bodytext">
 		<i>CellStyleHandler</i> can help you to achieve advanced functions.		In Open Document Format, there can be different font settings for		different script types. 		For example, a font setting for English characters and another font		setting for Chinese characters.		If you want to define the font setting for other script types, you		can reference to below codes.		The below code snippet defines a font for Chinese characters.
 </div>
@@ -47,7 +47,7 @@ Style handling methods provide convenient methods to set font and borders.
 		<span class='javaclass'>Font</span> chineseFont = styleHandler.getFont(<span class='javaclass'>Document</span>.<span class='javaclass'>ScriptType</span>.<span class='javaclass'>CJK</span>);<br/>
 		<span class='javaclass'>Font</span> complexFont = styleHandler.getFont(<span class='javaclass'>Document</span>.<span class='javaclass'>ScriptType</span>.<span class='javaclass'>CTL</span>);<br/>
 </pre>
-<br/><strong><a href="#Border handling" >Border handling</a></strong>
+<br/><br/><strong><a href="#Border handling" >Border handling</a></strong>
 <div class="bodytext">
 		The most simple way to set border is to create a border object and		then set it to a cell object.		Below code snippet illustrates how to set a cell object with four		borders.
 </div>

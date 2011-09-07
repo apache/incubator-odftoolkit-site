@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Get Text" >Get Text</a></strong>
+<br/><strong><a href="#Get Text" >Get Text</a></strong>
 <div class="bodytext">
 		TextExtractor provides a method to get the display text of a single element. EditableTextExtractor is a sub class of TextExtractor. 		It provides a method to return all the text that the user can typically edit in a document, including text in cotent.xml, 		header and footer in styles.xml, meta data in meta.xml. 
 </div>

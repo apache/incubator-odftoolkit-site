@@ -6,7 +6,7 @@
  </ul>
 </div>
 <br/>
-<strong><a href="#Add Slide" >Add Slide</a></strong>
+<br/><strong><a href="#Add Slide" >Add Slide</a></strong>
 <div class="bodytext">
 If you want to add new slide to the presentation document, you can use the following codes:
 </div>
@@ -17,7 +17,7 @@ Here the SlideLayout is the layout model of the added slide, the first parameter
                 <span class='javaclass'>PresentationDocument</span> document=<span class='javaclass'>PresentationDocument</span>.newPresentationDocument();	        			<br/>
 		document.newSlide(1, "new slide", <span class='javaclass'>SlideLayout</span>.TITLE_ONLY);<br/>
 </pre>
-<br/><strong><a href="#Get Slide" >Get Slide</a></strong>
+<br/><br/><strong><a href="#Get Slide" >Get Slide</a></strong>
 <div class="bodytext">
 You can get the slide through the index in the presentation document, like follows:
 </div>
@@ -43,7 +43,7 @@ Also you can get the number of the slides in the document by the following code:
 <br/><pre class='code' id="code4">
 		<span class='basic'>int</span> numSlide=document.getSlideCount();<br/>
 </pre>
-<br/><strong><a href="#Set/Get Slide Name/Index" >Set/Get Slide Name/Index</a></strong>
+<br/><br/><strong><a href="#Set/Get Slide Name/Index" >Set/Get Slide Name/Index</a></strong>
 <div class="bodytext">
 If you want to set a new name for a slide, you can use the following two methods:
 </div>
@@ -58,7 +58,7 @@ If you want to know the index and the name of one slide which is being operated,
 		<span class='basic'>int</span> slideIndex=slide.getSlideIndex();<br/>
 		<span class='javaclass'>String</span> slideName=slide.getSlideName();<br/>
 </pre>
-<br/><strong><a href="#Copy Slide" >Copy Slide</a></strong>
+<br/><br/><strong><a href="#Copy Slide" >Copy Slide</a></strong>
 <div class="bodytext">
 You can copy a slide in the presentation document from one position to another by using the following codes:
 </div>
@@ -79,7 +79,7 @@ Here the first parameter of copyForeignSlide is the new position of the copied s
 		 documentmodel=(<span class='javaclass'>PresentationDocument</span>)<span class='javaclass'>PresentationDocument</span>.loadDocument("presentation.odp");<br/>
 		 document.copyForeignSlide(1, documentmodel, 2);<br/>
 </pre>
-<br/><strong><a href="#Move/Delete Slide" >Move/Delete Slide</a></strong>
+<br/><br/><strong><a href="#Move/Delete Slide" >Move/Delete Slide</a></strong>
 <div class="bodytext">
 To move one slide to another position of this presentation position, you can use the following codes:
 </div>
@@ -96,7 +96,7 @@ You can delete the slide either by through the index or through the name of the 
 		document.deleteSlideByIndex(1);<br/>
 		document.deleteSlideByName("third slide");<br/>
 </pre>
-<br/><strong><a href="#Add Text to Slide" >Add Text to Slide</a></strong>
+<br/><br/><strong><a href="#Add Text to Slide" >Add Text to Slide</a></strong>
 <div class="bodytext">
 	  You can set the text content of a slide with text box API since version 0.5.	  Below codes will get the title text box of a slide, set the text content,	  and then get the outline text box, set the list content.
 </div>
@@ -115,7 +115,7 @@ To add some text, you can first get the notes of one slide and then add text to 
 		<span class='javaclass'>Notes</span> note=slide.getNotesPage();<br/>
 		note.addText("text notes");<br/>
 </pre>
-<br/><strong><a href="#Add Image to Slide" >Add Image to Slide</a></strong>
+<br/><br/><strong><a href="#Add Image to Slide" >Add Image to Slide</a></strong>
 <div class="bodytext">
 To add an image to slide, you can use below codes to simply add the image to the last slide of the presentation document.
 </div>
