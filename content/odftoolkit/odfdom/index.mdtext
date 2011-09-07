@@ -66,7 +66,7 @@ There are many ways to participate and we're always looking for contributors. Ju
 
 If you're a developer, just dive into [the development section][28]. Here you find information on where to access the source code and how to set up a build environment.
 
-You can contact us by IRC "[irc://irc.freenode.org/odfdom][28]".
+You can contact us by IRC "[irc://irc.freenode.org/odfdom][29]".
 
 
   [1]: ProjectOverview.html
@@ -95,5 +95,6 @@ You can contact us by IRC "[irc://irc.freenode.org/odfdom][28]".
   [24]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/
   [25]: http://www.langintro.com/odfdom_tutorials/
   [26]: FrequentQuestions.html
-  [27]: Development.html
-  [28]: irc://irc.freenode.org/odfdom
+  [27]: mailto:odf-users@incubator.apache.org
+  [28]: Development.html
+  [29]: irc://irc.freenode.org/odfdom
