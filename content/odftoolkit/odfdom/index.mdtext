@@ -1,6 +1,5 @@
-[[image: oasis_odf_logo.png|right]]
-
-=ODFDOM - the OpenDocument API=
+ODFDOM - the OpenDocument API
+-----------------------------
 
 ODFDOM is a free OpenDocument Format (ODF) library. Its purpose is to provide an easy common way to create, access and manipulate ODF files, without requiring detailed knowledge of the ODF specification. It is designed to provide the ODF developer community with an easy lightwork programming API portable to any object-oriented language. 
 
@@ -8,58 +7,60 @@ The current reference implementation is written in Java.
 
 To learn more about the project's architecture, refer to the [[ProjectOverview|project overview]] and the [[Layers|ODFDOM Layers]] section.
 
-==News==
+News
+----
 
-=== New ODFDOM 0.8.7 Release===
+**New ODFDOM 0.8.7 Release**
 
-ODFDOM 0.8.7 was [http://odftoolkit.org/projects/odfdom/lists/users/archive/2011-02/message/6 released on Feb 16th 2011]. Major enhancements are coming with this version:
-* Full Maven support: ODFDOM is now on the public Maven servers.
-* The sub document handling had been enhanced. 
-* ODF Package validation in ODFDOM was enabled. ODFDOM is used by the ODF Validator project of ODF Toolkit.
-* More functionality for source code generation of the ODF 1.2 typed DOM classes by using MultiSchemaValidator as RelaxNG parser and Apache Velocity as template engine
-* A major design clean-up had been archived. The inheritance relationship between DOM and Document layer has been broken up as it was no 1:1 relationship. The convenient methods for text, image and style are moved to incubator package. 
-* A new function to extract text from documents, DOMs and elements has been provided.
-* Several bugs related with table and presentation had been fixed. 
+ODFDOM 0.8.7 was on Feb 16th 2011. Major enhancements are coming with this version:       
 
-For more details see [http://odftoolkit.org/projects/odfdom/lists/users/archive/2011-02/message/6 feature summary on the mailing list] and the  [[ReleaseNotes|release notes with the API change list]].
+ - Full Maven support: ODFDOM is now on the public Maven servers.
+ - The sub document handling had been enhanced. 
+ - ODF Package validation in ODFDOM was enabled. ODFDOM is used by the ODF Validator project of ODF Toolkit.
+ - More functionality for source code generation of the ODF 1.2 typed DOM classes by using MultiSchemaValidator as RelaxNG parser and Apache Velocity as template engine
+ - A major design clean-up had been archived. The inheritance relationship between DOM and Document layer has been broken up as it was no 1:1 relationship. The convenient methods for text, image and style are moved to incubator package. 
+ - A new function to extract text from documents, DOMs and elements has been provided.
+ - Several bugs related with table and presentation had been fixed. 
 
-==Download==
+For more details see [feature summary on the mailing list][1] and the  [[ReleaseNotes|release notes with the API change list]].
 
-The ODFDOM downloads are now available from the  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/ official Maven repository]:
+Download
+--------
 
-'''ODFDOM'' - [http://odftoolkit.org/downloads/odfdom/KEYS KEYS] 
-* [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar ODFDOM 0.8.7 binary - jar]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.asc [PGP]]   [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.md5 [MD5]]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.sha1 [SHA]]
-* [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar ODFDOM 0.8.7 JavaDoc - jar]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.asc [PGP]]   [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.md5 [MD5]]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.sha1 [SHA]]
-* [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar ODFDOM 0.8.7 sources - jar]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.asc [PGP]]   [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.md5 [MD5]]  [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.sha1 [SHA]]
+The ODFDOM downloads are now available from [the official Maven repository][2]:
+
+**ODFDOM** - [*KEYS*][3]     
+
+ -  [ODFDOM 0.8.7 binary - jar][4] [[PGP]][5] [[MD5]][6] [[SHA]][7]
+ -  [ODFDOM 0.8.7 JavaDoc - jar][8] [[PGP]][9] [[MD5]][10] [[SHA]][11]   
+ -  [ODFDOM 0.8.7 sources - jar][12] [[PGP]][13] [[MD5]][14] [[SHA]][15]   
 
 For information on working with the source code, please refer to the [[Development|development section]]. 
 
-==Quickstart==
-Put the odfdom.jar file in your classpath. You will need [http://xml.apache.org/dist/xerces-j/ Apache Xerces-J] as XML parser and DOM implementation as well. Start with the following sample code to create a simple text document.
-<br/>
+Quickstart
+----------
 
-<pre>
-// Create a text document from a standard template (empty documents within the JAR)
-OdfTextDocument odt = OdfTextDocument.newTextDocument();
+Put the odfdom.jar file in your classpath. You will need [Apache Xerces-J][16] as XML parser and DOM implementation as well. Start with the following sample code to create a simple text document.    
 
-// Append text to the end of the document. 
-odt.addText("This is my very first ODF test");
+    // Create a text document from a standard template (empty documents within the JAR)  
+    OdfTextDocument odt = OdfTextDocument.newTextDocument();  
+    // Append text to the end of the document.   
+    odt.addText("This is my very first ODF test");  
+    // Save document  
+    odt.save("MyFilename.odt");  
 
-// Save document
-odt.save("MyFilename.odt");
-</pre>
-
-==Documentation==
+Documentation
+-------------
 
 A good starting point is reading the [[ProjectOverview|project overview]] and the [[Layers|ODFDOM Layers]] will help you to get an overview over the ODFDOM package structure. 
 
-Javadocs are [http://odfdom.odftoolkit.org/0.8.7/odfdom/apidocs/ viewable online] or [https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/ downloadable as bundle from the official Maven repository].
+Javadocs are [viewable online][17] or [downloadable as bundle][18] from the official Maven repository.
 
-There are [http://www.langintro.com/odfdom_tutorials/ David's ODFDOM tutorials]. You'll find an introduction as well as sample code for creating text and spreadsheet documents. (Note: The tutorials might not yet be adapted to the latest version).
+There are [David's ODFDOM tutorials][19]. You'll find an introduction as well as sample code for creating text and spreadsheet documents. (Note: The tutorials might not yet be adapted to the latest version).
 
 When meeting with questions, check if [[FrequentQuestions|FAQs]] can help you.
 
-==How to Participate==
+**How to Participate**
 
 There are many ways to participate and we're always looking for [[WhoWeAre|contributors]]. Just [https://odftoolkit.org/people/new sign up] on the ODF Toolkit Project and afterwards [http://odftoolkit.org/projects/odfdom/ watch this project]. Then you may want to start with reading and posting on the [http://odftoolkit.org/projects/odfdom/lists mailing lists] or on the [http://odftoolkit.org/projects/odftoolkit/forums/ODFDOM ODFDOM forum], report [http://odftoolkit.org/bugzilla/buglist.cgi?product=odfdom&order=bugs.bug_id bugs] or write documentation.
 
@@ -67,4 +68,23 @@ If you're a developer, just dive into the [[Development|development section]]. H
 
 You can contact us by IRC "irc://irc.freenode.org/odfdom".
 
-<p style="margin: 15px 0px; text-align:center">Back to: [http://odftoolkit.org/ ODF Toolkit Wiki Home]</p>
+
+  [1]: http://odftoolkit.org/projects/odfdom/lists/users/archive/2011-02/message/6
+  [2]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/
+  [3]: http://odftoolkit.org/downloads/odfdom/KEYS
+  [4]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar
+  [5]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.asc
+  [6]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.md5
+  [7]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7.jar.sha1
+  [8]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar
+  [9]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.asc
+  [10]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.md5
+  [11]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-javadoc.jar.sha1
+  [12]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar
+  [13]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.asc
+  [14]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.md5
+  [15]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/0.8.7/odfdom-java-0.8.7-sources.jar.sha1
+  [16]: http://xml.apache.org/dist/xerces-j/
+  [17]: http://odfdom.odftoolkit.org/0.8.7/odfdom/apidocs/
+  [18]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/
+  [19]: http://www.langintro.com/odfdom_tutorials/
