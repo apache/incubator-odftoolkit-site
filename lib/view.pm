@@ -57,38 +57,6 @@ sub single_narrative {
     return Template($template)->render(\%args), html => \%args;
 }
 
-# This view is used to wrap html.  It takes a
-# 'template' argument and a 'path' argument.
-# Assuming the path ends in foo.html, any files
-# like foo.page/bar.mdtext will be parsed and
-# passed to the template in the "bar" (hash)
-# variable.
-
-sub html_page {
-    my %args = @_;
-    my %styleargs = @_;
-    my $file = "content$args{path}";
-    my $template = $args{template};
-    $args{breadcrumbs} = breadcrumbs($args{path});
-
-    read_text_file $file, \%args;
-
-    my $page_path = $file;
-    $page_path =~ s/\.[^.]+$/.page/;
-    if (-d $page_path) {
-        for my $f (grep -f, glob "$page_path/*.mdtext") {
-            $f =~ m!/([^/]+)\.mdtext$! or die "Bad filename: $f\n";
-            $args{$1} = {};
-            read_text_file $f, $args{$1};
-        }
-    }
-
-    $args{header} = `sed -n '/<[Hh][Ee][Aa][Dd]>/,/<\\/[Hh][Ee][Aa][Dd]>/p' ${file} | sed -e '1s/.*<[Hh][Ee][Aa][Dd]>//' -e 's/<\\/[Hh][Ee][Aa][Dd]>.*//'`;
-    $args{content} = `sed -n '/<[Bb][Oo][Dd][Yy]/,/<\\/[Bb][Oo][Dd][Yy]>/p' ${file} | sed -e '1s/.*<[Bb][Oo][Dd][Yy]//' -e "s/<\\/[Bb][Oo][Dd][Yy]>.*//"`;
-
-    return Template($template)->render(\%args), html => \%args;
-}
-
 sub sitemap {
     my %args = @_;
     my $template = "content$args{path}";
