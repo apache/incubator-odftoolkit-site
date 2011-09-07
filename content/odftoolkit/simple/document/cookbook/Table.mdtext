@@ -103,4 +103,3 @@ Each table in the document has a protect attribute to show whether it is protect
  </ul>
 </div>
 <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />

@@ -90,4 +90,3 @@ Style handling methods provide convenient methods to set font and borders.
  </ul>
 </div>
 <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />

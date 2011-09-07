@@ -106,4 +106,3 @@ If the second parameter of row's setHeight is true, the row can fit the height t
  </ul>
 </div>
 <link type="text/css" rel="stylesheet" href="cookbook.css"/>
-<link rel="stylesheet" href="../images/style.css" type="text/css" />

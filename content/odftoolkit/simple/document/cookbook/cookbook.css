@@ -1,170 +1,42 @@
-body {
-
-  font-family: "Verdana", sans-serif;
-
-  margin-left:20px;
-
-}
-
-hr   {height:2px;border-width:0;color:gray;background-color:black;}   
-
-
-
-.page{
-
-   font-weight: bold
-
-}
-
-
-
-.page a:hover{
-
-	color: #FFF;
-
-    background-color: #FF7F50;
-
-}
-
-.section{
-
-   font-weight: bold
-
-}
-
-.section a:hover{
-
-    color: #FFF;
-
-    background-color: #FF7F50;
-
-}
-
-.subsection{
-
-    font-style: italic; 
-
-}
-
-.subsection a:hover{
-
-  color: #FFF;
-
-  background-color: #FF7F50;
-
-}
-
-.paragraph{
-
-
-
-}
-
-
-
-
-
 div.navigation {
-
     height: 30px;
-
-
     border-top: solid #000 1px;
-
     border-bottom: solid #000 1px;
-
-    background-color: #007CA6;
 
 }
 
 div.navigation ul {
 
     margin: 0px;
-
     padding: 0px;
-
-    font-family: Tahoma,sans-serif;
-
-    font-size: 18px;;
-
-    color: #FFF;
-
-    line-height: 30px;
-
     white-space: nowrap;
-
 	float:right;
 
 }
 
 div.navigation li {
-
-
-
     list-style-type: none;
-
     display: inline;
-
 }
 
 div.navigation li a {
 
     padding: 7px 10px;
-
-    color: #FFF;
-
 }
 
 div.navigation li a:link {
 
-    color: #FFF:
-
 }
-
-
 
 div.navigation li a:hover {
 
     font-weight: bold;
 
-    color: #FFF;
-
-    background-color: #43C7F4;
-
 }
-
-
-
-
-.pageli{
-
-
-
-}
-
-
-
-.sectionli{
-
-
-
-}
-
-
-
-.subsectionli{
-
-
-
-}
-
-
 
 /* styles for the code block */
 
 .code{
-
-
 
 	margin: 0 ;
 
@@ -172,15 +44,11 @@ div.navigation li a:hover {
 
 	border: 0 ;
 
-
-
 	background-color: #F8F8FF ;
 
 	text-align: left ;
 
 	float: none ;
-
-	
 
 	vertical-align: baseline ;
 
@@ -202,8 +70,6 @@ white-space:pre-wrap;
 	font-family: "Consolas","Courier New","Verdana";
 
 	font-size:14px;
-
-	
 
 }
 
