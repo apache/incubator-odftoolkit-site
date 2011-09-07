@@ -4,6 +4,7 @@ package path;
 
 our @patterns = (
 	[qr!\.mdtext$!, single_narrative => { template => "single_narrative.html" }],
+#    [qr!\.html$!, html_page => { template => "html_page.html" }],
 ) ;
 
 # for specifying interdependencies between files

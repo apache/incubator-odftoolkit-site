@@ -83,8 +83,8 @@ sub html_page {
         }
     }
 
-    $args{header} = `sed -n '/<head>/,/<\\/head>/p' ${file} | sed -e '1s/.*<head>//' -e 's/<\\/head>.*//'`;
-    $args{content} = `sed -n '/<body>/,/<\\/body>/p' ${file} | sed -e '1s/.*<body>//' -e "s/<\\/body>.*//"`;
+    $args{header} = `sed -n '/<[Hh][Ee][Aa][Dd]>/,/<\\/[Hh][Ee][Aa][Dd]>/p' ${file} | sed -e '1s/.*<[Hh][Ee][Aa][Dd]>//' -e 's/<\\/[Hh][Ee][Aa][Dd]>.*//'`;
+    $args{content} = `sed -n '/<[Bb][Oo][Dd][Yy]/,/<\\/[Bb][Oo][Dd][Yy]>/p' ${file} | sed -e '1s/.*<[Bb][Oo][Dd][Yy]//' -e "s/<\\/[Bb][Oo][Dd][Yy]>.*//"`;
 
     return Template($template)->render(\%args), html => \%args;
 }
