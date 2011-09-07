@@ -5,8 +5,10 @@ The ODFDOM project's objective is to provide an easy API for reading, writing an
 To archive this, the ODFDOM API follows a layered approach to access documents, as layered design is the robust foundation for a well-designed modular structure.
 
 The two ODFDOM layers are:   
+
 **-The ODF Package Layer**:  
   Provides access to all resources stored within the ODF package, such as XML streams, images or embedded objects. This layer covers all features from the [third part of the ODF 1.2 specification][1] defining the ODF Package features. The ODF 1.2 package features are build on top technologies as [ZIP package handling][2], [W3C encryption][3], [W3C signature][4] and [W3C metadata][5].       
+
 **-The ODF XML Layer**:<br/>Provides all the features of an office format, such as tables, images, numbering etc. All features are defined in [the first part of the ODF 1.2 specification][6] describing the ODF XML schema. This layer consists of two APIs representing two different views on the features:   
 
 - *The low-level DOM API*:   
