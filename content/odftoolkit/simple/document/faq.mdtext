@@ -1,45 +1,10 @@
-##What is the Simple Java API for ODF?
-
-The Simple Java API for ODF is an easy-to-use, high-level Java API for creating, modifying and extracting data from ODF 1.2 documents.  It is written in pure Java and does not require that you install any document editor on your system.  The Simple Java API for ODF is a high level abstraction of the lower-level [ODFDOM API][1].
-
-##New Release 0.6.6
-
-We are pleased to announce the release of the Simple Java API for ODF version 0.6.6 on Auguest 12th. The improvements in this version include:
-
-  - Two critical bugs in the Navigation API are fixed, as well as
-    several other issues.
-  - Page columns,  a page layout feature in text documents, are supported.
-  - Unit test coverage rate increased.  This work improves the stability of our API.
-
-You can download it here. The full release notes can be found here. 
-
-You are welcomed to give us any feedback by Bugzilla, eMail or forum. 
-
-##Project roadmap and schedule
-
-The Simple Java API for ODF adhears to the "Release Early and Often" development philosophy.  We will target a monthly release, for the end of each month.  Code that is ready makes it into that month's release.  Code that is not yet ready will wait.
-
-Proposed Roadmap:
-
-
-
-  - Version 0.2 at the end of Oct, 2010 with the high-level methods
-    migrated from ODFDOM and organized in new package structure;
-  - Version 0.3 at the end of Nov, 2010 with high-level style API;
-  - Version 0.4 at the end of Jan, 2011 with additional high-level text methods;
-  - Version 0.5 at the end of March, 2011 with text box and fields methods;
-  - Version 0.6 at the end of May, 2011 with chart methods;
-  - Version 0.6.6 at the middle of August, 2011 with bugs fixed;
-
-More work will be started in Apache.
-
 #Frequently Asked Questions
 
 ###For Users
 
 ####How to download and install
 
-You can get Simple Java API for ODF as binary distribution from the [http://odftoolkit.org/projects/simple/downloads download] area. There you'll find Javadocs as well. To obtain source code, please refer to [[#download_source|development section]]. 
+You can get Simple Java API for ODF as binary distribution from the [download][1] area. There you'll find Javadocs as well. To obtain source code, please refer to [[#download_source|development section]]. 
 
 ###How to start development
 
@@ -170,4 +135,5 @@ The current draft of the OASIS ODF 1.2 standard can be downloaded [http://www.oa
 *[http://odftoolkit.org/projects/odfdom/pages/Development#Mercurial Here] is a list of the most frequently used commands for Mercurial.
 *[http://odftoolkit.org/projects/odfdom/pages/Development#Maven Here] is a list of the most frequently used commands for Maven.
 
-[1]: http://incubator.apache.org/odftoolkit/odfdom/index.html
+
+  [1]: ../download.html
