@@ -7,12 +7,10 @@
 </div>
 <br/>
 <strong><a href="#Overview" >Overview</a></strong>
-<hr/>
 <div class="bodytext">
  This <a href="">Table</a> API supports to manipulate tables in text and spreadsheet documents. It covers the table definition in <a href="http:docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part1.html#a_9_Tables">ODF Specification 1.2 Committee Draft05</a>
 </div>
 <strong><a href="#Create Table" >Create Table</a></strong>
-<hr/>
 <div class="bodytext">
 Let's create an empty table first.By default,the code below create a table with 5 columns and 2 rows.
 </div>
@@ -51,7 +49,6 @@ You can also fill table with string values while creating it, to do this you sho
      	table4.setTableName("stringTable");<br/>
 </pre>
 <br/><strong><a href="#Find Table" >Find Table</a></strong>
-<hr/>
 <div class="bodytext">
 To get all the tables in the document,you can do like this:
 </div>
@@ -65,7 +62,6 @@ If you want to get a single table,you can use the table name to find it.If it's 
         <span class='javaclass'>Table</span> emptyTable=document.getTableByName("table1");<br/>
 </pre>
 <br/><strong><a href="#Delete Table" >Delete Table</a></strong>
-<hr/>
 <br/><pre class='code' id="code6">
         <span class='javaclass'>Table</span> table = document.getTableByName("<span class='javaclass'>DeletedTable</span>");<br/>
         <span class='control'>if</span> (table != <span class='basic'>null</span>) {<br/>
@@ -73,7 +69,6 @@ If you want to get a single table,you can use the table name to find it.If it's 
         }<br/>
 </pre>
 <br/><strong><a href="#Set Table" >Set Table</a></strong>
-<hr/>
 <div class="bodytext">
 You can set or update table name,which can be regarded as table identifier in a document.
 </div>
@@ -107,3 +102,5 @@ Each table in the document has a protect attribute to show whether it is protect
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

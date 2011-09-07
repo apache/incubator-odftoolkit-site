@@ -7,7 +7,6 @@
 </div>
 <br/>
 <strong><a href="#Get CellRange" >Get CellRange</a></strong>
-<hr/>
 <div class="bodytext">
 You can get cell range by providing start and end index of the column and row,or just provide start and end address of the cell(if you are using the spreadsheet.)
 </div>
@@ -16,7 +15,6 @@ You can get cell range by providing start and end index of the column and row,or
 	    <span class='javaclass'>CellRange</span> cellRangeAdd = table.getCellRangeByPosition("$E1","$E6");<br/>
 </pre>
 <br/><strong><a href="#Merge Text Table" >Merge Text Table</a></strong>
-<hr/>
 <div class="bodytext">
 The code below merges all of the selected cells into one:
 </div>
@@ -26,7 +24,6 @@ The code below merges all of the selected cells into one:
 	    cellRange.merge();<br/>
 </pre>
 <br/><strong><a href="#Merge Text Column" >Merge Text Column</a></strong>
-<hr/>
 <div class="bodytext">
 The code below shows how to merge the cells of the first column into one ：
 </div>
@@ -36,7 +33,6 @@ The code below shows how to merge the cells of the first column into one ：
 	    	firstColumn.merge();<br/>
 </pre>
 <br/><strong><a href="#Merge Text Row" >Merge Text Row</a></strong>
-<hr/>
 <div class="bodytext">
 The code below shows how to merge the cells of the first 2 rows into one ：
 </div>
@@ -47,7 +43,6 @@ The code below shows how to merge the cells of the first 2 rows into one ：
     	        firstTwoRow.merge();<br/>
 </pre>
 <br/><strong><a href="#Merge SpreadSheet" >Merge SpreadSheet</a></strong>
-<hr/>
 <div class="bodytext">
 Merge a spreadsheet's cell is the same as text document.Especially,when getting the cell range of spreadsheet,you can use special address instead of index.
 </div>
@@ -65,3 +60,5 @@ Merge a spreadsheet's cell is the same as text document.Especially,when getting 
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

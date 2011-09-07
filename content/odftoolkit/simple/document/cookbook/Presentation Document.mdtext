@@ -7,7 +7,6 @@
 </div>
 <br/>
 <strong><a href="#Create Presentation Document" >Create Presentation Document</a></strong>
-<hr/>
 <div class="bodytext">
 Let's create an empty presentation document first. The following codes generates an empty presentation document with one slide:
 </div>
@@ -22,7 +21,6 @@ We can also create a presentation template document by using the following codes
                     <span class='javaclass'>PresentationDocument</span> documentTmp=<span class='javaclass'>PresentationDocument</span>.newPresentationTemplateDocument();			    <br/>
 </pre>
 <br/><strong><a href="#Get Presentation Document" >Get Presentation Document</a></strong>
-<hr/>
 <div class="bodytext">
 We can get the existing presentation Document by using the loadDocument function like follows: 
 </div>
@@ -41,7 +39,6 @@ Here the slides of the documents "presentation.odp" will be appended to "documen
 	            document.appendPresentation(presentationmodel);	       <br/>
 </pre>
 <br/><strong><a href="#Change Presentation Mode" >Change Presentation Mode</a></strong>
-<hr/>
 <div class="bodytext">
 We can switch the mode presentation documents by using the following codes. Here the first one convert the presentation document to a template, and the second one convert the template to a normal presentation document.
 </div>
@@ -57,3 +54,5 @@ We can switch the mode presentation documents by using the following codes. Here
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

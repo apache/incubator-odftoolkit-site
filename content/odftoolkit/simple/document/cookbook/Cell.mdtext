@@ -7,7 +7,6 @@
 </div>
 <br/>
 <strong><a href="#Get Cell" >Get Cell</a></strong>
-<hr/>
 <div class="bodytext">
 If you want to get the specified cell in a table,you can use the getCellByPosition method of Table.
 </div>
@@ -45,7 +44,6 @@ The code below shows how you can do that:
 	 <span class='javaclass'>Column</span> column1=cell.getTableColumn();<br/>
 </pre>
 <br/><strong><a href="#Control Cell Attributes" >Control Cell Attributes</a></strong>
-<hr/>
 <div class="bodytext">
 Use the getStyleName() method you can get the style name of the cell.
 </div>
@@ -141,7 +139,6 @@ RemoveContent remove all of the cell while the removeTextContent only remove the
 	   cell.removeTextContent();<br/>
 </pre>
 <br/><strong><a href="#Get&Set Cell Value Type" >Get&Set Cell Value Type</a></strong>
-<hr/>
 <div class="bodytext">
 	 The cell value can have different types,for the setValueType method:	 the parameter can be 	 <ul><li>"boolean"</li>	 <li>"currency"</li>	 <li>"date"</li>	 <li>"float"</li>         <li>"percentage"</li>	 <li>"string"</li>	 <li>"time"</li>	 <li>"void"</li>	 </ul>	 If the parameter type is not a valid cell type, an IllegalArgumentException will be thrown.
 </div>
@@ -153,7 +150,6 @@ RemoveContent remove all of the cell while the removeTextContent only remove the
 For the following getXXXValue() method:it gets the cell value as xxx type.An IllegalArgumentException will be thrown if the cell type is not xxx.
 </div>
 <a href="#Get&Set boolean type Cell" >Get&Set boolean type Cell</a>
-<hr/>
 <div class="bodytext">
 	For setBooleanValue method:it sets the cell value as a boolean and sets the value type to be boolean.
 </div>
@@ -162,7 +158,6 @@ For the following getXXXValue() method:it gets the cell value as xxx type.An Ill
 	   cell.setBooleanValue(booleanValue);<br/>
 </pre>
 <br/><a href="#Get&Set currency type Cell" >Get&Set currency type Cell</a>
-<hr/>
 <div class="bodytext">
 For the following getting methods,if the value type is not "currency", an IllegalArgumentException will be thrown.
 </div>
@@ -181,25 +176,21 @@ You can also set currency value and currency format.Please note the overall form
 	   cell.setCurrencyFormat("$", "$#,##0.00");<br/>
 </pre>
 <br/><a href="#Get&Set date type Cell" >Get&Set date type Cell</a>
-<hr/>
 <br/><pre class='code' id="code18">
 	   <span class='javaclass'>Calendar</span> dateValue=cell.getDateValue(); <br/>
 	   cell.setDateValue(<span class='modifier'>new</span> <span class='javaclass'>GregorianCalendar</span>(2010,5,1));<br/>
 </pre>
 <br/><a href="#Get&Set float type Cell" >Get&Set float type Cell</a>
-<hr/>
 <br/><pre class='code' id="code19">
 	  <span class='basic'>double</span> floatValue=cell.getDoubleValue();  <br/>
 	  cell.setDoubleValue(<span class='modifier'>new</span> <span class='javaclass'>Double</span>(22.99f));<br/>
 </pre>
 <br/><a href="#Get&Set percentage type Cell" >Get&Set percentage type Cell</a>
-<hr/>
 <br/><pre class='code' id="code20">
 	  <span class='basic'>double</span> percentageValue=cell.getPercentageValue();<br/>
 	  cell.setPercentageValue(0.89);<br/>
 </pre>
 <br/><a href="#Get&Set string type Cell" >Get&Set string type Cell</a>
-<hr/>
 <div class="bodytext">
 If the cell type is not string, the display text will be returned.
 </div>
@@ -208,7 +199,6 @@ If the cell type is not string, the display text will be returned.
 	  cell.setStringValue("simple");<br/>
 </pre>
 <br/><a href="#Deal with the Time Value" >Deal with the Time Value</a>
-<hr/>
 <div class="bodytext">
 If you want to get the string type of time value,you can format it:
 </div>
@@ -218,7 +208,6 @@ If you want to get the string type of time value,you can format it:
           <span class='javaclass'>String</span>  timeString= simpleFormat.format(cell.getTimeValue().getTime());<br/>
 </pre>
 <br/><a href="#Something about Display Text" >Something about Display Text</a>
-<hr/>
 <div class="bodytext">
           Please note the display text in ODF viewer might be different from the value set by this method,	  because the displayed text in ODF viewer is calculated and set by editor. 
 </div>
@@ -227,7 +216,6 @@ If you want to get the string type of time value,you can format it:
 	  cell.setDisplayText(displayText);<br/>
 </pre>
 <br/><strong><a href="#Set image" >Set image</a></strong>
-<hr/>
 <div class="bodytext">
 		From version 0.5.5, we support high level APIs for images.	    You can use following codes to set an image to a cell.
 </div>
@@ -253,3 +241,5 @@ If you want to get the string type of time value,you can format it:
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

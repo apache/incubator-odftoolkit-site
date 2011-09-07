@@ -7,12 +7,10 @@
 </div>
 <br/>
 <strong><a href="#Overview" >Overview</a></strong>
-<hr/>
 <div class="bodytext">
 	    Since 0.6, Simple ODF provides methods to manipulate charts in text document, spreadsheet document and presentation document.		You can create, update and delete charts with these methods.
 </div>
 <strong><a href="#Create charts" >Create charts</a></strong>
-<hr/>
 <div class="bodytext">
 		We all know, a chart is associated with a table. In order to create a chart, you must determine the data set of this chart.		The data set can be a cell range of a table, for example:
 </div>
@@ -73,7 +71,6 @@
 				cellRange, <span class='basic'>true</span>, <span class='basic'>true</span>, <span class='basic'>false</span>, <span class='basic'>null</span>);<br/>
 </pre>
 <br/><strong><a href="#Update charts" >Update charts</a></strong>
-<hr/>
 <div class="bodytext">
 		You can update charts properties, for example, the title, axis title, chart type, whether to apply 3D effect, whether to use legend with API.		For example:
 </div>
@@ -91,7 +88,6 @@
 		chart.setChartData(<span class='modifier'>new</span> <span class='javaclass'>DataSet</span>(<span class='javaclass'>CellRangeAddressList</span>.valueOf("A.A1:A.C4"), spreadsheetDoc, true, true, true));<br/>
 </pre>
 <br/><strong><a href="#Get and delete charts" >Get and delete charts</a></strong>
-<hr/>
 <div class="bodytext">
 		You can get charts by title e.g.
 </div>
@@ -126,3 +122,5 @@
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

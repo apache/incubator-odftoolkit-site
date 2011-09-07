@@ -7,7 +7,6 @@
 </div>
 <br/>
 <strong><a href="#TextNavigation" >TextNavigation</a></strong>
-<hr/>
 <div class="bodytext">
 		First an ODF text document is needed to test the navigation operation. The following codes shows two main functions of TextNavigation		:hasNext() and getCurrentItem(). The first parameter of the TextNavigation constructor is the matched pattern String, and the second is		the navigation scope.
 </div>
@@ -24,9 +23,7 @@
 		}		<br/>
 </pre>
 <br/><strong><a href="#TextSelection" >TextSelection</a></strong>
-<hr/>
 <a href="#Get Index/Text of TextSelection" >Get Index/Text of TextSelection</a>
-<hr/>
 <div class="bodytext">
 		Run the following codes will get the text content of the searched String "good" and the corresponding index in 		the text document.
 </div>
@@ -41,7 +38,6 @@
 		}		<br/>
 </pre>
 <br/><a href="#Cut String" >Cut String</a>
-<hr/>
 <div class="bodytext">
 		To cut some specified string in a text document, you can do like the following codes which		cut off all the String "day" in the document.
 </div>
@@ -53,7 +49,6 @@
 		}		<br/>
 </pre>
 <br/><a href="#Paste String" >Paste String</a>
-<hr/>
 <div class="bodytext">
 		The following codes paste the string "change" both at the front and at the end of the string "good",		by using the function pasteAtFrontOf() and pasteAtEndOf().
 </div>
@@ -74,7 +69,6 @@
 		}<br/>
 </pre>
 <br/><a href="#Replace String" >Replace String</a>
-<hr/>
 <div class="bodytext">
 The following codes replace all the string "replacesource" with the string "replacedest" in the text document.
 </div>
@@ -87,7 +81,6 @@ The following codes replace all the string "replacesource" with the string "repl
 		}		<br/>
 </pre>
 <br/><a href="#Add Reference to String" >Add Reference to String</a>
-<hr/>
 <div class="bodytext">
 		To add reference for a string, you can do like the following codes. Here 		function addHref is used, the parameter of it is an URL object. The codes add network address		"http:www.ibm.com" to the string "network".
 </div>
@@ -100,7 +93,6 @@ The following codes replace all the string "replacesource" with the string "repl
 		}<br/>
 </pre>
 <br/><a href="#Add Comment" >Add Comment</a>
-<hr/>
 <div class="bodytext">
 		Adding comment is a useful function when review document, such as spell check and security check. 		You can do it like the following codes. Here, function addComment is used, the first parameter is 		the comment content, the second parameter is the comment author. The codes add a spell suggestion 		before the string "natwork".
 </div>
@@ -112,7 +104,6 @@ The following codes replace all the string "replacesource" with the string "repl
 		}<br/>
 </pre>
 <br/><strong><a href="#FieldSelection" >FieldSelection</a></strong>
-<hr/>
 <div class="bodytext">
 		Field Selection is a decorator class of TextSelection, which help user replace a text content with field.		Following code can be used to search the document content, and replace with a simple field.
 </div>
@@ -154,7 +145,6 @@ The following codes replace all the string "replacesource" with the string "repl
 		fieldSelection.replaceWithVariableField(userVariableField);<br/>
 </pre>
 <br/><strong><a href="#TextStyleNavigation" >TextStyleNavigation</a></strong>
-<hr/>
 <div class="bodytext">
 		Similar with TextNavigation, TextStyleNavigation has two main functions: getCurrentItem() and		hasNext() which is shown in the following codes. The input parameter of TextStyleNavigation constructor		is a map of OdfStyleProperty, so here a TreeMap "searchProps" which contains the Style properties is used		to construct the TextStyleNavigation object.
 </div>
@@ -177,3 +167,5 @@ The following codes replace all the string "replacesource" with the string "repl
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

@@ -7,7 +7,6 @@
 </div>
 <br/>
 <strong><a href="#Get Column/Row" >Get Column/Row</a></strong>
-<hr/>
 <div class="bodytext">
 The class Column/Row represents the column/row of table.To get all the columns or rows you can use the getColumnList or getRowList of the table instance.
 </div>
@@ -53,7 +52,6 @@ Yes,you can ask the column/row instance itself,if it doesn't exist,null will be 
 	<span class='javaclass'>Row</span> nextRow=row.getNextRow();<br/>
 </pre>
 <br/><strong><a href="#Append or Insert Column/Row" >Append or Insert Column/Row</a></strong>
-<hr/>
 <div class="bodytext">
 You can add a column to the end or insert many columns before the specified index
 </div>
@@ -75,7 +73,6 @@ What can I do if I want to insert a column/row into the specified position?
 	<span class='javaclass'>List</span>&lt;<span class='javaclass'>Row</span>&gt; newRows = table.insertRowsBefore(0, 2);<br/>
 </pre>
 <br/><strong><a href="#Remove Columns/Rows" >Remove Columns/Rows</a></strong>
-<hr/>
 <div class="bodytext">
 You can delete a number of columns/rows by index
 </div>
@@ -90,7 +87,6 @@ The code below remove 1 column whose index is 2;remove 2 rows whose index is 1,2
 	table.removeRowsByIndex(1, 2);<br/>
 </pre>
 <br/><strong><a href="#Set Column/Row" >Set Column/Row</a></strong>
-<hr/>
 <div class="bodytext">
 If you want to change the width of the column or the height of the row,you can use it like this:
 </div>
@@ -109,3 +105,5 @@ If the second parameter of row's setHeight is true, the row can fit the height t
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />

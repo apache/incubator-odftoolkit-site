@@ -7,12 +7,10 @@
 </div>
 <br/>
 <strong><a href="#Overview" >Overview</a></strong>
-<hr/>
 <div class="bodytext">
      This <a href="">Meta</a> API supports to access and set document metadata. It covers the metadata definitions in <a href="http:docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part1.html#a_4_Metadata">ODF Specification 1.2 Committee Draft05</a>
 </div>
 <strong><a href="#Get Meta object" >Get Meta object</a></strong>
-<hr/>
 <div class="bodytext">
      First you load an ODF text document(for example),then get the meta file DOM and then use the meta DOM to create an instance of     the Meta. Use Meta you can access all the supported elements.
 </div>
@@ -22,7 +20,6 @@
 	<span class='javaclass'>Meta</span> metadata = <span class='modifier'>new</span> <span class='javaclass'>Meta</span>(metadom);<br/>
 </pre>
 <br/><strong><a href="#Access metadata" >Access metadata</a></strong>
-<hr/>
 <div class="bodytext">
      After creating the Meta instance,you can use it to manipulate the metadata:     for example, you can set a value for the &lt;meta:generator&gt; like this:
 </div>
@@ -39,7 +36,6 @@
       metadata.setKeywords(keywords);<br/>
 </pre>
 <br/><strong><a href="#Access the user defined element" >Access the user defined element</a></strong>
-<hr/>
 <div class="bodytext">
     To manipulate the user defined data,you should get the list of their names,and then use the names to     update the data or its datatype or delete the whole user defined data.    you can use the setUserDefinedData(String name, String type, String value) method to update data,if the    name not exists in the document,the method will add the new user defined data.
 </div>
@@ -62,7 +58,6 @@
       <span class='javaclass'>String</span> dataValue=metadata.getUserDefinedDataValue(key);    <br/>
 </pre>
 <br/><strong><a href="#Access the document statistics" >Access the document statistics</a></strong>
-<hr/>
 <div class="bodytext">
     if you want to access the document statistics,you should get a DocumentStatistic instance,    if the return is null,it means that this ODF document doesn't have any document statistic information,you should    create a document statistics object.
 </div>
@@ -83,3 +78,5 @@
   <li><a href="#">top</a></li>
  </ul>
 </div>
+<link type="text/css" rel="stylesheet" href="cookbook.css"/>
+<link rel="stylesheet" href="../images/style.css" type="text/css" />
