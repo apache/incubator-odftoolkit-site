@@ -1,6 +1,7 @@
 Title: ODFDOM Code Generator
+
 The ODFDOMCodeGenerator is a java application to create source code for elements and attributes that are defined using relaxng schema.
-It is used in the [[Home|ODFDOM]] project to generate the java source files for the elements available in the OpenDocument format.
+It is used in the ODFDOM project to generate the java source files for the elements available in the OpenDocument format.
 
 Usage
 -----
@@ -235,7 +236,7 @@ All elements that are defined in the relaxng are iterated. For each element the 
  - 'elementname' is the same as 'elementqname' by default. The configuration file can override this.
  - 'elementstylefamily' is empty by default. The configuration file can override this.
 
-** 'attribute'**
+**'attribute'**
 
 All attributes of the currently selected element as defined in the relaxng schema are iterated. For each attribute the following variables will be set
 
