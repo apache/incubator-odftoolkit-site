@@ -7,9 +7,9 @@ Title: Development
 Config file $Hg Install Dir\Mercurial.ini on Windows or <Hg Install Dir>/.hgrc on Unix.    
 Enhance the default configuration, using GIT diff and enable [default plugin][1] avoid different line breaks in the source.  
 <pre>
-  [ui]
-  username = your Name <yourLoginName@odftoolkit.org>
-  ;merge = your-merge-program (or internal:merge)
+[ui]
+username = your Name <yourLoginName@odftoolkit.org>
+;merge = your-merge-program (or internal:merge)
     
     [diff]
     git = 1
