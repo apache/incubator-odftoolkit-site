@@ -1,3 +1,4 @@
+Title:ODFDOM Release Notes Release 0.8.7
 Title:ODFDOM Release Notes
 Release 0.8.7
 -------------
@@ -523,112 +524,115 @@ On July 16th, version 0.8.6 has been released. About a month after the release o
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
-{|- border="1"
-!Previous Java Class
-!Previous API
-!New Java Class
-!New API
-|-
-|Version
-|String getApplicationName()
-|JarManifest
-|String getOdfdomName()
-|-
-|
-|String getApplicationTitle()
-|
-|String getOdfdomTitle()
-|-
-|
-|String getApplicationVersion()
-|
-|String getOdfdomSupportedOdfVersion()
-|-
-|
-|String getApplicationWebsite()
-|
-|String getOdfdomWebsite()
-|-
-|
-|String getBuildDate()
-|
-|String getOdfdomBuildDate()
-|-
-|
-|String getBuildResponsible()
-|
-|String getOdfdomBuildResponsible()
-|-
-|
-|String getSupportedOdfVersion()
-|
-|String getOdfdomVersion()
-|-
-|doc.table.OdfTableCell
-|double  getCurrencyValue()
-|doc.table.OdfTableCell
-|Double  getCurrencyValue()
-|-
-|
-|double  getPercentageValue()
-|
-|Double  getPercentageValue()
-|-
-|
-|setBooleanValue(boolean)
-|
-|setBooleanValue(Boolean)
-|-
-|
-|setCurrencyValue(double, String)
-|
-|setCurrencyValue(Double, String)
-|-
-|
-|setDoubleValue(double)
-|
-|setDoubleValue(Double)
-|-
-|
-|setPercentageValue(double)
-|
-|setPercentageValue(Double)
-|-
-|
-|getVerticalJustify()
-|
-|getVerticalAlignment()
-|-
-|
-|setVerticalJustify(String)
-|
-|setVerticalAlignment(String)
-|-
-|
-|getHorizontalJustify()
-|
-|getHorizontalAlignment()
-|-
-|
-|setHorizontalJustify(String)
-|
-|setHorizontalAlignment(String)
-|-
-|
-|getCellBackColor()
-|
-|getCellBackgroundColor()
-|-
-|
-|setCellBackColor(Color)
-|
-|setCellBackgroundColor(Color)
-|-
-|type.Color
-|String mapColorFromRgbToHex(String)
-|type.Color
-|String toSixDigitHexRGB(String)
-|}
+<table>
+<tr>
+<td>Previous Java Class</td>
+<td>Previous API</td>
+<td>New Java Class</td>
+<td>New API</td>
+</tr><tr>
+<td>Version
+</td><td>String getApplicationName()
+</td><td>JarManifest
+</td><td>String getOdfdomName()
+</td></tr><tr>
+<td>
+</td><td>String getApplicationTitle()
+</td><td>
+</td><td>String getOdfdomTitle()
+</td></tr><tr>
+<td>
+</td><td>String getApplicationVersion()
+</td><td>
+</td><td>String getOdfdomSupportedOdfVersion()
+</td></tr><tr>
+<td>
+</td><td>String getApplicationWebsite()
+</td><td>
+</td><td>String getOdfdomWebsite()
+</td></tr><tr>
+<td>
+</td><td>String getBuildDate()
+</td><td>
+</td><td>String getOdfdomBuildDate()
+</td></tr><tr>
+<td>
+</td><td>String getBuildResponsible()
+</td><td>
+</td><td>String getOdfdomBuildResponsible()
+</td></tr><tr>
+<td>
+</td><td>String getSupportedOdfVersion()
+</td><td>
+</td><td>String getOdfdomVersion()
+</td></tr><tr>
+<td>doc.table.OdfTableCell
+</td><td>double  getCurrencyValue()
+</td><td>doc.table.OdfTableCell
+</td><td>Double  getCurrencyValue()
+</td></tr><tr>
+<td>
+</td><td>double  getPercentageValue()
+</td><td>
+</td><td>Double  getPercentageValue()
+</td></tr><tr>
+<td>
+</td><td>setBooleanValue(boolean)
+</td><td>
+</td><td>setBooleanValue(Boolean)
+</td></tr><tr>
+<td>
+</td><td>setCurrencyValue(double, String)
+</td><td>
+</td><td>setCurrencyValue(Double, String)
+</td></tr><tr>
+<td>
+</td><td>setDoubleValue(double)
+</td><td>
+</td><td>setDoubleValue(Double)
+</td></tr><tr>
+<td>
+</td><td>setPercentageValue(double)
+</td><td>
+</td><td>setPercentageValue(Double)
+</td></tr><tr>
+<td>
+</td><td>getVerticalJustify()
+</td><td>
+</td><td>getVerticalAlignment()
+</td></tr><tr>
+<td>
+</td><td>setVerticalJustify(String)
+</td><td>
+</td><td>setVerticalAlignment(String)
+</td></tr><tr>
+<td>
+</td><td>getHorizontalJustify()
+</td><td>
+</td><td>getHorizontalAlignment()
+</td></tr><tr>
+<td>
+</td><td>setHorizontalJustify(String)
+</td><td>
+</td><td>setHorizontalAlignment(String)
+</td></tr><tr>
+<td>
+</td><td>getCellBackColor()
+</td><td>
+</td><td>getCellBackgroundColor()
+</td></tr><tr>
+<td>
+</td><td>setCellBackColor(Color)
+</td><td>
+</td><td>setCellBackgroundColor(Color)
+</td></tr><tr>
+<td>type.Color
+</td><td>String mapColorFromRgbToHex(String)
+</td><td>type.Color
+</td><td>String toSixDigitHexRGB(String)</td>
+</tr>
+</table>
+
 
 
 Release: 0.8.5
@@ -667,62 +671,61 @@ The resolved issues in this version include:
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
-{|- border="1"
-!Previous Java Class
-!Previous API
-!New Java Class
-!New API
-|-
-|pkg.element.OdfAlienElement
-|getOdfName()
-|OdfAlienElement
-|getOdfName()
-|-
-|
-|
-|
-|
-|-
-|pkg.element.OdfAlienAttribute
-|getOdfName()
-|OdfAlienAttribute
-|getOdfName()
-|-
-|
-|getDefault()
-|
-|getDefault()
-|-
-|
-|hasDefault()
-|
-|hasDefault()
-|-
-|
-|
-|
-|
-|-
-|doc.OdfElementFactory
-|newOdfElement(OdfFileDom,OdfName)
-|OdfXMLFactory
-|newOdfElement(OdfFileDom,OdfName)
-|-
-|
-|newOdfAttribute(OdfFileDom,OdfName)
-|
-|newOdfAttribute(OdfFileDom,OdfName)
-|-
-|
-|mapElementOdfNameToClass(OdfName,Class)
-|
-|setOdfElementClass(OdfName,Class)
-|-
-|
-|mapAttributeOdfNameToClass(OdfName,Class)
-|
-|setOdfAttributeClass(OdfName,Class)
-|}
+<table>
+<tr>
+<td>Previous Java Class</td><td>Previous API</td><td>New Java Class</td><td>New API</td>
+</td></tr><tr>
+<td>pkg.element.OdfAlienElement
+</td><td>getOdfName()
+</td><td>OdfAlienElement
+</td><td>getOdfName()
+</td></tr><tr>
+<td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr><tr>
+<td>pkg.element.OdfAlienAttribute
+</td><td>getOdfName()
+</td><td>OdfAlienAttribute
+</td><td>getOdfName()
+</td></tr><tr>
+<td>
+</td><td>getDefault()
+</td><td>
+</td><td>getDefault()
+</td></tr><tr>
+<td>
+</td><td>hasDefault()
+</td><td>
+</td><td>hasDefault()
+</td></tr><tr>
+<td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr><tr>
+<td>doc.OdfElementFactory
+</td><td>newOdfElement(OdfFileDom,OdfName)
+</td><td>OdfXMLFactory
+</td><td>newOdfElement(OdfFileDom,OdfName)
+</td></tr><tr>
+<td>
+</td><td>newOdfAttribute(OdfFileDom,OdfName)
+</td><td>
+</td><td>newOdfAttribute(OdfFileDom,OdfName)
+</td></tr><tr>
+<td>
+</td><td>mapElementOdfNameToClass(OdfName,Class)
+</td><td>
+</td><td>setOdfElementClass(OdfName,Class)
+</td></tr><tr>
+<td>
+</td><td>mapAttributeOdfNameToClass(OdfName,Class)
+</td><td>
+</td><td>setOdfAttributeClass(OdfName,Class)
+</td></tr>
+</table>
 
 Release: 0.8
 ------------
