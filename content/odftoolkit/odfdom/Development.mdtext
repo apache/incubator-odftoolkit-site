@@ -202,7 +202,7 @@ The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which 
 
 
   - [Class Structure in ODFDOM][24]  
-  - <a href="Convenience Layer Design Ideas.html">Convenience Layer Design Ideas</a>
+  - [Convenience Layer Design Ideas][25]
 
 
   [1]: http://mercurial.selenic.com/wiki/Win32TextExtension
@@ -229,3 +229,4 @@ The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which 
   [22]: ODFDOM-Code-Generator.html
   [23]: http://odftoolkit.org/hg/odfdom~relaxng2template
   [24]: ODFDOM-Class-Structure.html
+  [25]: ConvenienceLayerDesignIdeas.html
