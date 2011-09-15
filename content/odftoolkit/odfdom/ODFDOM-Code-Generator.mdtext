@@ -547,24 +547,6 @@ The function 'startswith' returns true if the first parameter starts with the se
 
 
   &lt;code&gt;       
-  %{ startswith('foobar','bar') }        
-  %{ startswith('foobar','foo') }        
-  &lt;/code&gt;       
-
-
-outputs
-
-
-      false
-      true
-
-
-**startswith**
-
-The function 'startswith' returns true if the first parameter starts with the second.
-
-
-  &lt;code&gt;       
   %{ startswith('foobar','bar') }          
   %{ startswith('foobar','foo') }      
   &lt;/code&gt;       
