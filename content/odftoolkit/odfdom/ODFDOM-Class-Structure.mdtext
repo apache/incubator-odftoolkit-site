@@ -1,4 +1,5 @@
-Title:Class Structure in ODFDOM
+Title: Class Structure in ODFDOM   
+
 The Java packages reflect the layers of the ODFDOM library.
 
 Shared Functionality
