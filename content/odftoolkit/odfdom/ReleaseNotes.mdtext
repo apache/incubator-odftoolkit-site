@@ -519,7 +519,7 @@ On July 16th, version 0.8.6 has been released. About a month after the release o
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=210 Bug 210] - Make API for metadata of odfdom.jar more obvious
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=212 Bug 212] - Trying to access a spreadsheet cell without first inserting rows causes NPE
 
-====API changes since 0.8.5 Release ====
+**API changes since 0.8.5 Release**
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
@@ -631,7 +631,8 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 |}
 
 
-=== Release: 0.8.5 ===
+Release: 0.8.5
+--------------
 
 On 3rd July 2010 version 0.8.5 of the Java implementation has been released.  In this version, ODFDOM supports the load, parse and save of all available media types of OpenDocument documents - except Formula (MathML) and Database front end documents. 
 As well, ODFDOM now allows the load & save of none-ODF XML elements and attributes.
@@ -641,7 +642,7 @@ In particular the slide access, deletion, reordering, the copy of slides from a 
 A second focus had been the overall performance. 
 We improved the start-up time of ODFDOM using a class lazy loading approach and reduced the saving time of ODF documents by avoiding the compressing of already compressed file, e.g. images. In special the performance of table handling via  the Document API have been enhanced. For instance by using now automatic table expansion when a requested cell index was out of range. Finally we improved table method robustness by adding sanity checks and the fix of several table issues.
 
-====Resolved Issues====
+**Resolved Issues**
 
 The resolved issues in this version include:
 
@@ -662,7 +663,7 @@ The resolved issues in this version include:
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=169 Bug 169] - Minor fix for OdfPackage Performance;
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=170 Bug 170] - Update of ODF 1.2 part 1 specification in ODFDOM JavaDoc to Public Review Draft (CD05).
 
-====API changes since 0.8 Release====
+**API changes since 0.8 Release**
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
@@ -723,11 +724,12 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 |setOdfAttributeClass(OdfName,Class)
 |}
 
-=== Release: 0.8 ===
+Release: 0.8
+------------
 
 On 19 Feb 2010 version 0.8 of the Java implementation has been released. The API adapts to latest ODF Specification 1.2 part Community Draft 4 and the codegeneration has been updated to the new RelaxNG schema. A major improvement of convenient layer is the introduce of table convenient API - a first prototype of ODF features - which provides methods to manipulate table feature and its sub-features, such as rows, columns, cells and cell ranges. In this prototype, the 1:1 inheritance relationships between convenient layer classes and dom layer classes have been broken up, and composite relationships are used instead. We also provide metadata convenient API in incubator package which will be improved in the following version. Dom layer has been improved to support invalid attributes and values in DOM tree. Some bugs in package layer, DOM/XML layer and document/convenient layer have been fixed. The Java Docs are improved. 
 
-==== Resolved Issues ====
+**Resolved Issues**
 
 The resolved issues in this version includes: 
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=19 Bug 19] - Special characters in package path string not handled correctly;
@@ -745,7 +747,7 @@ The resolved issues in this version includes:
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=128 Bug 128] - Exchange System.out.print/println with JDK logging;
 *[https://odftoolkit.org/bugzilla/show_bug.cgi?id=133 Bug 133]  - Slight enhancements of the Maven pom.xml.
 
-==== API changes since 0.7  Release (possibly uncomplete)  ====
+**API changes since 0.7  Release (possibly uncomplete)**
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
