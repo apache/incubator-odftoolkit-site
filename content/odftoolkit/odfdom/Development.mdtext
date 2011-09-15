@@ -6,10 +6,10 @@ Title: Development
 1. Setup Mercurial (optional):    
 Config file $Hg Install Dir\Mercurial.ini on Windows or <Hg Install Dir>/.hgrc on Unix.    
 Enhance the default configuration, using GIT diff and enable [default plugin][1] avoid different line breaks in the source.  
-<pre>
-[ui]
-username = your Name <yourLoginName@odftoolkit.org>
-;merge = your-merge-program (or internal:merge)
+
+    [ui]
+    username = your Name <yourLoginName@odftoolkit.org>
+    ;merge = your-merge-program (or internal:merge)
     
     [diff]
     git = 1
@@ -32,7 +32,7 @@ username = your Name <yourLoginName@odftoolkit.org>
     \# before adding the file to the source repository    
     \# See http://mercurial.selenic.com/wiki/EolExtension    
     only-consistent = False
-</pre>
+
 1. Get the [ODFDOM source code][2] from the odfdom~developer [Mercurial][3] repository. Please see below for a short introduction to using Mercurial on odftoolkit.org. There's also a more general [help][4] on how to use source control systems on odftoolkit.org. The command   
 `hg clone https://odftoolkit.org/hg/odfdom~developer` will download the repository into a new directory.    
 Please note that by this you'll get the latest changeset. If you for example want stable release 0.8.6, you may want to use  
