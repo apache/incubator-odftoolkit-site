@@ -1,4 +1,4 @@
-title:Development
+Title: Development
 **Get and Build the Source Code**
 
 1. Install latest Mercurial
@@ -216,8 +216,8 @@ The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which 
 **Other Useful Pages**     
  
 
-  - [[ODFDOM-Class-Structure|Class Structure in ODFDOM]]
-  - [[Convenience Layer Design Ideas]]
+  - [Class Structure in ODFDOM][12]
+  - [Convenience Layer Design Ideas][13]
 
 
   [1]: http://mercurial.selenic.com/wiki/Win32TextExtension
@@ -231,3 +231,5 @@ The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which 
   [9]: http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html#367
   [10]: mailto:odf-dev@incubator.apache.org
   [11]: https://odftoolkit.org/bugzilla/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=odfdom&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
+  [12]: ODFDOM-Class-Structure.html
+  [13]: Convenience Layer Design Ideas.html
