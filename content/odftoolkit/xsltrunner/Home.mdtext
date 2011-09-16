@@ -1,16 +1,23 @@
-<a href="http://www.oasis-open.org/committees/office" target="_blank">[[image: oasis_odf_logo.png |right]]</a>
-= <span style="color:#E86F00;font-style:italic;font-weight:bold;">ODF Conformance and other Tools Wiki</span> =
+Title: ODF Conformance and other Tools
 
-This project develops tools for checking [http://www.oasis-open.org/committees/office ODF] conformance as well as tools that simplify the processing of ODF documents.
+This project develops tools for checking [ODF][1] conformance as well as tools that simplify the processing of ODF documents.
 
-= Conformance Tools =
+Conformance Tools
+-----------------
+
 Tools for validating and checking conformance of of ODF documents.
 
-* [[ODFValidator]]: A validating for ODF documents.
-* [http://tools.odftoolkit.org/odfvalidator Online ODF Validator]: An online validator for ODF documents.
+ - **ODFValidator**: A validating for ODF documents.
+ - [**Online ODF Validator**][2]: An online validator for ODF documents.
 
-= Application and Tools =
+Application and Tools
+---------------------
+
 Other tools for processing ODF documents.
 
-* [[ODFXSLTRunner|ODF XSLT Runner]]: A tools that simplifies the application of XSLT stylesheets to ODF documents.
-* [[ODFXSLTRunnerTask|ODF XSLT Runner Task]]: An Ant task for the application of XSLT stylesheets to ODF documents.
+ - **ODF XSLT Runner**: A tools that simplifies the application of XSLT stylesheets to ODF documents.
+ - **ODF XSLT Runner Task**: An Ant task for the application of XSLT stylesheets to ODF documents.
+
+
+  [1]: http://www.oasis-open.org/committees/office
+  [2]: http://tools.odftoolkit.org/odfvalidator
