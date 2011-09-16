@@ -1,4 +1,5 @@
 Title: Simple API Documents
+
 *In this page, documents of Simple API are listed.*  
 
 **Javadoc**  
@@ -21,6 +22,14 @@ You can download the Javadoc of different versions on the [Downloads Page][1].
 - [Open Document Processing with ODFDOM in an insurance solution][6]          
 - [ODF Template Engine -- An easy document generation tool built with ODFDOM][7]
 
+**More Documents for Developer**   
+
+- [Project Road Map][8]    
+- [Requirements][9]     
+- [Architecture][10]                
+- [API Changes From ODFDOM 0.8.6][11]      
+- [Frequently Asked Questions][12]
+
 
   [1]: ../downloads.html
   [2]: cookbook/index.html
@@ -29,3 +38,8 @@ You can download the Javadoc of different versions on the [Downloads Page][1].
   [5]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt3/index.html
   [6]: http://www.ooocon.org/index.php/ooocon/2010/paper/view/264/164
   [7]: http://conference.services.openoffice.org/index.php/ooocon/2009/paper/viewFile/82/44
+  [8]: ProjectRoadmap.html
+  [9]: Requirements.html
+  [10]: PackageLayer.html
+  [11]: APIChangesFrom086.html
+  [12]: faq.html
