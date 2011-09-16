@@ -1,6 +1,4 @@
-The ODFDOM Layers
------------------
-
+Title: The ODFDOM Layers
 The ODFDOM project's objective is to provide an easy API for reading, writing and manipulating documents of the OpenDocument format (ODF). 
 To archive this, the ODFDOM API follows a layered approach to access documents, as layered design is the robust foundation for a well-designed modular structure.
 
