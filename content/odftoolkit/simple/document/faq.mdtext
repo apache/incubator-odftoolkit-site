@@ -1,5 +1,6 @@
 Title: Frequently Asked Questions
-###For Users
+
+##For Users
 
 ####How to download and install
 
@@ -25,7 +26,7 @@ You can find sample codes from our [Cookbook][8] and [Demos][9].
 ####How to report defects
 The Simple API uses Bugzilla to track the defects. You can report defects [here][10].
 
-###For Developers
+##For Developers
 
 ####How to download source
 
