@@ -1,9 +1,10 @@
 Title: ODF Validator
+
 **ODF Validator** is a tool that validates OpenDocument files and checks them for certain conformance criteria.
 
 **ODF Validator** is available as an [online service] [1] and as a 
 command line tool. This page primarily describes the command line tool. 
-Please visit the [ODF Online Validator] [1] web page for details regarding 
+Please visit the [ODF Online Validator] [2] web page for details regarding 
 the online tool.
 
 ## How to start
@@ -17,14 +18,14 @@ To use the '''ODF Validator''', the following steps are required:
 * Choose an arbitrary OpenDocument file &lt;odffile&gt;
 * If you are using JRE 1.5, call the '''ODF Validator''' with
 
-    java -jar "<path>/odfvalidator.jar" <odffile>
+    java -jar "<path>/odfvalidator.jar" &lt;odffile&gt;
 
 * If you are using JRE 1.6, call the ODF Validator with
 
     java 
       -Djavax.xml.validation.SchemaFactory:http://relaxng.org/ns/structure/1.0=org.iso_relax.verifier.jaxp.validation.RELAXNGSchemaFactoryImpl
       -Dorg.iso_relax.verifier.VerifierFactoryLoader=com.sun.msv.verifier.jarv.FactoryLoaderImpl
-      -jar "<path>/odfvalidator.jar"  <odffile>
+      -jar "<path>/odfvalidator.jar"  &lt;odffile&gt;
 
 ## Usage
 
@@ -32,7 +33,7 @@ To use the '''ODF Validator''', the following steps are required:
 
 In an Java 1.5 environment, **ODF Validator** is invoked by the following command:
 
-     java -jar "&lt;path&gt;/odfvalidator.jar"
+     java -jar "<path>/odfvalidator.jar"
 
 In an Java 1.6 environment, the following command line has to be used:
 
@@ -88,7 +89,7 @@ The options have the following meaning:
 
 **-w**: Print warnings.
 
-**-x**: Exclude files that match the specified [regular expression] [2] from validation.
+**-x**: Exclude files that match the specified [regular expression] [3] from validation.
 
 **-C**: Validate using configuration file **&lt;configfile&gt;**.
 
@@ -136,7 +137,7 @@ documents.
 
 The optional **-x** switch allows to exclude certain files or directories 
 from the validation. The files that shall be excluded are specified by a 
-[regular expression] [2]. Please note that the full absolute path names of 
+[regular expression] [4]. Please note that the full absolute path names of 
 directories and files are matched against this pattern. This means that the 
 regular expression either must include the absolute path of the files and 
 directories that shall be excluded, or must start with **.***. 
@@ -169,7 +170,7 @@ All other command line option are as described in *Validation using default sche
 
 The schemas and the files that should be validated can be specified in a 
 configuration file. A configuration file is a Java XML properties file as 
-described in the [Java 2 API documentation] [3]. The following properties 
+described in the [Java 2 API documentation] [5]. The following properties 
 are supported:
 
 * **strict-schema**: Specifies the strict schema to be used.
@@ -179,11 +180,9 @@ are supported:
 * **path***: All properties whose names start with "path" are considered to be files or directories that shall be validated. 
 * **recursive**: This boolean property specifies whether directories are scanned recursively. It takes the values **true** and **false**.
 * **exclude**: Specifies files and directories that shall be excluded as 
-a [regular expression] [2]. See description of **-x** option.
+a [regular expression] [6]. See description of **-x** option.
 
 A sample configuration file looks like this:
-
- 
 
       <?xml version="1.0" encoding="UTF-8"?>
       <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
@@ -254,7 +253,7 @@ The following actions take place before or during the validation:
 ## Where do I get the schemas?
 
 The OpenDocument schemas are available on the [OASIS OpenDocument Technical 
-Committee] [4] page. The ODF 1.0 and 1.1 schemas can be downloaded directly 
+Committee] [7] page. The ODF 1.0 and 1.1 schemas can be downloaded directly 
 from that page]. A zip file containing the most recent ODF 1.2 schemas is 
 available in the document section.
 
@@ -271,8 +270,8 @@ OpenOffice.org/Oracle Open Office installation.
 
 **ODF Validator** further requires the following packages:
 
-* [MSV] [5]. **msv.jar**, **isorelax.jar**, **relaxngDatatype.jar** and **xsdlib.jar** included in the MSV distribution must be added to the project's libraries and must be in the classpath or a folder called **lib** that is next to the **odfvalidator.jar** at runtime. 
-* [ISORELAX JARV -&gt; JAXP 1.3 Xml Validation Engine Adaptor] [6].  **isorelax-jaxp-bridge-1.0.jar** must be added to the project's libraries and must be in the classpath or a folder called **lib** that is next to the **odfvalidator.jar**  at runtime. 
+* [MSV] [8]. **msv.jar**, **isorelax.jar**, **relaxngDatatype.jar** and **xsdlib.jar** included in the MSV distribution must be added to the project's libraries and must be in the classpath or a folder called **lib** that is next to the **odfvalidator.jar** at runtime. 
+* [ISORELAX JARV -&gt; JAXP 1.3 Xml Validation Engine Adaptor] [9].  **isorelax-jaxp-bridge-1.0.jar** must be added to the project's libraries and must be in the classpath or a folder called **lib** that is next to the **odfvalidator.jar**  at runtime. 
 * **odfdom.jar** from the ODFDOM component must be added to the project's libraries and must be in the classpath or a folder called **lib** that is next to the **odfvalidator.jar**  at runtime. 
 
 The NetBeans project is pre-configured to build ODFDOM while building **ODF Validator**. This requires that the ODFDOM sources are located in a folder **odfdom** next to the folder of the **ODF Validator** project.
@@ -282,19 +281,24 @@ Alternatively, the reference to the ODFDOM project in the compile time classpath
 The references to all other jar files must be updated manually before 
 building **ODF Validator**.
 
-**Note:** ODFDOM requires [Apache Xerces] [7]. The jar file **xercesImpl.jar** also must exist in a folder **lib** next to **odvalidator.jar** file, or it must be in the classpath. The **ODF Validator** NetBeans projects includes a reference to **xersesImpl.jar** in the runtime classpath which has to be adapted after checking out the project.
+**Note:** ODFDOM requires [Apache Xerces] [10]. The jar file **xercesImpl.jar** also must exist in a folder **lib** next to **odvalidator.jar** file, or it must be in the classpath. The **ODF Validator** NetBeans projects includes a reference to **xersesImpl.jar** in the runtime classpath which has to be adapted after checking out the project.
 
 **Note:** ODFDOM requires at least Xerces 2.8.0. Please note that MSV distribution contains an xercesImpl.jar which is older. 
 
 ## Source Code
 
-The **ODF Validator** source code is located [http://odftoolkit.org/projects/conformancetools/sources/odf-validator-src/show here]. **ODF Validator** uses Mercurial for source control. Please check the 
-<a href="{{project help page SourceControl}}">help</a> for instruction how to use Mercurial.
+The **ODF Validator** source code is located [here][11]. **ODF Validator** uses Mercurial for source control. Please check the 
+help for instruction how to use Mercurial.
 
-[1]: http://tools.odftoolkit.org/odfvalidator
-[2]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
-[3]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html
-[4]: http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office
-[5]: https://msv.dev.java.net/
-[6]: https://isorelax-jaxp-bridge.dev.java.net
-[7]: http://xml.apache.org/dist/xerces-j/
+
+  [1]: http://tools.odftoolkit.org/odfvalidator
+  [2]: http://tools.odftoolkit.org/odfvalidator
+  [3]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
+  [4]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
+  [5]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html
+  [6]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
+  [7]: http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office
+  [8]: https://msv.dev.java.net/
+  [9]: https://isorelax-jaxp-bridge.dev.java.net
+  [10]: http://xml.apache.org/dist/xerces-j/
+  [11]: http://odftoolkit.org/projects/conformancetools/sources/odf-validator-src/show
