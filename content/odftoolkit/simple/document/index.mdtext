@@ -14,32 +14,35 @@ You can download the Javadoc of different versions on the [Downloads Page][1].
   
 [Cookbook][2] provides simple codes to help developers know how to use Simple API.</p>
 
+**Frequently Asked Questions**     
+
+[This page][3] lists the frequently asked questions.
+
 **Article and Paper**   
 
-- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 1][3]     
-- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 2][4]     
-- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 3][5]                
-- [Open Document Processing with ODFDOM in an insurance solution][6]          
-- [ODF Template Engine -- An easy document generation tool built with ODFDOM][7]
+- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 1][4]     
+- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 2][5]     
+- [ODFDOM for Java: Simplifying programmatic control of documents and their data, Part 3][6]                
+- [Open Document Processing with ODFDOM in an insurance solution][7]          
+- [ODF Template Engine -- An easy document generation tool built with ODFDOM][8]
 
 **More Documents for Developer**   
 
-- [Project Road Map][8]    
-- [Requirements][9]     
-- [Architecture][10]                
-- [API Changes From ODFDOM 0.8.6][11]      
-- [Frequently Asked Questions][12]
+- [Project Road Map][9]    
+- [Requirements][10]     
+- [Architecture][11]                
+- [API Changes From ODFDOM 0.8.6][12]      
 
 
   [1]: ../downloads.html
   [2]: cookbook/index.html
-  [3]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt1/index.html
-  [4]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt2/index.html
-  [5]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt3/index.html
-  [6]: http://www.ooocon.org/index.php/ooocon/2010/paper/view/264/164
-  [7]: http://conference.services.openoffice.org/index.php/ooocon/2009/paper/viewFile/82/44
-  [8]: ProjectRoadmap.html
-  [9]: Requirements.html
-  [10]: PackageLayer.html
-  [11]: APIChangesFrom086.html
-  [12]: faq.html
+  [3]: faq.html
+  [4]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt1/index.html
+  [5]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt2/index.html
+  [6]: http://www.ibm.com/developerworks/lotus/library/symphony-odfdom-pt3/index.html
+  [7]: http://www.ooocon.org/index.php/ooocon/2010/paper/view/264/164
+  [8]: http://conference.services.openoffice.org/index.php/ooocon/2009/paper/viewFile/82/44
+  [9]: ProjectRoadmap.html
+  [10]: Requirements.html
+  [11]: PackageLayer.html
+  [12]: APIChangesFrom086.html
