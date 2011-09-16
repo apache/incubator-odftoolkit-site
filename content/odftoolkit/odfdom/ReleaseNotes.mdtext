@@ -1,5 +1,5 @@
-Title: ODFDOM Release Notes Release 0.8.7
-Title:ODFDOM Release Notes
+Title: ODFDOM Release Notes
+
 Release 0.8.7
 -------------
 
@@ -503,22 +503,22 @@ On July 16th, version 0.8.6 has been released. About a month after the release o
 
 **Resolved Issues**
 
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=146 Bug 146] - Some resources for performance test are not available
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=161 Bug 161] - Adapt line breaking activating Mercurial plugin
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=169 Bug 169] - Minor fix for OdfPackage Performance (and removing redundant log file)
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=178 Bug 178] - Setting default column style does not work properly
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=180 Bug 180] - setFormatString method does not work.
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=183 Bug 183] - getCellBackColor throws an exception.
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=185 Bug 185] - JavaDoc Fix:Table methods use different measure
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=186 Bug 186] - Color data type improvements and usage in Table Cell
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=187 Bug 187] - Javadoc for OdfTableCell.setHorizontalJustify is wrong and related comments.
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=188 Bug 188] - OdfTableCell.getHorizontalJustify always returns null.
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=191 Bug 191] - Sheet name should be unique for each sheet
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=192 Bug 192] - Cellrange merge throws IndexOutOfBoundsException
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=193 Bug 193] - Calling OdfTableCell.getCurrencyValue() throws NullPointerException
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=206 Bug 206] - setFormatString now takes an exception
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=210 Bug 210] - Make API for metadata of odfdom.jar more obvious
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=212 Bug 212] - Trying to access a spreadsheet cell without first inserting rows causes NPE
+ - [Bug 146][28] - Some resources for performance test are not available    
+ - [Bug 161][29] - Adapt line breaking activating Mercurial plugin
+ - [Bug 169][30] - Minor fix for OdfPackage Performance (and removing redundant log file)
+ - [Bug 178][31] - Setting default column style does not work properly
+ - [Bug 180][32] - setFormatString method does not work
+ - [Bug 183][33] - getCellBackColor throws an exception
+ - [Bug 185][34] - JavaDoc Fix:Table methods use different measure
+ - [Bug 186][35] - Color data type improvements and usage in Table Cell
+ - [Bug 187][36] - Javadoc for OdfTableCell.setHorizontalJustify is wrong and related comments
+ - [Bug 188][37] - OdfTableCell.getHorizontalJustify always returns null
+ - [Bug 191][38] - Sheet name should be unique for each sheet
+ - [Bug 192][39] - Cellrange merge throws IndexOutOfBoundsException
+ - [Bug 193][40] - Calling OdfTableCell.getCurrencyValue() throws NullPointerException
+ - [Bug 206][41] - setFormatString now takes an exception
+ - [Bug 210][42] - Make API for metadata of odfdom.jar more obvious
+ - [Bug 212][43] - Trying to access a spreadsheet cell without first inserting rows causes NPE
 
 **API changes since 0.8.5 Release**
 
@@ -634,7 +634,6 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 </table>
 
 
-
 Release: 0.8.5
 --------------
 
@@ -650,22 +649,22 @@ We improved the start-up time of ODFDOM using a class lazy loading approach and 
 
 The resolved issues in this version include:
 
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=97 Bug 97] - OdfTableRow.getCellAt(int) returns null when the cell is a repeat cell;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=121 Bug 121] - Fix OdfTable.newTable method when rowlabel and columnlabel are null;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=127 Bug 127] - Adding new ODF Mediatypes;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=138 Bug 138] - bug fix for transform cell address string to column and row index;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=139 Bug 139] - Exchanging PNG, which blocked test with IBM JDK 1.5;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=143 Bug 143] - Convenience API for slide-level operation;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=144 Bug 144] - Allow load and save for none ODF XML;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=145 Bug 145] - OdfTable.newTable(OdfDocument, int, int) failed for spreadsheet document;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=149 Bug 149] - Enable a method about not compressing pictures to improve performance;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=150 Bug 150] - Table API enhancement for invalid parameter;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=154 Bug 154] - Table expands automatically;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=157 Bug 157] - Calling OdfTableCell.setFormatString('yyyy-MM-dd') throws NPE;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=158 Bug 158] - Enable Code Coverage Tool;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=163 Bug 163] - Performance improvement of table API;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=169 Bug 169] - Minor fix for OdfPackage Performance;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=170 Bug 170] - Update of ODF 1.2 part 1 specification in ODFDOM JavaDoc to Public Review Draft (CD05).
+ - [Bug 97][44] - OdfTableRow.getCellAt(int) returns null when the cell is a repeat cell;
+ - [Bug 121][45] - Fix OdfTable.newTable method when rowlabel and columnlabel are null;
+ - [Bug 127][46] - Adding new ODF Mediatypes;
+ - [Bug 138][47] - bug fix for transform cell address string to column and row index;
+ - [Bug 139][48] - Exchanging PNG, which blocked test with IBM JDK 1.5;
+ - [Bug 143][49] - Convenience API for slide-level operation;
+ - [Bug 144][50] - Allow load and save for none ODF XML;
+ - [Bug 145][51] - OdfTable.newTable(OdfDocument, int, int) failed for spreadsheet document;
+ - [Bug 149][52] - Enable a method about not compressing pictures to improve performance;
+ - [Bug 150][53] - Table API enhancement for invalid parameter;
+ - [Bug 154][54] - Table expands automatically;
+ - [Bug 157][55] - Calling OdfTableCell.setFormatString('yyyy-MM-dd') throws NPE;
+ - [Bug 158][56] - Enable Code Coverage Tool;
+ - [Bug 163][57] - Performance improvement of table API;
+ - [Bug 169][58] - Minor fix for OdfPackage Performance;
+ - [Bug 170][59] - Update of ODF 1.2 part 1 specification in ODFDOM JavaDoc to Public Review Draft (CD05).
 
 **API changes since 0.8 Release**
 
@@ -735,93 +734,95 @@ On 19 Feb 2010 version 0.8 of the Java implementation has been released. The API
 **Resolved Issues**
 
 The resolved issues in this version includes: 
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=19 Bug 19] - Special characters in package path string not handled correctly;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=56 Bug 56]  - Allow to get meta.xml as a OdfFileDom object;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=77 Bug 77]  - Allow load/save documents including attributes with potential primitives, but none primitives values;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=91 Bug 91]  - Update ODF 1.2 schema to OpenDocument-schema-v1.2-cd04;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=106 Bug 106]  - Improvement of error-messages when loading unsupported files;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=114 Bug 114] - Only one package stream is accessible at the time;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=116 Bug 116]  - Enable users to specify that no temporary files are being used;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=118 Bug 118]  - Loading a document should not delete ODF attributes with invalid values;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=120 Bug 120]  - XML nodes with none ODF namespaces should be accessible by XPath;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=121 Bug 121]  - Table convenient APIs as a first prototype of feature;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=124 Bug 124] - Setting style property on an automatic style, which occurs on multiple elements and does not have a style parent, results in an error;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=125 Bug 125]  - Rollback of patch of [https://odftoolkit.org/bugzilla/show_bug.cgi?id=29 Bug 29] due to performance problems;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=128 Bug 128] - Exchange System.out.print/println with JDK logging;
-*[https://odftoolkit.org/bugzilla/show_bug.cgi?id=133 Bug 133]  - Slight enhancements of the Maven pom.xml.
+
+ - [Bug 19][60] - Special characters in package path string not handled correctly;
+ - [Bug 56][61] - Allow to get meta.xml as a OdfFileDom object;
+ - [Bug 77][62] - Allow load/save documents including attributes with potential primitives, but none primitives values;
+ - [Bug 91][63] - Update ODF 1.2 schema to OpenDocument-schema-v1.2-cd04;
+ - [Bug 106][64] - Improvement of error-messages when loading unsupported files;
+ - [Bug 114][65] - Only one package stream is accessible at the time;
+ - [Bug 116][66] - Enable users to specify that no temporary files are being used;
+ - [Bug 118][67] - Loading a document should not delete ODF attributes with invalid values;
+ - [Bug 120][68] - XML nodes with none ODF namespaces should be accessible by XPath;
+ - [Bug 121][69] - Table convenient APIs as a first prototype of feature;
+ - [Bug 124][70] - Setting style property on an automatic style, which occurs on multiple elements and does not have a style parent, results in an error;
+ - [Bug 125][71] - Rollback of patch of Bug 29 due to performance problems;
+ - [Bug 128][72] - Exchange System.out.print/println with JDK logging;
+ - [Bug 133][73] - Slight enhancements of the Maven pom.xml.
 
 **API changes since 0.7  Release (possibly uncomplete)**
 
 Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdom'.
 
-{|- border="1"
-!Java Class
-!Previous API
-!New API
-|-
-|NamespaceName.OdfNamespaceNames
-|getNamespaceUri()
-|getUri()
-|-
-|
-|
-|
-|-
-|OdfTable
-|getTableColumn(int):OdfTableColumn
-|getColumnByIndex(int):OdfTableColumn
-|-
-|
-|getTableColumnList():List&lt;OdfTableColumn&gt;
-|getColumnList():List&lt;OdfTableColumn&gt;
-|-
-|
-|getTableColumnCount():int
-|getColumnNumber():int
-|-
-|
-|addTableColumn():OdfTableColumn
-|appendColumn():OdfTableColumn
-|-
-|
-|addTableColumn(int):OdfTableColumn
-|insertColumnBefore(int nIndex,int nCount):List&lt;OdfTableColumn&gt;
-|-
-|
-|appendRow(Node):Node
-|appendRow():OdfTableRow
-|-
-|
-|addStyledTableColumn(String):OdfTableColumn
-|
-|-
-|
-|makeStyledColumnList(List&lt;String&gt;):List&lt;OdfTableColumn&gt;
-|
-|-
-|
-|setColumnList(List&lt;Od
-
+<table>
+<tr>
+<td>Java Class</td><td>Previous API</td><td>New API</td>
+</tr><tr>
+<td>NamespaceName.OdfNamespaceNames
+</td><td>getNamespaceUri()
+</td><td>getUri()
+</td></tr><tr>
+<td>
+</td><td>
+</td><td>
+</td></tr><tr>
+<td>OdfTable
+</td><td>getTableColumn(int):OdfTableColumn
+</td><td>getColumnByIndex(int):OdfTableColumn
+</td></tr><tr>
+<td>
+</td><td>getTableColumnList():List&lt;OdfTableColumn&gt;
+</td><td>getColumnList():List&lt;OdfTableColumn&gt;
+</td></tr><tr>
+<td>
+</td><td>getTableColumnCount():int
+</td><td>getColumnNumber():int
+</td></tr><tr>
+<td>
+</td><td>addTableColumn():OdfTableColumn
+</td><td>appendColumn():OdfTableColumn
+</td></tr><tr>
+<td>
+</td><td>addTableColumn(int):OdfTableColumn
+</td><td>insertColumnBefore(int nIndex,int nCount):List&lt;OdfTableColumn&gt;
+</td></tr><tr>
+<td>
+</td><td>appendRow(Node):Node
+</td><td>appendRow():OdfTableRow
+</td></tr><tr>
+<td>
+</td><td>addStyledTableColumn(String):OdfTableColumn
+</td><td>
+</td></tr><tr>
+<td>
+</td><td>makeStyledColumnList(List&lt;String&gt;):List&lt;OdfTableColumn&gt;
+</td><td>
+</td></tr><tr>
+<td>
+</td><td>setColumnList(List&lt;OdfTableColumn)
+</td><td>
+</td></tr>
+</table>
 
   [1]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=5
   [2]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=35
   [3]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=66
-  [4]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=69 
-  [5]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=91 
-  [6]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=131 
+  [4]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=69
+  [5]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=91
+  [6]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=131
   [7]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=141
   [8]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=161
   [9]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=166
-  [10]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=171 
-  [11]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=179 
+  [10]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=171
+  [11]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=179
   [12]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=181
-  [13]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=198 
-  [14]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=200 
-  [15]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=209 
-  [16]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=214 
+  [13]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=198
+  [14]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=200
+  [15]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=209
+  [16]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=214
   [17]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=215
-  [18]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=216 
-  [19]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=217 
+  [18]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=216
+  [19]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=217
   [20]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=219
   [21]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=220
   [22]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=221
@@ -830,3 +831,49 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
   [25]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=234
   [26]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=236
   [27]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=257
+  [28]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=146 
+[29]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=161
+[30]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=169
+[31]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=178
+[32]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=180
+[33]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=183
+[34]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=185
+[35]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=186
+[36]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=187
+[37]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=188
+[38]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=191
+[39]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=192
+[40]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=193
+[41]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=206
+[42]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=210
+[43]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=212 
+[44]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=97
+[45]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=121
+[46]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=127
+[47]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=138
+[48]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=139
+[49]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=143
+[50]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=144
+[51]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=145
+[52]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=149
+[53]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=150
+[54]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=154
+[55]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=157
+[56]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=158
+[57]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=163
+[58]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=169
+[59]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=170
+[60]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=19
+[61]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=56
+[62]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=77
+[63]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=91
+[64]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=106
+[65]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=114
+[66]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=116
+[67]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=118
+[68]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=120
+[69]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=121
+[70]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=124
+[71]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=125
+[72]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=128
+[73]: https://odftoolkit.org/bugzilla/show_bug.cgi?id=133
