@@ -4,7 +4,7 @@ Title: ODF XSLT Runner
 
 **ODF XSLT Runner** is a small Java application that allows you to apply 
 XSLT stylesheets to XML streams included in ODF packages without extracting 
-them from the package. It can be used from the command line. A [driver][0] to use 
+them from the package. It can be used from the command line. A [driver][1] to use 
 it within Ant buildfiles is also available.
 
 ## Getting and building ODF XSLT Runner
@@ -13,7 +13,7 @@ it within Ant buildfiles is also available.
 the sources from the Mercurial repository, you can open the project 
 in NetBeans and build **odfxsltrunner**.
 
-A binary release of **odfxsltrunner.jar** is available in the download section].
+A binary release of **odfxsltrunner.jar** is available in the [download section][2]. Pelease download [odfxsltrunner.zip][3].
 
 Building and running **odfxsltrunner.jar** requires additional jar files. 
 Please see Requirements for details.
@@ -62,12 +62,12 @@ The **-f** option specifies the ''javax.xml.transform.TransformerFactory'' to us
 The **-l** option can be used to redirect diagnostic messages into a log file. 
 By default they are printed on standard error.
 
-XSLT [Parameters] [1] can be passed to the transformation by specifying them as name=value pairs. They must appear behind all other command line parameters.
+XSLT [Parameters] [4] can be passed to the transformation by specifying them as name=value pairs. They must appear behind all other command line parameters.
 
 ## URI resolution/document() function
 
 If the source of a transformation is an ODF package, the XSLT 
-[document][2] function can be used to access other files in the package than 
+[document][5] function can be used to access other files in the package than 
 the one that is the source of the transformation. To do so, the first parameter 
 of the *document()* function must be a relative URI that references the file 
 that shall be accessed. The reference must be relative to the source file. 
@@ -89,7 +89,7 @@ relative to a file within an ODF package.
 
 ## Requirements
 
-**ODF XSLT Runner** requires [J2RE 5] [3], or a later version of Java.
+**ODF XSLT Runner** requires [J2RE 5] [6], or a later version of Java.
 
 It further requires ODFDOM. The NetBeans project is pre-configured to build 
 ODFDOM while building **ODF XSLT Runner**. This requires that the ODFDOM 
@@ -102,7 +102,7 @@ to an already compiled **odfdom.jar**.
 
 At run time, the **odfdom.jar** file must be either located in folder called **lib** next to the **odfxsltrunner.jar** file, or it must be in the classpath. 
 
-**Note:** ODFDOM requires [Apache Xerces] [4]. The jar file **xercesImpl.jar** 
+**Note:** ODFDOM requires [Apache Xerces] [7]. The jar file **xercesImpl.jar** 
 also must exist in a folder **lib** next to **odfxsltrunner.jar** file, or it 
 must be in the classpath. The **ODF XSLT Runner** NetBeans projects includes a 
 reference to **xersesImpl.jar** in the runtime classpath which has to be 
@@ -110,11 +110,14 @@ adapted after checking out the project.
 
 ## Examples
 
-Example stylesheets can be found on the [ODFXSLTRunner Examples][5] page.
+Example stylesheets can be found on the [ODFXSLTRunner Examples][8] page.
 
-[0]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerTask.html
-[1]: http://www.w3.org/TR/1999/REC-xslt-19991116#top-level-variables
-[2]: http://www.w3.org/TR/1999/REC-xslt-19991116#document
-[3]: http://java.sun.com/javase/downloads/index.jsp
-[4]: http://xml.apache.org/dist/xerces-j/
-[5]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerExamples.html
+
+  [1]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerTask.html
+  [2]: http://code.google.com/a/apache-extras.org/p/odftoolkit-extra/downloads/list
+  [3]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/odfxsltrunner.zip
+  [4]: http://www.w3.org/TR/1999/REC-xslt-19991116#top-level-variables
+  [5]: http://www.w3.org/TR/1999/REC-xslt-19991116#document
+  [6]: http://java.sun.com/javase/downloads/index.jsp
+  [7]: http://xml.apache.org/dist/xerces-j/
+  [8]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerExamples.html
