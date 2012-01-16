@@ -16,11 +16,11 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-		   
-Apache ODF Toolkit (Incubating) released its first Apache incubator version - 0.5 on Jan 14, 2012.
-The detail Release Notes of cunrrent version can be found [HERE](http://www.apache.org/dist/incubator/odftoolkit/CHANGES-0.5-incubating.txt).
+The Apache ODF Toolkit(Incubating) team is pleased to announce the release of 0.5 on Jan 14, 2012. This is our first Apache release.
 
-All downloads can be verified using the Apache ODF Toolkit code signing [KEYS](http://www.apache.org/dist/incubator/odftoolkit/KEYS).
+A full list of changes is available in the [change log](http://www.apache.org/dist/incubator/odftoolkit/CHANGES-0.5-incubating.txt). People interested should also follow the [mail list](http://incubator.apache.org/odftoolkit/mailing-lists.html) to track progress.
+
+The ODF Toolkit source release as well as the pre-built binary deployment packages are listed below. Pre-built versions of all ODF Toolkit components are available in the central Maven repository under Group ID "org.apache.odftoolkit" and Version "0.5-incubating".
 
 Below is a list of the current downloads:
 
@@ -48,7 +48,8 @@ Below is a list of the current downloads:
 	* [odftoolkit-0.5-incubating-doc.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/docs/odftoolkit-0.5-incubating-doc.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.5-incubating-doc.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.5-incubating-doc.zip.md5)]
 	[[sha](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.5-incubating-doc.zip.sha)]
   
-*Note*: When downloading from a mirror please check the [md5sum](http://www.apache.org/dev/release-signing#md5)
+*Note*: All downloads can be verified using the Apache ODF Toolkit code signing [KEYS](http://www.apache.org/dist/incubator/odftoolkit/KEYS).
+When downloading from a mirror please check the [md5sum](http://www.apache.org/dev/release-signing#md5)
 and verify the [OpenPGP](http://www.apache.org/dev/release-signing#openpgp) compatible
 signature from the main [Apache site](http://www.apache.org). Links are provided above (next to the release download link). This [KEYS](http://www.apache.org/dist/incubator/odftoolkit/KEYS) file contains the public
 keys used for signing release. It is recommended that (when possible) a [web of trust](http://www.apache.org/dev/release-signing#web-of-trust) is
