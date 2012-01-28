@@ -60,7 +60,6 @@ activities and ensure we are all pulling in the same direction.  This is a high 
   - Unsubscribe: [odf-dev-unsubscribe@incubator.apache.org][3]
   - Archives
     - [Markmail][4]
-    - [Gmane][5]
     - [Apache][6]
 
 ## Commits Mailing List
@@ -90,7 +89,7 @@ This is where the users ask questions, suggest features, etc. This is a low traf
   [2]:  mailto:odf-dev@incubator.apache.org
   [3]:  mailto:odf-dev-unsubscribe@incubator.apache.org
   [4]:  http://markmail.org/search/+list:org.apache.incubator.odf-dev
-  [5]:  http://dir.gmane.org/gmane.comp.apache.incubator.ooo.devel/
+
   [6]:  http://mail-archives.apache.org/mod_mbox/incubator-odf-dev/
   [7]:  mailto:odf-commits-subscribe@incubator.apache.org
   [8]:  mailto:odf-commmits-unsubscribe@incubator.apache.org
