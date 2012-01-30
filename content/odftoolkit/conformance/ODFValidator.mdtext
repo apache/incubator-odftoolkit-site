@@ -2,10 +2,9 @@ Title: ODF Validator
 
 **ODF Validator** is a tool that validates OpenDocument files and checks them for certain conformance criteria.
 
-**ODF Validator** is available as an [online service] [1] and as a 
-command line tool. This page primarily describes the command line tool. 
-Please visit the [ODF Online Validator] [2] web page for details regarding 
-the online tool.
+**ODF Validator** is available as Java library for command line or embedded use, 
+as well as a servlet.  An instance of the servlet is [hosted online][1] courtesy of the
+[OpenDoc Society][2].  This page primarily describes the command line tool. 
 
 ## How to start
 To use the '''ODF Validator''', the following steps are required:
@@ -291,8 +290,8 @@ The **ODF Validator** source code is located [here][11]. **ODF Validator** uses 
 help for instruction how to use Mercurial.
 
 
-  [1]: http://tools.odftoolkit.org/odfvalidator
-  [2]: http://tools.odftoolkit.org/odfvalidator
+  [1]: http://odf-validator.rhcloud.com/
+  [2]: http://www.opendocsociety.org/
   [3]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
   [4]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
   [5]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html
