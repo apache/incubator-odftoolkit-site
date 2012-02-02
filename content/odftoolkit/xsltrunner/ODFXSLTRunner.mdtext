@@ -13,7 +13,8 @@ it within Ant buildfiles is also available.
 the sources from the Mercurial repository, you can open the project 
 in NetBeans and build **odfxsltrunner**.
 
-A binary release of **odfxsltrunner.jar** is available in the ODF Toolkit binary package. Pelease download [here][3]. If you need the earlier single jars, please access [here][2].   
+A binary release of **odfxsltrunner.jar** is available in the ODF Toolkit binary package. Please download [here][3].   
+If you need the earlier single jars, please access [here][2].   
 
 Building and running **odfxsltrunner.jar** requires additional jar files. 
 Please see Requirements for details.
