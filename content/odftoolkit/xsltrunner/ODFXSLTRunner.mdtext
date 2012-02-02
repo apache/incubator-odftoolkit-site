@@ -13,7 +13,7 @@ it within Ant buildfiles is also available.
 the sources from the Mercurial repository, you can open the project 
 in NetBeans and build **odfxsltrunner**.
 
-A binary release of **odfxsltrunner.jar** is available in the [download section][2]. Pelease download [odfxsltrunner.zip][3].
+A binary release of **odfxsltrunner.jar** is available in the ODF Toolkit binary package. Pelease download [here][3]. If you need the earlier single jars, please access [here][2].   
 
 Building and running **odfxsltrunner.jar** requires additional jar files. 
 Please see Requirements for details.
@@ -115,7 +115,7 @@ Example stylesheets can be found on the [ODFXSLTRunner Examples][8] page.
 
   [1]: http://incubator.apache.org/odftoolkit/xsltrunner/ODFXSLTRunnerTask.html
   [2]: http://code.google.com/a/apache-extras.org/p/odftoolkit-extra/downloads/list
-  [3]: http://odftoolkit-extra.apache-extras.org.codespot.com/files/odfxsltrunner.zip
+  [3]: ../downloads.html
   [4]: http://www.w3.org/TR/1999/REC-xslt-19991116#top-level-variables
   [5]: http://www.w3.org/TR/1999/REC-xslt-19991116#document
   [6]: http://java.sun.com/javase/downloads/index.jsp
