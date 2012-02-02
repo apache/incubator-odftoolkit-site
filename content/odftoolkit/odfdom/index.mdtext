@@ -1,14 +1,15 @@
 Title: ODFDOM - the OpenDocument API
+
 ODFDOM is a free OpenDocument Format (ODF) library. Its purpose is to provide an easy common way to create, access and manipulate ODF files, without requiring detailed knowledge of the ODF specification. It is designed to provide the ODF developer community with an easy lightwork programming API portable to any object-oriented language. 
 
 The current reference implementation is written in Java.
 
 To learn more about the project's architecture, refer to the [project overview][1] and the [ODFDOM Layers][2] section.
 
-News
+The Earlier Release
 ----
 
-**New ODFDOM 0.8.7 Release**
+**ODFDOM 0.8.7**
 
 ODFDOM 0.8.7 was on Feb 16th 2011. Major enhancements are coming with this version:       
 
@@ -22,12 +23,11 @@ ODFDOM 0.8.7 was on Feb 16th 2011. Major enhancements are coming with this versi
 
 For more details see [feature summary on the mailing list][3] and [the release notes with the API change list][4].
 
-Download
---------
+**Download**
 
 The ODFDOM downloads are now available from [the official Maven repository][5]:
 
-**ODFDOM** - [*KEYS*][6]     
+  [*KEYS*][6]     
 
  -  [ODFDOM 0.8.7 binary - jar][7] [[PGP]][8] [[MD5]][9] [[SHA]][10]
  -  [ODFDOM 0.8.7 JavaDoc - jar][11] [[PGP]][12] [[MD5]][13] [[SHA]][14]   
