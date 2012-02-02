@@ -16,18 +16,6 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-News!
------
-**Simple API Release 0.6.6**
-
-We are pleased to announce the release of Simple API version 0.6.6 on Auguest 12th. The improvements in this version include:
-
-  - Two critical bugs in the Navigation API are fixed, as well as several other issues.   
-  - Page columns, a page layout feature in text documents, are supported. 
-  - Unit test coverage rate increased. This work improves the stability of our API.
-
-You can download it [here][1]. The full release notes can be found [here][2]. 
- 
 What is Simple API?
 -------------------
 
