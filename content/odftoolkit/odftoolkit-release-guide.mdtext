@@ -42,13 +42,13 @@ III. Release Document
 -------------------------
 Documents a particular release of a product rather than the product itself. For a release manager, the first thing he should do is to consult and correct the project's release documentation. For ODF Toolkit, we should make sure the following items are ready.    
 
- 1. Ensure the CHANGES.txt is up to date.
+ 1. Ensure the CHANGES.txt is up to date.     
  2. The Cookbook was updated to support the new release, add new content and modify the old parts.    
  3. Make sure all of the demo codes work well under the new release. If necessary, write new demo to introduce the key new features in the new version.   
  4. Remember to update the online Javadoc to the newest version, but don't publish until the vote pass.    
  5. Prepare other website update content, save them as staged, but don't publish until the vote pass.    
 
-IV. Release Candidate
+IV. Release Candidate     
 --------------------------------
 A release candidate is a set of artifacts upon which a vote is held for a release. The actual nature of the release candidate depends on the release system adopted by a the project. For ODF Toolkit, we supply 3 type of artifacts, binary package, source package and document package. Making release artefacts should follow the following steps:      
 
@@ -57,9 +57,9 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
          &lt;groupId>org.apache.odftoolkit&lt;/groupId>   
          &lt;artifactId>odftoolkit&lt;/artifactId>   
          &lt;version>0.6-incubating-SNAPSHOT&lt;/version>  
-      <code>                   
-    The version should include incubating (or incubator) to ensure that the artifacts created comply with [Incubator release policy][13]. 
-       
+      <code>   
+    The version should include incubating (or incubator) to ensure that the artifacts created comply with [Incubator release policy][13].       
+
  2. Tag current version.       
     Include the current revision number in the comment.          
     <code>   
@@ -68,19 +68,19 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
       -m "tag r649911 as odftoolkit-0.5-incubating"    
     <code/>      
     Where $TAG is the release tag, for example, odftoolkit-0.5-incubating.   
-	   
+
  3. Checkout the tagged version.   
     <code>       
       cd tags       
       svn checkout https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG       
     </code>      
-		   
+                     
  4. Build artifacts.        
     <code>   
       cd $TAG    
       mvn install    
     </code>         
-		   
+                     
  5. Package artifacts    
     Comment the following snippet in pom.xml to avoid duplicated package in sub-components:
     <code>    
@@ -103,18 +103,18 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
            &lt;/properties>   
            &lt;build>   
               &lt;plugins>   
-		...   
-	      &lt;/plugins>   
-	   &lt;/build>   
+                  ...   
+         &lt;/plugins>   
+      &lt;/build>   
        &lt;/profile>-->   
     </code>       
     Replace "${user.name}" with your Apache ID, such as "devinhan".       
     Use the following command to package.       
     <code>    
         mvn install -Papache-release       
-    </code>  	    
+    </code>         
     After package you should have the following files in the "target\":   
-    <code>    	   
+    <code>          
           $TAG-bin.tar.bz2    
           $TAG-bin.tar.gz   
           $TAG-bin.zip   
@@ -130,20 +130,227 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
           vote.txt   
     </code>   
     vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .asc files.    
-	   
+      
  6. Upload artifacts for vote.      
     Login people.apache.org using your Apache LDAP account. Copy the artifacts packages to directory "/public_html/odftoolkit-release/$TAG" using [scp][14]. If the directly don't exist, please create. It is best to scp into the home directory and then copy into position from there.         
     Make sure all of the files are owned by the incubator group, group readable and writable, and read only for the world. In short -rw-rw-r--. To do this from the top level:               
-    <code>   
+    <code>      
           > find . -type f -exec chmod 664 {} \;     
-	  > find . -type d -exec chmod 775 {} \;     
-	  > chgrp -R incubator *    
-    </code>	    	   
+          > find . -type d -exec chmod 775 {} \;  
+          > chgrp -R incubator *          
+    </code>      
     Then the artifacts can be accessed from Web browser. The link looks like:   
     <code>    
- 	  http://people.apache.org/~$USER/odftoolkit-release/$TAG        
+      http://people.apache.org/~$USER/odftoolkit-release/$TAG        
     </code>        
-    Replace $USER with your Apache ID, such as "devinhan".     
+    Replace $USER with your Apache ID, such as "devinhan".        
+
+V. Incubator Release Vote     
+-----------------------------
+After release candidate is uploaded, the release manager can start vote process. All releases by podlings must be approved by the Incubator PMC. The conventional process is for the podling to follow the usual Apache process release vote and then call for a Incubator PMC VOTE on the general incubator list.       
+
+1. Vote in ODF Toolkit Development List     
+A formal vote on candidate artifacts must be conducted by the release manager on the ODF Toolkit development list. The vote mail can be drafted based on the vote.txt, which is generated with artifacts. A sample looks like this:         
+
+>    Subject: [VOTE] Release Apache ODF Toolkit 0.5-incubating(RC6)         
+>         To: odf-dev@incubator.apache.org          
+>         
+>    Hi all,            
+>    Please vote on releasing the following candidate as Apache ODF Toolkit (incubating) version 0.5. This will be the first incubator     
+>    release for ODF Toolkit in Apache.    
+> 
+>    This release candidate fixes the following issues found in RC5:       
+>    (1) Reomve JUnit declaration from NOTICE & LICENSE files.        
+>    (2) Fix the "mvn clean" failed issue.         
+> 
+>    The candidate for the ODF Toolkit 0.5-incubating release is available at:     
+>    http://people.apache.org/~devinhan/odftoolkit-release/odftoolkit-0.5-incubating-rc6/    
+> 
+>    The release candidate is a zip archive of the sources in:         
+>    https://svn.apache.org/repos/asf/incubator/odf/tags/odftoolkit-0.5-incubating/      
+> 
+>    The SHA1 checksum of the archive is 44e16d8ee39fc0426f96aa7da9cd8eefccaf78e5.    
+>    The MD5 checksum of the archive is c12a87f0ca441f23d945a423e1d4127c.       
+> 
+>    Besides source code, binary packages and javadoc packages are also listed in:      
+>    http://people.apache.org/~devinhan/odftoolkit-release/odftoolkit-0.5-incubating-rc6/     
+> 
+>    All of the artifacts supply three package formats, tar.gz, tar.bz2 and zip.      
+> 
+>    Keys:         
+>      http://www.apache.org/dist/incubator/odftoolkit/KEYS    
+> 
+>    Please vote on releasing this package as Apache ODF Toolkit 0.5-incubating.        
+>    The vote is open for the next full week, until next Saturday, Dec 31rd 6pm, because of the Christmas holiday, and passes       
+>    if a majority of at least 3 +1 IPMC votes are cast.      
+>    [ ] +1 Release this package as Apache ODF Toolkit 0.5-incubating     
+>    [ ] -1 Do not release this package because...      
+>    
+>    To learn more about Apache ODF Toolkit, please access: http://incubator.apache.org/odftoolkit/.     
+
+All votes are welcome, but only those votes by the project's PPMC members (or IPMC members) count towards the final tally. The voting period should be no less than 72 hours, and at the end of the voting the release manager should post a final tally to the list. eg.        
+
+>    Subject: [RESULT][VOTE] Release Apache ODF Toolkit 0.5-incubating-rc7          
+>        To: odf-dev@incubator.apache.org     
+> 
+>    Hi All,        
+>    The RC7 ballot has ended (due to New Year Holiday, we extended the vote to this Monday ) with the following results:    
+> 
+>    From PPMC members:    
+>    +1 daisyguo     
+>    +1 devinhan   
+>    +1 robweir       
+>    +1 svanteschubert       
+> 
+>    From Mentors:      
+>    +1 yegor(IPMC)      
+> 
+>    Other votes:     
+>     (abstain non-binding [;<) orcmid    
+> 
+>    I will send a vote mail to incubator-general mail list and collect another 2 IPMC +1's votes.     
+>    Thanks all of the voters.    
+
+The vote passes if there are at least 3 +1's from the PPMC/IPMC members and more +1's than -1's. This is what is meant by majority consensus. If you've gotten this far, congratulations, you're nearly ready to upload and announce the release.     
+If the vote is failed, the release manager should improve the artifacts based on the comments and prepare new candidate. That means step "III. Release Candidate" need to rework. This process maybe repeat several times until the vote passes.        
+**NOTE:** Please remember to delete old release candidates from Apache home space after new candidates are uploaded.     
+
+2. Vote in General Incubator List       
+In the case of the incubator, the IPMC must approve all releases. That means there is an additional bit of voting that the release manager must now oversee on general@incubator in order to gain that approval. The release manager must inform general@incubator that the vote has passed on the project's development list, and should indicate any IPMC votes gained during that process. A new vote on the release candidate artifacts must now be held on general@incubator to seek majority consensus from the IPMC. Previous IPMC votes issued on the project's development list count towards that goal. The sample mail is:      
+
+        Subject: [VOTE] Release Apache ODF Toolkit 0.5-incubating(RC7)        
+              To: general@incubator.apache.org     
+              Cc: odf-dev@incubator.apache.org       
+          Hi all,      
+
+          The ODF Toolkit 0.5 is ready for release.  This will be our first incubator release.     
+          We had a preliminary vote in the PPMC, which had great results, including a +1 from our mentor, Yegor.      
+
+          The PPMC vote result thread is here:    
+          http://markmail.org/message/tw3juzkak6kdiod2       
+          The vote thread is here:     
+          http://markmail.org/message/h6qfmhl4vulyjyhw       
+
+          We need two more IPMC votes to pass.       
+
+          Please vote on releasing the following candidate RC7 as Apache ODF Toolkit (incubating) version 0.5.  
+
+          This release candidate fixes the pom.xml file inconsistant issue found in RC6. Thanks Yegor!      
+
+          The candidate for the ODF Toolkit 0.5-incubating release is available at:   
+          http://people.apache.org/~devinhan/odftoolkit-release/odftoolkit-0.5-incubating-rc7/     
+
+
+          The release candidate is a zip archive of the sources in:        
+          https://svn.apache.org/repos/asf/incubator/odf/tags/odftoolkit-0.5-incubating/      
+
+
+          The SHA1 checksum of the zip archive is 4e97a1a79291035d590b5578caf79478dc3f6de8.      
+          The MD5 checksum of the zip archive is 8883f036ee34282077d3c175329f6257.       
+
+          Besides source code, binary packages and javadoc packages are also listed in:     
+          http://people.apache.org/~devinhan/odftoolkit-release/odftoolkit-0.5-incubating-rc7/       
+
+          All of the artifacts supply three package formats, tar.gz, tar.bz2 and zip.       
+
+          Keys:   
+          http://www.apache.org/dist/incubator/odftoolkit/KEYS       
+
+          The vote is open for 72 hours, or until we get the needed number of votes (3 +1).         
+
+            [ ] +1 Release this package as Apache ODF Toolkit 0.5-incubating      
+            [ ] -1 Do not release this package because...       
+
+          To learn more about Apache ODF Toolkit, please access http://incubator.apache.org/odftoolkit/.     
+
+Once the 72-hour minimum voting period has ended on general@incubator, the release manager should tally the votes and declare a result. If majority consensus has been achieved with respect to IPMC votes, the release manager may proceed with the release. Otherwise, the release manager need to rework step(III) and step(IV) based on the received comments.      
+The vote result mail looks like:    
+
+>         Subject: [VOTE] Release Apache ODF Toolkit 0.5-incubating(RC7)           
+>              To: general@incubator.apache.org, odf-dev@incubator.apache.org         
+>         Hi all,            
+> 
+>         The Apache ODF Toolkit 0.5-incubating RC7 ballot has ended. We have received 4 IPMC +1 votes (plus an additional 4 PPMC +1 > votes)       
+>         during the release voting on dev and general. The vote passed!       
+> 
+>         Results:      
+> 
+>         From IPMC members:       
+>                  name                     apache id        
+>               +1 Yegor Kozlov(mentor)       yegor        
+>               +1 Nick Burch(mentor)         nick          
+>               +1 Chris Mattmann             mattmann       
+>               +1 Christian Grobmeier        grobmeier        
+>               
+>         From PPMC members:        
+>                  name                      apache id      
+>               +1  Ying Chung Guo              daisyguo        
+>               +1  Biao Han                    devinhan      
+>               +1  Rob Weir                    robweir        
+>               +1  Svante Schubert             svanteschubert      
+> 
+>         Other votes:      
+>                                           name                       apache id      
+>               (abstain non-binding [;<)   Dennis E. Hamilton        orcmid         
+> 
+>          We will work on releasing ODF Toolkit 0.5. Thank you everyone who worked in this release!      
+
+VI. After the Vote   
+------------------------------    
+1. Distributing Releases              
+   The distribution upload location (www.apache.org/dist) for all Apache projects is the /www/www.apache.org/dist directory on people.apache.org. Each project (including the Incubator) owns a directory within dist.              
+   The directory of ODF Toolkit is http://www.apache.org/dist/incubator/odftoolkit/. The release manager should move the release artifacts from /public_html/odftoolkit-release/$TAG to this directory.            
+
+2. Mirroring       
+   To avoid excessive use of bandwidth and to increase download speeds, official releases are made available through a global network of volunteer mirrors. Using these mirrors has some notable differences from unmirrored downloads. In particular, a <a href="http://www.apache.org/dev/release-download-pages.html">script</a> must be used to direct the download to an appropriate URL. The mdtext format sample is:           
+   {code}       
+>    **Current Version (0.5-incubating)**            
+>    * Source:     
+>    * [odftoolkit-0.5-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz)    
+>      [[asc](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz.asc)]   
+>      [[md5](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz.md5)]   
+>      [[sha](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz.sha)]    
+   {code}    
+   Users will download the mirrored release artifacts from machines outside Apache control. Users need to verify that the copy downloaded is identical to the original. Mirrored copies of checksums, KEYS and signature files (.asc and .md5 files) will be present on the mirrors but must never be used for verification. So, all links from the podling website to signatures, sums and KEYS need to refer to the original documents on www.apache.org. See release signing guide for more information.                
+     
+3. Archiving              
+   All Apache releases form an important part of the history of a project. They are therefore archived with the aim of preserving them indefinitely for future reference. All artifacts within www.apache.org/dist will be automatically archived to http://archive.apache.org/dist. When a new artifact is uploaded, it will be sync'd to the archive. The sync'ing is scheduled to operate several times a day. So it may be some hours before an added artifact is archived. When an (archived) artifact is deleted from the live distribution, it will remain in the archives.                  
+   Please remember that these archives are served from Apache bandwidth. Anyone who wants to obtain a large quantity of data from the archives should contact the Infrastructure Team.                   
+     
+4. Publishing Maven Artifacts        
+   ODF Toolkit chooses to distribute approved releases through the central Maven repository. Please follow this guide:[Publishing Maven Artifacts][15] to finish this work.   
+   It's clear and simple enough, so I don't need to copy it here.     
+    
+5. Publish Document        
+   Publish all of the prepared document on the website and update the download page.           
+     
+6. Send Announcements       
+   The release manager need to send announcements to odf-user and odf-dev lists. Note, announcements should be sent from your @apache.org e-mail address. The sample looks like:      
+   {code}     
+   Subject:[ANNOUNCEMENT] Apache ODF Toolkit(Incubating) 0.5-incubating Release     
+   To: odf-users@incubator.apache.org      
+   Hi all,       
+
+   The Apache ODF Toolkit(Incubating) team is pleased to announce the release of 0.5-incubating. This is our first Apache release.   
+
+   The Apache ODF Toolkit is a set of Java modules that allow programmatic creation, scanning and manipulation of Open Document Format (ISO/IEC 26300 == ODF) documents. Unlike other approaches which rely on runtime manipulation of heavy-weight editors via an automation interface, the ODF Toolkit is lightweight and ideal for server use.     
+
+   A full list of changes is available in the change log[1]. People interested should also follow the mail list[2] to track progress.    
+
+   The ODF Toolkit source release as well as the pre-built binary deployment packages are listed in the downloads page[3]. Pre-built versions of all ODF Toolkit components are available in the central Maven repository under Group ID "org.apache.odftoolkit" and Version "0.5-incubating".      
+
+   \[1] http://www.apache.org/dist/incubator/odftoolkit/CHANGES-0.5-incubating.txt.    
+   \[2] http://incubator.apache.org/odftoolkit/mailing-lists.html.    
+   \[3] http://incubator.apache.org/odftoolkit/downloads.html               
+  {code}
+
+References        
+-------------------------  
+1. [A Guide To Release Management During Incubation (DRAFT)][16]                 
+2. [Apache Release Management][17]                     
+3. [POI Release Guide][18]       
+4. [POI Release Checklist][19]            
+    
 
 
   [1]: http://incubator.apache.org/guides/releasemanagement.html
@@ -160,3 +367,8 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
   [12]: http://www.apache.org/dev/crypto.html
   [13]: http://incubator.apache.org/incubation/Incubation_Policy.html#Releases
   [14]: http://www.apache.org/dev/user-ssh.html
+  [15]: http://www.apache.org/dev/publishing-maven-artifacts.html
+  [16]: http://incubator.apache.org/guides/releasemanagement.html
+  [17]: http://www.apache.org/dev/#releases
+  [18]: https://svn.apache.org/repos/asf/poi/branches/ooxml/src/documentation/release-guide.txt
+  [19]: https://svn.apache.org/repos/asf/poi/branches/ooxml/src/documentation/Release-Checklist.txt
