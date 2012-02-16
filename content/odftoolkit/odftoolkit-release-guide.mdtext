@@ -16,7 +16,8 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-**(I) Prerequisites**  
+I. Prerequisites
+-------------------  
  1. You should read the document:[A Guide To Release Management During Incubation (DRAFT)][1].   
  2. You must have shell access to people.apache.org, such as [PuTTY][2].        
  3. Release manager must have his public key appended to the KEYS file checked in to SVN and the key published on one of the public key servers.  
