@@ -52,72 +52,69 @@ IV. Release Candidate
 --------------------------------
 A release candidate is a set of artifacts upon which a vote is held for a release. The actual nature of the release candidate depends on the release system adopted by a the project. For ODF Toolkit, we supply 3 type of artifacts, binary package, source package and document package. Making release artefacts should follow the following steps:      
 
- 1. Update version id in pom.xml.
-
-      {code}   
-         <groupId>org.apache.odftoolkit</groupId>   
-         <artifactId>odftoolkit</artifactId>   
-         <version>0.6-incubating-SNAPSHOT</version>  
-      {code} 
-           
+ 1. Update version id in pom.xml.   
+      <code>   
+         &lt;groupId>org.apache.odftoolkit&lt;/groupId>   
+         &lt;artifactId>odftoolkit&lt;/artifactId>   
+         &lt;version>0.6-incubating-SNAPSHOT&lt;/version>  
+      <code>                   
     The version should include incubating (or incubator) to ensure that the artifacts created comply with [Incubator release policy][13]. 
        
  2. Tag current version.       
-    Include the current revision number in the comment.   
-   {code}   
+    Include the current revision number in the comment.          
+    <code>   
       $ svn cp https://svn.apache.org/repos/asf/incubator/odf/trunk/ \    
       https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG \    
       -m "tag r649911 as odftoolkit-0.5-incubating"    
-   {code} 
-
+    <code/>      
     Where $TAG is the release tag, for example, odftoolkit-0.5-incubating.   
 	   
  3. Checkout the tagged version.   
-       {code}     
-          cd tags    
-          svn checkout https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG    
-       {code}   
+    <code>       
+      cd tags       
+      svn checkout https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG       
+    </code>      
 		   
- 4. Build artifacts.    
-       {code}   
-          cd $TAG    
-          mvn install    
-       {code}         
+ 4. Build artifacts.        
+    <code>   
+      cd $TAG    
+      mvn install    
+    </code>         
 		   
  5. Package artifacts    
-       Comment the following snippet in pom.xml to avoid duplicated package in sub-components:
-       {code}    
-          <modules>    
-             <module>taglets</module>    
-             <module>generator</module>   
-             <module>xslt-runner</module>   
-             <module>xslt-runner-task</module>    
-             <module>odfdom</module>    
-             <module>validator</module>   
-             <module>simple</module>   
-          </modules>   
-       {code}  
-	   Remove the comments of the following snippet in pom.xml to make sure Maven know how to package:     
-       {code}   
-          <!--<profile>  
-             <id>apache-release</id>   
-             <properties>   
-                <username>${user.name}</username>   
-             </properties>   
-             <build>   
-                <plugins>   
-		...
-		</plugins>   
-	     </build>   
-          </profile>-->   
-       {code}   
-       Replace "${user.name}" with your Apache ID, such as "devinhan".   
-       Use the following command to package.   
-       {code}    
-          mvn install -Papache-release       
-       {code}  	    
-	   After package you should have the following files in the "target\":   
-       {code}    	   
+    Comment the following snippet in pom.xml to avoid duplicated package in sub-components:
+    <code>    
+      &lt;modules>    
+           &lt;module>taglets&lt;/module>    
+           &lt;module>generator&lt;/module>   
+           &lt;module>xslt-runner&lt;/module>   
+           &lt;module>xslt-runner-task&lt;/module>    
+           &lt;module>odfdom&lt;/module>    
+           &lt;module>validator&lt;/module>   
+           &lt;module>simple&lt;/module>   
+      &lt;/modules>   
+    </code>  
+   Remove the comments of the following snippet in pom.xml to make sure Maven know how to package:     
+    <code>   
+       &lt;!--&lt;profile>  
+           &lt;id>apache-release&lt;/id>   
+           &lt;properties>   
+              &lt;username>${user.name}&lt;/username>   
+           &lt;/properties>   
+           &lt;build>   
+              &lt;plugins>   
+		...   
+	      &lt;/plugins>   
+	   &lt;/build>   
+       &lt;/profile>-->   
+    </code>       
+    Replace "${user.name}" with your Apache ID, such as "devinhan".       
+    Use the following command to package.       
+    <code>    
+        mvn install -Papache-release       
+    </code>  	    
+    After package you should have the following files in the "target\":   
+    <code>    	   
           $TAG-bin.tar.bz2    
           $TAG-bin.tar.gz   
           $TAG-bin.zip   
@@ -131,22 +128,22 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
           *.md5   
           *.sha   
           vote.txt   
-	{code}   
-        vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .asc files.    
+    </code>   
+    vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .asc files.    
 	   
- 6. Upload artifacts for vote.   
+ 6. Upload artifacts for vote.      
     Login people.apache.org using your Apache LDAP account. Copy the artifacts packages to directory "/public_html/odftoolkit-release/$TAG" using [scp][14]. If the directly don't exist, please create. It is best to scp into the home directory and then copy into position from there.         
-    Make sure all of the files are owned by the incubator group, group readable and writable, and read only for the world. In short -rw-rw-r--. To do this from the top level:          
-       {code}   
+    Make sure all of the files are owned by the incubator group, group readable and writable, and read only for the world. In short -rw-rw-r--. To do this from the top level:               
+    <code>   
           > find . -type f -exec chmod 664 {} \;     
 	  > find . -type d -exec chmod 775 {} \;     
 	  > chgrp -R incubator *    
-       {code}	    	   
-       Then the artifacts can be accessed from Web browser. The link looks like:   
-       {code}    
+    </code>	    	   
+    Then the artifacts can be accessed from Web browser. The link looks like:   
+    <code>    
  	  http://people.apache.org/~$USER/odftoolkit-release/$TAG        
-       {code}        
-       Replace $USER with your Apache ID, such as "devinhan".     
+    </code>        
+    Replace $USER with your Apache ID, such as "devinhan".     
 
 
   [1]: http://incubator.apache.org/guides/releasemanagement.html
