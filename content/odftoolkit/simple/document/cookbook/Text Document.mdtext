@@ -44,6 +44,21 @@ Also we can change the mode of one text document by using the following codes:
 <br/><pre class='code' id="code3">
 	    document2.changeMode(<span class='javaclass'>OdfMediaType</span>.TEXT_WEB);<br/>
 </pre>
+<br/><br/><strong><a href="#Insert TextDocument" >Insert TextDocument</a></strong>
+<div class="bodytext">
+	    From version 0.8, you can copy contents from a source TextDocument and then insert them to the current TextDocument. The insert position is relative to a reference Paragraph, before or after. You can also choose to copy the styles with the contents or not.
+</div>
+<br/><pre class='code' id="code54">
+		<span class='javaclass'>TextDocument</span> src = <span class='javaclass'>TextDocument</span>.loadDocument("SourceDocument.odt");
+		<span class='javaclass'>TextDocument</span> target = <span class='javaclass'>TextDocument</span>.loadDocument("TargetDocument.odt");
+		<span class='javaclass'>Paragraph</span> p1 = target.getParagraphByIndex(0, <span class='basic'>true</span>);
+
+	    <span class='comments'>	// insert contents before p1 and copy styles</span>
+		target.insertContentFromDocumentBefore(src, p1, <span class='basic'>true</span>);
+	
+	   <span class='comments'>	// insert contents after p1 and don't copy styles</span>
+		target.insertContentFromDocumentAfter(src, p1, <span class='basic'>false</span>);
+</pre>
 <br/><br/><strong><a href="#Paragraph" >Paragraph</a></strong>
 <div class="bodytext">
 	    To add a new paragraph to a text document, the following codes can be used,	    the first one add an empty paragraph to the end of the document, and the second one	    add a new paragraph with the corresponding texts to the document.
@@ -144,11 +159,23 @@ The following code is to add a comment at the front of the paragraph.
 <br/><pre class='code' id="code16">
 		aSection.remove();<br/>
 </pre>
+<br/><div class="bodytext">
+	    From version 0.8, we support high level APIs to protect a section. 		You can use the following code to set the protection without a password:	
+</div>
+<br/><pre class='code' id="code17">
+		aSection.setProtected(<span class='basic'>true</span>);<br/>
+</pre>
+<br/><div class="bodytext">
+	    If you want to protect a section with a password,		you can use the following code.
+</div>
+<br/><pre class='code' id="code54">
+		aSection.setProtectedWithPassword("<span class='javaclass'>myPassword</span>");<br/>
+</pre>
 <br/><br/><strong><a href="#List" >List</a></strong>
 <div class="bodytext">
 	    From version 0.4, we support high level APIs for list.		You can use the following code to create a list. The two methods are same.
 </div>
-<br/><pre class='code' id="code17">
+<br/><pre class='code' id="code55">
 		<span class='javaclass'>List</span> newList1 = document1.addList();<br/>
 		<span class='javaclass'>List</span> newList2 = <span class='modifier'>new</span> <span class='javaclass'>List</span>(document1);<br/>
 </pre>
@@ -412,6 +439,57 @@ The following code is to apply a hyperlink to this span.
 <span class='comments'>		//add a page break at the end of reference paragraph.</span>
 		<span class='javaclass'>Paragraph</span> refParagraph = newDoc.addParagraph("before page break");<br/>
 		newDoc.addPageBreak(refParagraph);<br/>
+</pre>
+<div class="bodytext">
+	    From version 0.8, we support to appoint the page style for the page that follows the added page break.		You can get a page style by the name and use it as one parameter when adding a page break.
+</div>
+<br/><pre class='code' id="code50">
+		<span class='javaclass'>TextDocument</span> newDoc = <span class='javaclass'>TextDocument</span>.newTextDocument();<br/>
+		<span class='javaclass'>MasterPage</span> master = (<span class='javaclass'>MasterPage</span>) getOrCreateMasterPage(newDoc, "<span class='javaclass'>Envelope</span>");<br/>
+		<span class='javaclass'>Paragraph</span> refParagraph = newDoc.addParagraph("before page break");<br/>
+		newDoc.addPageBreak(refParagraph, master);<br/>	
+</pre>
+<div class="bodytext">
+	    You can also create a customized page style and use it with a page break.	    
+</div>
+<br/><pre class='code' id="code51">
+		<span class='javaclass'>TextDocument</span> newDoc = <span class='javaclass'>TextDocument</span>.newTextDocument();<br/>
+		<span class='javaclass'>MasterPage</span> master = (<span class='javaclass'>MasterPage</span>) getOrCreateMasterPage(newDoc, "<span class='javaclass'>Landscape</span>");<br/>
+<span class='comments'>		//create a customized page style with specified width, height, margins and other properties.</span>
+		maste.setPageWidth(279.4);<br/>
+		master.setPageHeight(215.9);<br/>
+		master.setNumberFormat(<span class='javaclass'>NumberFormat.HINDU_ARABIC_NUMBER</span>.toString());<br/>
+		master.setPrintOrientation(<span class='javaclass'>PrintOrientation.LANDSCAPE</span>);<br/>
+		master.setFootnoteMaxHeight(0);<br/>
+		master.setWritingMode(<span class='javaclass'>StyleTypeDefinitions.WritingMode.LRTB</span>);<br/>
+		master.setMargins(20, 20, 20, 20);<br/>
+		master.setFootnoteSepProperties(<span class='javaclass'>AdjustmentStyle.LEFT</span>, <span class='javaclass'>Color</span>.valueOf("#000000"), 1, 1, null, <span class='javaclass'>Percent</span>.valueOf("25%"), 0.18);<br/>
+		<span class='javaclass'>Paragraph</span> refParagraph = newDoc.addParagraph("before page break");<br/>
+		newDoc.addPageBreak(refParagraph, master);<br/>	
+</pre>
+<br/><br/><strong><a href="#Table of Content" >Table of Content</a></strong>
+<div class="bodytext">
+	    From version 0.8, we support high level APIs to add table of content (TOC).		You can add TOC before/after a reference paragraph by following code.		The first parameter is the reference paragraph, the second parameter specifies where to insert the TOC,  "true" means before the reference paragraph, "false" means after the reference paragraph.
+</div>
+<br/><pre class='code' id="code52">
+		<span class='javaclass'>TextTableOfContentElement</span> textTableOfContentElement = doc.createDefaultTOC(paragraph1,<span class='basic'>false</span>);
+</pre>
+<div class="bodytext">
+	    You can also specify the additional paragraph styles applied on the created TOC.		The following codes shows how to generate a TOC before a reference paragraph with customized styles.
+</div>
+<br/><pre class='code' id="code53">
+		<span class='javaclass'>TOCStyle</span> tocstyle = <span class='modifier'>new</span> <span class='javaclass'>TOCStyle</span>();
+		tocstyle.addStyle("User_20_Index_20_1", 1);
+		tocstyle.addStyle("User_20_Index_20_2", 2);
+		tocstyle.addStyle("User_20_Index_20_3", 3);
+		tocstyle.addStyle("User_20_Index_20_4", 4);
+		tocstyle.addStyle("User_20_Index_20_5", 5);
+		tocstyle.addStyle("User_20_Index_20_6", 6);
+		tocstyle.addStyle("User_20_Index_20_7", 7);
+		tocstyle.addStyle("User_20_Index_20_8", 8);
+		tocstyle.addStyle("User_20_Index_20_9", 9);
+		tocstyle.addStyle("User_20_Index_20_10", 10);
+		<span class='javaclass'>TextTableOfContentElement</span> textTableOfContentElement = doc.createTOCwithStyle(paragraph1, tocstyle, <span class='basic'>true</span>);
 </pre>
 <br/><br/> 
 <div class="navigation">
