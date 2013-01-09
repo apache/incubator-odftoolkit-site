@@ -6,6 +6,7 @@
  <li><a href="Text Document.html#Overview">Overview</a></li>
  <li><a href="Text Document.html#Generate TextDocument">Generate TextDocument</a></li>
  <li><a href="Text Document.html#Get TextDocument">Get TextDocument</a></li>
+ <li><a href="Text Document.html#Insert TextDocument">Insert TextDocument</a></li>
  <li><a href="Text Document.html#Paragraph">Paragraph</a></li>
  <li><a href="Text Document.html#Section">Section</a></li>
  <li><a href="Text Document.html#List">List</a></li>
@@ -14,6 +15,7 @@
  <li><a href="Text Document.html#Image">Image</a></li>
  <li><a href="Text Document.html#Span">Span</a></li>
  <li><a href="Text Document.html#Page Break">Page Break</a></li>
+ <li><a href="Text Document.html#Table of Content">Table of Content</a></li>
   </ul>
  </li>
 </ul>
@@ -47,6 +49,7 @@
  <li><a href="Table.html#Find Table">Find Table</a></li>
  <li><a href="Table.html#Delete Table">Delete Table</a></li>
  <li><a href="Table.html#Set Table">Set Table</a></li>
+ <li><a href="Table.html#Format Table">Format Table</a></li>
   </ul>
  </li>
  <li><a href="Column and Row.html">Column and Row</a>
@@ -117,7 +120,12 @@
     <li><a href="Manipulate TextSearch.html#Get Index/Text of TextSelection">Get Index/Text of TextSelection</a></li>
     <li><a href="Manipulate TextSearch.html#Cut String">Cut String</a></li>
     <li><a href="Manipulate TextSearch.html#Paste String">Paste String</a></li>
-    <li><a href="Manipulate TextSearch.html#Replace String">Replace String</a></li>
+        <li><a href="Manipulate TextSearch.html#Replace String with String">Replace String with String</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String with Paragraph">Replace String with Paragraph</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String with Image">Replace String with Image</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String with Table">Replace String with Table</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String with Field">Replace String with Field</a></li>
+    <li><a href="Manipulate TextSearch.html#Replace String with TextDocument">Replace String with TextDocument</a></li>
     <li><a href="Manipulate TextSearch.html#Add Reference to String">Add Reference to String</a></li>
     <li><a href="Manipulate TextSearch.html#Add Comment">Add Comment</a></li>
   </ul>
@@ -149,6 +157,30 @@
  <li><a href="Fields.html#Page Number Field">Page Number Field</a></li>
  <li><a href="Fields.html#Date Field">Date Field</a></li>
  <li><a href="Fields.html#Time Field">Time Field</a></li>
+  </ul>
+ </li>
+</ul>
+<br/><strong><a href="#Form">Form</a></strong>
+ <ul>
+ <li><a href="Forms.html">Forms</a>
+ <ul>
+ <li><a href="Forms.html#Form">Form</a></li>
+ <li><a href="Forms.html#Controls">Controls</a></li>
+ <ul>
+ <li><a href="Forms.html#Button">Button</a></li>
+ <li><a href="Forms.html#Label">Label</a></li>
+ <li><a href="Forms.html#TextBox">TextBox</a></li>
+ <li><a href="Forms.html#ListBox">ListBox</a></li>
+ <li><a href="Forms.html#ComboBox">ComboBox</a></li>
+ <li><a href="Forms.html#RadioButton">RadioButton</a></li>
+ <li><a href="Forms.html#CheckBox">CheckBox</a></li>
+ <li><a href="Forms.html#Date Field">Date Field</a></li>
+ <li><a href="Forms.html#Time Field">Time Field</a></li>
+ <li><a href="Forms.html#Numeric Field">Numeric Field</a></li>
+ <li><a href="Forms.html#Pattern Field">Patter Field</a></li>
+ <li><a href="Forms.html#Currency Field">Currency Field</a></li>
+ </ul>
+ <li><a href="Forms.html#Time Field">Size and Style</a></li>
   </ul>
  </li>
 </ul>
