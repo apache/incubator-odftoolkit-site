@@ -94,6 +94,16 @@ Each table in the document has a protect attribute to show whether it is protect
            <span class='basic'>boolean</span> isProtected=table1.isProtected();<br/>
            table1.setProtected(<span class='basic'>true</span>);<br/>
 </pre>
+<br/><br/><strong><a href="#Format Table" >Format Table</a></strong>
+<div class="bodytext">
+Since version 0.8, new APIs are added to format a table, which will load the formatting from a template table in a foreign document and apply them to corresponding cells of current table. The template table should be a 5*5 table with predefined formatting, includes number format, text format, text alignment, borders and background.	The following code will load formatting from a foreign template table - Table1 in TemplateTable.odt, and apply the styles to a new table - Table2 in TargetTable.odt.
+</div>
+<br/><pre class='code' id="code10">
+          <span class='javaclass'>Document</span> doc = <span class='javaclass'>TextDocument</span>.loadDocument("TargetTable.odt");<br/>
+          <span class='basic'>TableTemplate</span> template = doc.LoadTableTemplateFromForeignTable(<span class='modifier'>new</span> <span class='javaclass'>FileInputStream</span>("TableTemplate.odt"), "Table1");<br/>
+          <span class='basic'>Table</span> table = doc.getTableByName("Table2");<br/>
+          table.applyStyle(template);<br/>
+</pre>
 <br/><br/> 
 <div class="navigation">
  <ul>
