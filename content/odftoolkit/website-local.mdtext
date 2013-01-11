@@ -25,9 +25,9 @@ Quick editing of the site is available for committers using the Apache CMS
 This page gives instructions on doing website development on your local computer.
 
 * [Setup](#setup) - How to download the Odf project site repos and setup the Apache CMS.
-* [Directory Layout](#directory_layout) - Where to find the content, templates, and scripts.
-* [Local Development](#local_development) - How to build and test locally.
-* [Submitting Your Results](#submitting_your_results) - How to contribute your edits.
+* [Directory Layout](#directory-layout) - Where to find the content, templates, and scripts.
+* [Local Development](#local-development) - How to build and test locally.
+* [Submitting Your Results](#submitting-your-results) - How to contribute your edits.
 
 ## Setup
 
