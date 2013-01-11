@@ -104,7 +104,7 @@ Using your favorite editors edit the site content, templates, and lib scripts.
 Start the Python Markdown daemon.
 
     export MARKDOWN_SOCKET=`pwd`/markdown.socket PYTHONPATH=`pwd`
-    python markdownd.py
+    python cms/build/markdownd.py
 
 ### Build the site.
 
@@ -117,6 +117,12 @@ On my Mac:
     sudo scp -rp www/content/odftoolkit /Library/WebServer/Documents/.
 
 The site is then available with [http://localhost/odftoolkit/][5].
+
+Or serve the site directly using the Python SimpleHTTPServer:
+
+    (cd www/content/ && python -m SimpleHTTPServer 8080)
+
+The site is then available with [http://localhost:8080/odftoolkit/][8].
 
 ## Submitting your results.
 
@@ -138,3 +144,4 @@ For further information see the [Apache Source Code Repository][7] page.
 [5]: http://localhost/odftoolkit
 [6]: docs/edit-cms.html
 [7]: http://www.apache.org/dev/version-control.html
+[8]: http://localhost:8080/odftoolkit/
