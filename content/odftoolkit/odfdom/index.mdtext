@@ -89,7 +89,7 @@ You can contact us by IRC "[irc://irc.freenode.org/odfdom][29]".
   [20]: http://xml.apache.org/dist/xerces-j/
   [21]: ProjectOverview.html
   [22]: Layers.html
-  [23]: http://odfdom.odftoolkit.org/0.8.7/odfdom/apidocs/
+  [23]: /odftoolkit/mvn-site/0.8.9-incubating/odfdom-java/apidocs/
   [24]: https://oss.sonatype.org/content/groups/public/org/odftoolkit/odfdom-java/
   [25]: http://www.langintro.com/odfdom_tutorials/
   [26]: FrequentQuestions.html

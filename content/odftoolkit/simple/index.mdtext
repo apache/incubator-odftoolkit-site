@@ -61,7 +61,7 @@ If you want to dive into this project, please reference the [document page][14],
   [6]: gettingstartguide.html
   [7]: document/cookbook/index.html
   [8]: demo/index.html
-  [9]: document/javadoc/index.html
+  [9]: /odftoolkit/mvn-site/0.8-incubating/simple-odf/apidocs/index.html
   [10]: ../downloads.html
   [11]: mailto:devinhan@apache.org
   [12]: https://issues.apache.org/jira/browse/ODFTOOLKIT
