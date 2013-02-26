@@ -52,11 +52,9 @@ Also we can change the mode of one text document by using the following codes:
 		<span class='javaclass'>TextDocument</span> src = <span class='javaclass'>TextDocument</span>.loadDocument("SourceDocument.odt");
 		<span class='javaclass'>TextDocument</span> target = <span class='javaclass'>TextDocument</span>.loadDocument("TargetDocument.odt");
 		<span class='javaclass'>Paragraph</span> p1 = target.getParagraphByIndex(0, <span class='basic'>true</span>);
-
-	    <span class='comments'>	// insert contents before p1 and copy styles</span>
+<span class='comments'>	       // insert contents before p1 and copy styles</span>
 		target.insertContentFromDocumentBefore(src, p1, <span class='basic'>true</span>);
-	
-	   <span class='comments'>	// insert contents after p1 and don't copy styles</span>
+<span class='comments'>	       // insert contents after p1 and don't copy styles</span>
 		target.insertContentFromDocumentAfter(src, p1, <span class='basic'>false</span>);
 </pre>
 <br/><br/><strong><a href="#Paragraph" >Paragraph</a></strong>
