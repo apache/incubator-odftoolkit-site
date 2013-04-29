@@ -80,60 +80,29 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
     mvn install  
                  
  5. Package artifacts    
-    Comment the following snippet in pom.xml to avoid duplicated package in sub-components:    
-  &lt;modules>    
-       &lt;module>taglets&lt;/module>    
-       &lt;module>generator&lt;/module>   
-       &lt;module>xslt-runner&lt;/module>   
-       &lt;module>xslt-runner-task&lt;/module>    
-       &lt;module>odfdom&lt;/module>    
-       &lt;module>validator&lt;/module>   
-       &lt;module>simple&lt;/module>   
-  &lt;/modules>    
-
-   Remove the comments of the following snippet in pom.xml to make sure Maven know how to package:     
-   
-
-   &lt;!--&lt;profile>  
-       &lt;id>apache-release&lt;/id>   
-       &lt;properties>   
-          &lt;username>${user.name}&lt;/username>   
-       &lt;/properties>   
-       &lt;build>   
-          &lt;plugins>   
-              ...   
-     &lt;/plugins>   
-  &lt;/build>   
-   &lt;/profile>--> 
-
-  
     
-    Replace "${user.name}" with your Apache ID, such as "devinhan".       
-    Use the following command to package.       
-   
+    Use the following command to package (replace &lt;YOUR APACHEID&gt; with your apache id, e.g. devinhan):       
 
-    mvn install -Papache-release  
-
-     
+    mvn install -Papache-release -Duser.name=&lt;YOUR APACHEID&gt; -pl=. 
        
     After package you should have the following files in the "target\":   
           
-      $TAG-bin.tar.bz2    
-      $TAG-bin.tar.gz   
-      $TAG-bin.zip   
-      $TAG-src.tar.bz2    
-      $TAG-src.tar.gz    
-      $TAG-src.zip    
-      $TAG-doc.tar.bz2    
-      $TAG-doc.tar.gz   
-      $TAG-doc.zip   
-      *.asc   
-      *.md5   
-      *.sha   
-      vote.txt 
+        $TAG-bin.tar.bz2    
+        $TAG-bin.tar.gz   
+        $TAG-bin.zip   
+        $TAG-src.tar.bz2    
+        $TAG-src.tar.gz    
+        $TAG-src.zip    
+        $TAG-doc.tar.bz2    
+        $TAG-doc.tar.gz   
+        $TAG-doc.zip   
+        *.asc   
+        *.md5   
+        *.sha   
+        vote.txt 
 
  
-    vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .asc files.    
+    vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .sha files.    
       
  6. Upload artifacts for vote.      
     Login people.apache.org using your Apache LDAP account. Copy the artifacts packages to directory "/public_html/odftoolkit-release/$TAG" using [scp][14]. If the directly don't exist, please create. It is best to scp into the home directory and then copy into position from there.         
