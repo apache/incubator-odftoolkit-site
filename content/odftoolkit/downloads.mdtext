@@ -16,15 +16,38 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
+**Current Version**
+
+The Apache ODF Toolkit(incubating) team is pleased to announce the release of 0.6-incubating on Jun 22, 2013.
+ 
+A full list of changes is available in the [change log](http://www.apache.org/dist/incubator/odftoolkit/CHANGES-0.6-incubating.txt). People interested should also follow the [mailing list](http://incubator.apache.org/odftoolkit/mailing-lists.html) to track progress.
+
+The ODF Toolkit source release as well as the pre-built binary deployment packages are listed below. This release is not available in the central Maven repository.
+
+Below is a list of the downloads:
+
+ * Source: 
+	* [odftoolkit-0.6-incubating-src.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.md5)]
+	[[sha](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.sha)]
+ * Binaries: 
+	* [odftoolkit-0.6-incubating-bin.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.md5)]
+	[[sha](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.sha)]
+ * Documentation: 
+	* [odftoolkit-0.6-incubating-doc.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/docs/odftoolkit-0.6-incubating-doc.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.6-incubating-doc.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.6-incubating-doc.zip.md5)]
+	[[sha](http://www.apache.org/dist/incubator/odftoolkit/docs/odftoolkit-0.6-incubating-doc.zip.sha)]
+ 
+
+**Older Versions**
+
+**0.5-incubating** 
+
 The Apache ODF Toolkit(Incubating) team is pleased to announce the release of 0.5-incubating on Jan 14, 2012. This is our first Apache release.
 
 A full list of changes is available in the [change log](http://www.apache.org/dist/incubator/odftoolkit/CHANGES-0.5-incubating.txt). People interested should also follow the [mail list](http://incubator.apache.org/odftoolkit/mailing-lists.html) to track progress.
 
 The ODF Toolkit source release as well as the pre-built binary deployment packages are listed below. Pre-built versions of all ODF Toolkit components are available in the central Maven repository under Group ID "org.apache.odftoolkit" and Version "0.5-incubating".
 
-Below is a list of the current downloads:
-
-**Current Version (0.5-incubating)**
+Below is a list of the downloads:
 
  * Source: 
     * [odftoolkit-0.5-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz)  [[asc](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.5-incubating-src.tar.gz.md5)]
