@@ -20,12 +20,13 @@ I. Prerequisites
 -------------------  
  1. You should read the document:[A Guide To Release Management During Incubation (DRAFT)][1].   
  2. You must have shell access to people.apache.org, such as [PuTTY][2].        
- 3. Release manager must have his public key appended to the KEYS file checked in to SVN and the key published on one of the public key servers.  
+ 3. Release manager must have his public key appended to the KEYS file checked in to SVN. Make sure that a current version is available in the dist folder. The key should be published on one of the public key servers. Also, it should be added to the profile page via id.apache.org.  
     ODF Toolkit project KEYS file: [https://svn.apache.org/repos/asf/incubator/odf/trunk/KEYS][3].  
     The sign tool, such as [GnuPG][4] should be installed. More info can be found here: [http://www.apache.org/dev/release-signing.html][5].    
  4. You must have [Oracle JDK 1.5/1.6][6] or [Open JDK][7].     
  5. [Subversion client][8] is installed. We suggest you install version 1.7.2 or later.      
- 6. The ODF Toolkit build system requires [Maven][9] to perform a build. We suggest you install version later than 2.2.1 or 3.0.4.  
+ 6. The ODF Toolkit build system requires [Maven][9] to perform a build. We suggest you install version later than 2.2.1 or 3.0.4. Make sure that you have set up your Maven installation according to the guide on [Publishing Maven Artifacts][15] 
+ 7. All mail adresses the release manager is using should be added to the profile via id.apache.org
 
 II. Legal Audit    
 -------------------  
@@ -50,62 +51,61 @@ Documents a particular release of a product rather than the product itself. For 
 
 IV. Release Candidate     
 --------------------------------
-A release candidate is a set of artifacts upon which a vote is held for a release. The actual nature of the release candidate depends on the release system adopted by a the project. For ODF Toolkit, we supply 3 type of artifacts, binary package, source package and document package. Making release artefacts should follow the following steps:      
+A release candidate is a set of artifacts upon which a vote is held for a release. The actual nature of the release candidate depends on the release system adopted by a the project. For ODF Toolkit, we supply 3 type of artifacts, binary package, source package and document package. The release candidate jars are deployed to a Maven staging repository. Making release artefacts should follow the following steps:      
 
- 1. Update version id in pom.xml.      
+ 1. Make sure that your working copy is clean
 
-    &lt;groupId>org.apache.odftoolkit&lt;/groupId>   
-    &lt;artifactId>odftoolkit&lt;/artifactId>   
-    &lt;version>0.6-incubating-SNAPSHOT&lt;/version>
+    Preferrably check out a clean version from https://svn.apache.org/repos/asf/incubator/odf/trunk
 
-    The version should include incubating (or incubator) to ensure that the artifacts created comply with [Incubator release policy][13].       
+ 2. Prepare the release      
 
- 2. Tag current version.       
-    Include the current revision number in the comment.       
+        mvn release:prepare
 
-    $ svn cp https://svn.apache.org/repos/asf/incubator/odf/trunk/ \    
-    https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG \    
-    -m "tag r649911 as odftoolkit-0.5-incubating" 
+    If you haven't set up your environment for automatic svn access you need to pass in username and password:
 
-    Where $TAG is the release tag, for example, odftoolkit-0.5-incubating.   
+        mvn release:prepare -Dusername=APACHE_ID -Dpassword=PASSWORD
 
- 3. Checkout the tagged version.          
-
-    cd tags       
-    svn checkout https://svn.apache.org/repos/asf/incubator/odf/tags/$TAG     
-                     
- 4. Build artifacts.           
-
-    cd $TAG    
-    mvn install  
-                 
- 5. Package artifacts    
+    This will start the interactive release preparation. You need to supply Maven with the versions of the release. "release version" should be the version of the intended release (recommended value should be fine). "SCM release tag or label" should include the RC version (e.g. odftoolkit-0.6.1-incubating-RC3). "new development version" should be the current SNAPSHOT version (don't use the recommended version, e.g. when building 0.6.1-incubating this should be 0.6.1-incubating-SNAPSHOT, not 0.6.2-incubating-SNAPSHOT).
     
-    Use the following command to package (replace &lt;YOUR APACHEID&gt; with your apache id, e.g. devinhan):       
+    This will update the versions of all modules and create an svn tag. The version should always include incubating (or incubator) to ensure that the artifacts created comply with [Incubator release policy][13].       
 
-    mvn install -Papache-release -Duser.name=&lt;YOUR APACHEID&gt; -pl=. 
+ 3. Perform the release
+
+        mvn release:perform
+
+    This will checkout the tag to the target directory, build and package everything and upload the artifacts to the staging repository.
+
+ 4. Close the staging repo.
+
+    Log in to [the Nexus repository manager][20], click on Staging Repositories, select the current ODFToolkit staging repo and click on close.
+
+    You can test the staging repository by adding a snippet like this to your Maven settings (the url to the staged repo can be obtained from the mail you got when closing the repo):
+        
+            <profile>
+                <id>odfstage</id>
+                <activation>
+                    <activeByDefault>true</activeByDefault>
+                </activation>
+                <repositories>
+                    <repository>
+                        <id>staged-releases</id>
+                        <url>https://repository.apache.org/content/repositories/orgapacheodftoolkit-127/</url>
+                    </repository>
+                </repositories>
+            </profile>
+
+ 5. Package download artifacts    
+    
+    Switch to the checkout directory that has been created by the release: cd target/checkout. Use the following command to package (replace &lt;YOUR APACHEID&gt; with your apache id, e.g. devinhan):       
+
+        mvn install -Prelease-distribution -pl=. -Duser.name=&lt;YOUR APACHEID&gt; 
        
-    After package you should have the following files in the "target\":   
+    After package there should be a folder release/$TAG in the "target\"   
           
-        $TAG-bin.tar.bz2    
-        $TAG-bin.tar.gz   
-        $TAG-bin.zip   
-        $TAG-src.tar.bz2    
-        $TAG-src.tar.gz    
-        $TAG-src.zip    
-        $TAG-doc.tar.bz2    
-        $TAG-doc.tar.gz   
-        $TAG-doc.zip   
-        *.asc   
-        *.md5   
-        *.sha   
-        vote.txt 
-
- 
     vote.txt is a draft of the dev vote mail. Each package has its own .asc, .md5 and .sha files.    
       
  6. Upload artifacts for vote.      
-    Login people.apache.org using your Apache LDAP account. Copy the artifacts packages to directory "/public_html/odftoolkit-release/$TAG" using [scp][14]. If the directly don't exist, please create. It is best to scp into the home directory and then copy into position from there.         
+    Login people.apache.org using your Apache LDAP account. Copy the folder release/$TAG to directory "/public_html/odftoolkit-release/$TAG" using [scp][14]. If the directory does't exist, please create. It is best to scp into the home directory and then copy into position from there.         
     Make sure all of the files are owned by the incubator group, group readable and writable, and read only for the world. In short -rw-rw-r--. To do this from the top level:               
            
           > find . -type f -exec chmod 664 {} \;     
@@ -116,7 +116,8 @@ A release candidate is a set of artifacts upon which a vote is held for a releas
      
       http://people.apache.org/~$USER/odftoolkit-release/$TAG        
          
-    Replace $USER with your Apache ID, such as "devinhan".        
+    Replace $USER with your Apache ID, such as "devinhan".
+        
 
 V. Incubator Release Vote     
 -----------------------------
@@ -289,14 +290,13 @@ VI. After the Vote
    Please remember that these archives are served from Apache bandwidth. Anyone who wants to obtain a large quantity of data from the archives should contact the Infrastructure Team.                   
      
 4. Publishing Maven Artifacts        
-   ODF Toolkit chooses to distribute approved releases through the central Maven repository. Please follow this guide:[Publishing Maven Artifacts][15] to finish this work.   
-   It's clear and simple enough, so I don't need to copy it here.     
-    
+   Log in to [the Nexus repository manager][20] and release the staging repository. 
+ 
 5. Publish Document        
    Publish all of the prepared document on the website and update the download page.           
      
 6. Send Announcements       
-   The release manager need to send announcements to odf-user and odf-dev lists. Note, announcements should be sent from your @apache.org e-mail address. The sample looks like:      
+   The release manager need to send announcements to odf-user and odf-dev lists as well as announce@apache.org, general@incubator.apache.org, dev@openoffice.apache.org. Note, announcements should be sent from your @apache.org e-mail address. The sample looks like:      
          
    Subject:[ANNOUNCEMENT] Apache ODF Toolkit(Incubating) 0.5-incubating Release     
    To: odf-users@incubator.apache.org      
@@ -343,3 +343,4 @@ References
   [17]: http://www.apache.org/dev/#releases
   [18]: https://svn.apache.org/repos/asf/poi/branches/ooxml/src/documentation/release-guide.txt
   [19]: https://svn.apache.org/repos/asf/poi/branches/ooxml/src/documentation/Release-Checklist.txt
+  [20]: https://repository.apache.org/index.html 
