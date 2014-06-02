@@ -27,8 +27,8 @@ The ODF Toolkit source release as well as the pre-built binary deployment packag
 Below is a list of the downloads:
 
  * Source: 
-	* [odftoolkit-0.6.1-incubating-src.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/odftoolkit-0.6.1-incubating-src.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6.1-incubating-src.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6.1-incubating-src.zip.md5)]
-	[[sha](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6.1-incubating-src.zip.sha)]
+	* [odftoolkit-0.6.1-incubating-src.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/sources/odftoolkit-0.6.1-incubating-src.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.6.1-incubating-src.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.6.1-incubating-src.zip.md5)]
+	[[sha](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.6.1-incubating-src.zip.sha)]
  * Binaries: 
 	* [odftoolkit-0.6.1-incubating-bin.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/binaries/odftoolkit-0.6.1-incubating-bin.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6.1-incubating-bin.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6.1-incubating-bin.zip.md5)]
 	[[sha](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.sha)]
@@ -51,7 +51,7 @@ The ODF Toolkit source release as well as the pre-built binary deployment packag
 Below is a list of the downloads:
 
  * Source: 
-	* [odftoolkit-0.6-incubating-src.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.md5)]
+	* [odftoolkit-0.6-incubating-src.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/sources/odftoolkit-0.6-incubating-src.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.6-incubating-src.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/sources/odftoolkit-0.6-incubating-src.zip.md5)]
 	[[sha](http://www.apache.org/dist/incubator/odftoolkit/odftoolkit-0.6-incubating-src.zip.sha)]
  * Binaries: 
 	* [odftoolkit-0.6-incubating-bin.zip ](http://www.apache.org/dyn/closer.cgi/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip )  [[asc](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.asc)] [[md5](http://www.apache.org/dist/incubator/odftoolkit/binaries/odftoolkit-0.6-incubating-bin.zip.md5)]
