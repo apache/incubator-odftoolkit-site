@@ -291,11 +291,15 @@ VI. After the Vote
      
 4. Publishing Maven Artifacts        
    Log in to [the Nexus repository manager][20] and release the staging repository. 
+
+5. Copy the SVN tag to the release version
+    
+        svn cp https://svn.apache.org/repos/asf/incubator/odf/tags/odftoolkit-0.XX-incubating-RCYY https://svn.apache.org/repos/asf/incubator/odf/tags/odftoolkit-0.XX-incubating/
  
-5. Publish Document        
+6. Publish Document        
    Publish all of the prepared document on the website and update the download page.           
      
-6. Send Announcements       
+7. Send Announcements       
    The release manager need to send announcements to odf-user and odf-dev lists as well as announce@apache.org, general@incubator.apache.org, dev@openoffice.apache.org. Note, announcements should be sent from your @apache.org e-mail address. The sample looks like:      
          
    Subject:[ANNOUNCEMENT] Apache ODF Toolkit(Incubating) 0.5-incubating Release     
