@@ -21,7 +21,7 @@ repository][2] in your web browser.
 
 ## Getting the source code
 
-    svn co https://svn.apache.org/repos/asf/incubator/odf/trunk odf
+    svn co https://svn.apache.org/repos/asf/incubator/odf/trunk odf-toolkit
 
 For further information see the [Apache Source Code Repository][3] page.
 
@@ -29,17 +29,15 @@ For further information see the [Apache Source Code Repository][3] page.
 
 ###Linux
 
-The following detailed instructions assume a fresh Ubuntu 10.04 installation.
+The following detailed instructions assume a fresh Ubuntu 14.04 installation.
 Other distros and versions should work fine, but might require some slight
-modifications.  
+modifications.
 
-
-    mkdir odf-toolkit
+    svn co https://svn.apache.org/repos/asf/incubator/odf/trunk odf-toolkit
     cd odf-toolkit
-    svn co https://svn.apache.org/repos/asf/incubator/odf/trunk .
-    sudo apt-get install openjdk-6-jdk
-    sudo apt-get install maven2
-    mvn clean install
+    sudo apt-get install openjdk-7-jdk
+    sudo apt-get install maven
+    mvn clean install -Ppedantic
 
     
 ###Windows
