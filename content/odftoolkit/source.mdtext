@@ -16,7 +16,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-We use [Apache Subversion][1] for version control. You can [browse our 
+We use [Apache Subversion][1] for version control. You can [browse our
 repository][2] in your web browser.
 
 ## Getting the source code
@@ -25,27 +25,30 @@ repository][2] in your web browser.
 
 For further information see the [Apache Source Code Repository][3] page.
 
-## Building and Running
-
+## Build setup
 ###Linux
+    sudo apt-get install openjdk-8-jdk
+    sudo apt-get install maven
 
-The following detailed instructions assume a fresh Ubuntu 14.04 installation.
+Note: The previous instructions has been tested with an Ubuntu 16.04 installation.
 Other distros and versions should work fine, but might require some slight
 modifications.
 
-    svn co https://svn.apache.org/repos/asf/incubator/odf/trunk odf-toolkit
+###Windows
+For the setup of the build environment, please see [Java JDK download for Windows][4] and [Maven setup on Windows][5]
+
+
+## Build
+###Linux / Windows
     cd odf-toolkit
-    sudo apt-get install openjdk-7-jdk
-    sudo apt-get install maven
     mvn clean install -Ppedantic
 
-    
-###Windows
-
-To-Do
+Note: The build option pedantic is triggering an Apache tool doing various checks as for unlicensed files.
 
 
 
 [1]: http://subversion.apache.org
 [2]: http://svn.apache.org/viewvc/incubator/odf/trunk
 [3]: http://www.apache.org/dev/version-control.html
+[4]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[5]: https://maven.apache.org/guides/getting-started/windows-prerequisites.html
