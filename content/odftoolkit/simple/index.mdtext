@@ -1,4 +1,4 @@
-Title: Apache ODF Toolkit(Incubating) - Simple API 
+Title: Apache ODF Toolkit(Incubating) - Simple API
 Notice:    Licensed to the Apache Software Foundation (ASF) under one
            or more contributor license agreements.  See the NOTICE file
            distributed with this work for additional information
@@ -38,7 +38,7 @@ Lastly, please reference the newest [javadoc][9], which supplies more details of
 Where can I get Simple API?
 ---------------------------
 
-You can go to [downloads page][10]. This page lists the jar, the javadoc and the source code packages. You can unzip and find Simple API in these packages.  
+You can go to [downloads page][10]. This page lists the jar, the javadoc and the source code packages. You can unzip and find Simple API in these packages.
 If you need the earlier versions before moved to Apache, please download [here][15].
 
 Need More Infomation?
@@ -48,7 +48,7 @@ If you want to supply suggestion or feedback, please send [e-mail][11] to us.
 
 If you want to report a bug, please create issue on our [JIRA][12].
 
-If you want to contribute code, please read the [developer guide document][13], which introduces how to build the development environment.   
+If you want to contribute code, please read the [developer guide document][13], which introduces how to build the development environment.
 
 If you want to dive into this project, please reference the [document page][14], which lists lots of useful materials.
 
@@ -61,9 +61,9 @@ If you want to dive into this project, please reference the [document page][14],
   [6]: gettingstartguide.html
   [7]: document/cookbook/index.html
   [8]: demo/index.html
-  [9]: /odftoolkit/mvn-site/0.8-incubating/simple-odf/apidocs/index.html
+  [9]: /odftoolkit/0.6.2-incubating/simple/index.html
   [10]: ../downloads.html
-  [11]: mailto:devinhan@apache.org
+  [11]: mailto:odf-dev@incubator.apache.org
   [12]: https://issues.apache.org/jira/browse/ODFTOOLKIT
   [13]: http://incubator.apache.org/odftoolkit/simple/document/faq.html
   [14]: document/index.html

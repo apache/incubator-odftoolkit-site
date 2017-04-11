@@ -293,12 +293,12 @@ help for instruction how to use Mercurial.
 
   [1]: http://odf-validator.rhcloud.com/
   [2]: http://www.opendocsociety.org/
-  [3]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
-  [4]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
-  [5]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html
-  [6]: http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html#sum
+  [3]: http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum
+  [4]: http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum
+  [5]: http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
+  [6]: http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum
   [7]: http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office
   [8]: https://msv.dev.java.net/
   [9]: https://isorelax-jaxp-bridge.dev.java.net
   [10]: http://xml.apache.org/dist/xerces-j/
-  [11]: http://odftoolkit.org/projects/conformancetools/sources/odf-validator-src/show
+  [11]: http://svn.apache.org/viewvc/incubator/odf/trunk/validator/
