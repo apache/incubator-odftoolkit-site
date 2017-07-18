@@ -77,8 +77,14 @@ The TextDocument class has these convenient methods:
 
 If you use an IDE, you can just run this class as a Java Application. If you use command line, you may compile the code and run it with the following commands:
 
-    javac -cp lib/simple-odf-0.8.2-incubating-jar-with-dependencies.jar:. HelloWorld.java
-    java -cp lib/simple-odf-0.8.2-incubating-jar-with-dependencies.jar:. HelloWorld
+    javac -cp lib/simple-odf-0.8.2-incubating-jar-with-dependencies.jar HelloWorld.java
+
+		LINUX using ':' as classpath separator:
+		java -cp .:lib/simple-odf-0.8.2-incubating-jar-with-dependencies.jar HelloWorld
+
+		WINDOWS using ';' as classpath separator:
+		java -cp .;lib/simple-odf-0.8.2-incubating-jar-with-dependencies.jar HelloWorld
+
 **Getting the Files**
 
 You can download the code and resources of this demo from [here][2].
