@@ -64,14 +64,14 @@
   <ul>
  <li><a href="Cell.html#Get Cell">Get Cell</a></li>
  <li><a href="Cell.html#Control Cell Attributes">Control Cell Attributes</a></li>
- <li><a href="Cell.html#Get&Set Cell Value Type">Get&Set Cell Value Type</a></li>
+ <li><a href="Cell.html#Get&amp;Set Cell Value Type">Get&amp;Set Cell Value Type</a></li>
   <ul>
-    <li><a href="Cell.html#Get&Set boolean type Cell">Get&Set boolean type Cell</a></li>
-    <li><a href="Cell.html#Get&Set currency type Cell">Get&Set currency type Cell</a></li>
-    <li><a href="Cell.html#Get&Set date type Cell">Get&Set date type Cell</a></li>
-    <li><a href="Cell.html#Get&Set float type Cell">Get&Set float type Cell</a></li>
-    <li><a href="Cell.html#Get&Set percentage type Cell">Get&Set percentage type Cell</a></li>
-    <li><a href="Cell.html#Get&Set string type Cell">Get&Set string type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set boolean type Cell">Get&amp;Set boolean type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set currency type Cell">Get&amp;Set currency type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set date type Cell">Get&amp;Set date type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set float type Cell">Get&amp;Set float type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set percentage type Cell">Get&amp;Set percentage type Cell</a></li>
+    <li><a href="Cell.html#Get&amp;Set string type Cell">Get&amp;Set string type Cell</a></li>
     <li><a href="Cell.html#Deal with the Time Value">Deal with the Time Value</a></li>
     <li><a href="Cell.html#Something about Display Text">Something about Display Text</a></li>
   </ul>

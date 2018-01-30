@@ -4,11 +4,11 @@ Title: Development
 
 1. Install latest Mercurial
 1. Setup Mercurial (optional):    
-Config file $Hg Install Dir\Mercurial.ini on Windows or <Hg Install Dir>/.hgrc on Unix.    
+Config file $Hg Install Dir\Mercurial.ini on Windows or &lt;Hg Install Dir&gt;/.hgrc on Unix.    
 Enhance the default configuration, using GIT diff and enable [default plugin][1] avoid different line breaks in the source.  
 
     [ui]
-    username = your Name <yourLoginName@odftoolkit.org>
+    username = your Name &lt;yourLoginName@odftoolkit.org&gt;
     ;merge = your-merge-program (or internal:merge)
     
     [diff]
@@ -100,20 +100,20 @@ Here a list of the most frequently used commands:
   // Please carefully check the output of "hg status" first
   hg addremove
   // Safe alternatives
-  hg add <myNewFile>
-  hg remove <myUnnecessaryFile>
-  hg remove -A <myAlreadyDeletedFile>  
+  hg add &lt;myNewFile&gt;
+  hg remove &lt;myUnnecessaryFile&gt;
+  hg remove -A &lt;myAlreadyDeletedFile&gt;
   // Commit your changes locally and display their revision number
   hg commit -A -u "your Name" -m "#bug XY# Description of changes"
   hg tip
   // Export your locally committed changes as patch
-  hg export -a -g -o ../myChanges.patch <RevisionNumbersOfYourCommit>
+  hg export -a -g -o ../myChanges.patch &lt;RevisionNumbersOfYourCommit&gt;
   // Import changes into your local repository
   hg import --no-commit ../someFile.patch
   // Get help
   hg help
   // Get help about a special command
-  hg help <command>
+  hg help &lt;command&gt;
   hg help export
   hg help addremove
   ...
@@ -134,7 +134,7 @@ That way others will review your patch for you. If everything is ok, the reviewe
   // Generate DOM layer elements and attributes from RelaxNG
   mvn clean test -P codegen
   // Generate code coverage documentation in
-  // <PROJECT_DIR>/target/site/cobertura/index.html
+  // &lt;PROJECT_DIR&gt;/target/site/cobertura/index.html
   // see http://mojo.codehaus.org/cobertura-maven-plugin/
   mvn cobertura:cobertura
 </pre>
@@ -220,12 +220,12 @@ The ODFDOM Code Generator is used to generate the core Classes for ODFDOM which 
   [13]: http://maven.apache.org/
   [14]: http://wiki.netbeans.org/MercurialVersionControl
   [15]: http://mercurial.selenic.com/wiki/
-  [16]: http://odftoolkit.org/bugzilla/buglist.cgi?product=odfdom&order=bugs.bug_id
+  [16]: http://odftoolkit.org/bugzilla/buglist.cgi?product=odfdom&amp;order=bugs.bug_id
   [17]: http://maven.apache.org/
   [18]: http://java.sun.com/docs/codeconv/html/CodeConvTOC.doc.html
   [19]: http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html#367
   [20]: mailto:odf-dev@incubator.apache.org
-  [21]: https://odftoolkit.org/bugzilla/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=odfdom&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=
+  [21]: https://odftoolkit.org/bugzilla/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=odfdom&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=
   [22]: ODFDOM-Code-Generator.html
   [23]: http://odftoolkit.org/hg/odfdom~relaxng2template
   [24]: ODFDOM-Class-Structure.html

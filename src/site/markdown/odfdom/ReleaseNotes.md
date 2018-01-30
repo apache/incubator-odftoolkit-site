@@ -208,9 +208,9 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 <td>
 </td><td>OdfDrawPage  getSlideByIndex(int)
 </td><td>
-</td><td>OdfSlide  getSlideByIndex(int)
+</td><td>OdfSlide  getSlideByIndex(int)</td>
 </tr><tr>
-</td><td>
+<td>
 </td><td>OdfDrawPage  getSlideByName(String)
 </td><td>
 </td><td>OdfSlide  getSlideByName(String)</td>
@@ -238,9 +238,9 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 <td>
 </td><td>OdfDocument  getEmbeddedDocument(String)
 </td><td>
-</td><td>OdfDocument  loadSubDocument(String)
+</td><td>OdfDocument  loadSubDocument(String)</td>
 </tr><tr>
-</td><td>
+<td>
 </td><td>List  getEmbeddedDocuments()
 </td><td>
 </td><td>Map  loadSubDocuments()
@@ -250,7 +250,7 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 </td><td>
 </td><td>Map  loadSubDocuments(OdfDocument.OdfMediaType)
 </td></tr><tr>
-</td><td>
+<td>
 </td><td>String  getMediaType()
 </td><td>
 </td><td>OdfDocument.OdfMediaType  getOdfMediaType()
@@ -464,15 +464,15 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
       org.odftoolkit.odfdom.doc.xforms
 </td><td>use corresponding DOM layer classes directly. <br/>
  sample: org.odftoolkit.odfdom.doc.anim.OdfAnimate ->
-         org.odftoolkit.odfdom.dom.anim.AnimAnimateElement
+         org.odftoolkit.odfdom.dom.anim.AnimAnimateElement</td>
 </tr><tr>
 <td>remove get/setValue() from dom attribute classes 
 </td><td>use get/setValue() in XML DOM directly. 
-</tr><tr>
+</td></tr><tr>
 <td>remove classes:<br/>
  OdfAttributeNames, OdfElementNames, OdfNamespaceNames<br/>
  from package org.odftoolkit.odfdom.dom
-</td><td>use String to replace emun value. 
+</td><td>use String to replace emun value.</td> 
 </tr><tr>
 <td>remove the following methods:<br/>
     int getColumnSpannedNumber();<br/>
@@ -482,17 +482,17 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
     void setColumnSpannedNumber(int spannedNum);<br/>
     void setRowSpannedNumber(int spannedNum);<br/>
     from org.odftoolkit.odfdom.doc.table.OdfTable;
-</td><td>use OdfTableCellRange.merge(). 
+</td><td>use OdfTableCellRange.merge(). </td>
 </tr><tr>
 <td>remove method:<br/>
     OdfOfficeBody  getOfficeBody()<br/>
  from org.odftoolkit.odfdom.doc.OdfDocument
-</td><td> 
+</td><td> </td>
 </tr><tr>
 <td>remove class:<br/>
     OdfXMLHelper<br/>
  from org.odftoolkit.odfdom.pkg
-</td><td>
+</td><td></td>
 </tr>
 </table>
 
@@ -673,7 +673,7 @@ Note: The first column 'Java class' package is relative to 'org.odftoolkit.odfdo
 <table>
 <tr>
 <td>Previous Java Class</td><td>Previous API</td><td>New Java Class</td><td>New API</td>
-</td></tr><tr>
+</tr><tr>
 <td>pkg.element.OdfAlienElement
 </td><td>getOdfName()
 </td><td>OdfAlienElement

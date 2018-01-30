@@ -59,7 +59,7 @@ The **ODF Validator** may be called with the following options:
      odfvalidator -h
      odfvalidator -V
 
-If no parameters are specified, the files **<odffiles>** are validated using the schema that belongs to the ODF version of the file. For ODF 1.0 files the ODF 1.0 schema is used, for ODF 1.1 files the ODF 1.1 schema is used, and so on. The version of an ODF file is detected for each file separately.
+If no parameters are specified, the files **&lt;odffiles&gt;** are validated using the schema that belongs to the ODF version of the file. For ODF 1.0 files the ODF 1.0 schema is used, for ODF 1.1 files the ODF 1.1 schema is used, and so on. The version of an ODF file is detected for each file separately.
 
 The options have the following meaning:
 
@@ -221,7 +221,7 @@ The following actions take place before or during the validation:
     OpenOffice.org wrongly included a document type declaration.
     Ignoring the document type enables the validation of the manifest
     despite of this error.
-  - A namespace &quot;http://openoffice.org/2001/manifest&quot; within a
+  - A namespace http://openoffice.org/2001/manifest within a
     *manifest.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:manifest:1.0&quot;. For
     the logging level **all**, an information is displayed if this
     happens. <br/>**Note:** Early ODF implementations in OpenOffice.org
@@ -241,10 +241,10 @@ The following actions take place before or during the validation:
     displayed if this happens.<br/>**Note:** The truncation of this
     attribute value avoids a stack overflow in MSV while validating the
     attribute value against a regular expression.
-  - A namespace &quot;http://openoffice.org/2004/database&quot; within a
-    *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:database:1.0&quot;, and
-    a namespace &quot;http://openoffice.org/2004/office&quot; within a
-    *content.xml* file is changed to &quot;urn:oasis:names:tc:opendocument:xmlns:office:1.0&quot;. For
+  - A namespace http://openoffice.org/2004/database within a
+    *content.xml* file is changed to urn:oasis:names:tc:opendocument:xmlns:database:1.0, and
+    a namespace http://openoffice.org/2004/office within a
+    *content.xml* file is changed to urn:oasis:names:tc:opendocument:xmlns:office:1.0 For
     the logging level **all**, an information is displayed if this
     happens.<br/>**Note:** These namespaces were used in OpenOffice.org
     2.x database documents, because database documents are included in OpenDocument since version 1.2 only. Changing them enables the

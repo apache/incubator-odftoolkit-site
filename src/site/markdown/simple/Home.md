@@ -77,11 +77,11 @@ The Simple Java API for ODF uses Bugzilla to track the defects. You can report d
 
 First, install [http://mercurial.selenic.com/wiki/ latest Mercurial]
 
-Second, setup Mercurial (optional):<br />Config file <Hg Install Dir>\Mercurial.ini on Windows or <Hg Install Dir>/.hgrc on Unix.
+Second, setup Mercurial (optional):<br/>Config file &lt;Hg Install Dir&gt;\Mercurial.ini on Windows or &lt;Hg Install Dir&gt;/.hgrc on Unix.
 Enhance the default configuration, using GIT diff and enable [http://mercurial.selenic.com/wiki/Win32TextExtension default plugin] avoid different line breaks in the source.
-
+<pre>
     [ui]
-    username = your Name <yourLoginName@odftoolkit.org>
+    username = your Name &lt;yourLoginName@odftoolkit.org&gt;
     ;merge = your-merge-program (or internal:merge)
     
     [diff]
@@ -113,8 +113,8 @@ Now, get the source code from the Simple project
 Please see below for a short introduction to using Mercurial on odftoolkit.org. 
 There's also a more general <a href="{{project help page 
 SourceControl}}">help</a> on how to use source control systems on 
-odftoolkit.org. The command <br /><pre>
-hg clone https://hg.odftoolkit.org/hg/simple~code-base</pre>will 
+odftoolkit.org. The command <br/>
+<pre>hg clone https://hg.odftoolkit.org/hg/simple~code-base</pre>will 
 download the repository into a new directory.
 
 Please note that by this you'll get the latest changeset. If you for example 
@@ -170,7 +170,7 @@ If you want to contribute a patch to this project, following below steps:
     [http://odftoolkit.org/projects/odfdom/pages/Development#Coding_Guidelines
     code guidelines] are same as ODFDOM.
   - Step 4. Test your contribution with Mecurial command to make sure all the unit tests pass.  mvn
-  - Step 5. Generate a patch with hg commands.  hg commit -A -u "Developer:xxx" -m "#bug XY# Description of changes"  hg export -a
+  - Step 5. Generate a patch with hg commands.  hg commit -A -u &quot;Developer:xxx&quot; -m &quot;&#35;bug XY&#35; Description of changes&quot;  hg export -a
     -g -o ../myChanges.patch
   - Step 6. Upload your patch to bugzilla.
   - Step 7. Refactor your patch if you get comments from reviewers.
@@ -191,8 +191,8 @@ As a reviewer, you need to carefully read the source code, run the unit tests, t
   - Step 8. Repeat step 2 to 7 after the contributor improves the patch.
   - Step 9. Push the patch to repository with Mecurial command if you think the patch is good enough:  hg commit -A -u "Developer:xxx
     Reviewer:yyy" -m "#bug XY# Description of changes"  hg push
-    https://<your user id>:<your
-    password>@odftoolkit.org/hg/simple~code-base
+    https://&lt;your user id&gt;:&lt;your
+    password&gt;@odftoolkit.org/hg/simple~code-base
 
 ##Reference material
 

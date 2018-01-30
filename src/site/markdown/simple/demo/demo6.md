@@ -6,7 +6,7 @@ This demo shows the power of text box and paragraph support in Simple API.
 
 The background of this demo is that a travel agency has to help customers book hotel. They have a spreadsheet file in hand, which records all of the visitors' information. They need to generate an order form with the requirements of hotel reservation using these data. A order form template has been supplied. This program generates order forms for all the visitors based on records of passengers in spreadsheet and the given template.    
 
-<img src="image/demo6.png" ><br/><br/> 
+<img src="image/demo6.png" /><br/><br/> 
 **Code Introduction**
 
 There code of this demo is very simple. First, load template document and spreadsheet separately. Secondly, iterate data table and create new section and paragraph. The Text Boxes in the paragraph are also cloned. All of them are iterated and filled information from data table.<br/>

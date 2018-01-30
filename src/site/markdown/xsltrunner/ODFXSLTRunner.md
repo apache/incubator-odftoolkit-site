@@ -40,9 +40,9 @@ Please see Requirements for details.
      java -jar odfxsltrunner.jar <style sheet> [-v] [-f <factory>] [-p <path in package&gt;]
       [-l log file] -i <input file> <output package> [name=value ...]
 
-The default is to apply the XSLT stylesheet **<style-sheet>** to the stream 
+The default is to apply the XSLT stylesheet **&lt;style-sheet&gt;** to the stream 
 **content.xml** of the ODF file **&lt;input package&gt;**. 
-If no **<output package>** parameter is specified, then the result of the transformation will be printed to the standard output. If an **&lt;output package&gt;** is specified, the **&lt;input package&gt;** is copied to the **&lt;output package&gt;**, and the steam **content.xml** of the **&lt;output package&gt;** is replaced with the result of the transformation.
+If no **&lt;output package&gt;** parameter is specified, then the result of the transformation will be printed to the standard output. If an **&lt;output package&gt;** is specified, the **&lt;input package&gt;** is copied to the **&lt;output package&gt;**, and the steam **content.xml** of the **&lt;output package&gt;** is replaced with the result of the transformation.
 
 The **-p** option allows to specify another stream in the package as source of the transformation than **content.xml**.
 

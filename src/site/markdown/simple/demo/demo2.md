@@ -19,7 +19,7 @@ Here the original presentation documents "Pres1.odp" and "Pres2.odp" are used. P
 
 The contents of the text document which contains the notes of the presentation document is shown in the following picture, where each note is identified by the corresponding slide name.   
 
-<img src="image/ExtractedNotes.JPG" >
+<img src="image/ExtractedNotes.JPG"/>
 
 **Code Introduction**   
 

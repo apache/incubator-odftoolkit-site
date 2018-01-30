@@ -103,7 +103,7 @@ The notation used in voting is:
     +1 Simon
     +1 Greg
 
-[See here for more information][2] <br>
+[See here for more information][2] <br/>
 [See here for more mail templates][3]
 
 

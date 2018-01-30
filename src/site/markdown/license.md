@@ -16,7 +16,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-Apache License<br></br>Version 2.0, January 2004<br></br>
+Apache License<br/>Version 2.0, January 2004<br/>
 [http://www.apache.org/licenses/](http://www.apache.org/licenses/) 
 
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION

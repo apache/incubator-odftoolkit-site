@@ -41,8 +41,8 @@ The general flow for updating the website is:
     into HTML files in the staging directory.  (You will see a commit mail with "Staging
     update by buildbot" as log message.)
  1. You verify that the staged webpage is correct and then tell the CMS to publish 
-    the changes to the production directory.  (You will see a commit mail with "Publishing
-    merge to odftoolkit site by <your Apache ID>" as log message.)
+    the changes to the production directory.  (You will see a commit mail with &ldquo;Publishing
+    merge to odftoolkit site by &lt;your Apache ID&gt;&ldquo; as log message.)
 
 The intent of this workflow is to allow committers flexibility in changing 
 webpages and testing changes on a staging website, before moving these changes to

@@ -20,7 +20,20 @@ Besides, we also supply some codes to show how to create chart in a spreadsheet 
 
 **Code Introduction**
 	
-There code of this demo is very clear. First, we create a presentation document and load the data document. Second, we create cover page and set its content. Thirdly, we add charts to each slide. If you want to add chart to a slide, you must chose a layout which can hold chart. In Simple ODF 0.6, these layouts are "TITLE_PLUS_CHART", "TITLE_PLUS_2_CHART", "TITLE_LEFT_CHART_RIGHT_OUTLINE", "TITLE_PLUS_3_OBJECT", "TITLE_PLUS_4_OBJECT". Different layout can own different count of charts. Please be sure you know that, otherwise chart insert would be failed. For slide, you needn't set the chart size or position, Simple ODF will do it automatically. Finally, the data document is closed and the new created document is saved.   
+There code of this demo is very clear. 
+First, we create a presentation document and load the data document. 
+Second, we create cover page and set its content. 
+Thirdly, we add charts to each slide. If you want to add chart to a slide, you must chose a layout which can hold chart. 
+In Simple ODF 0.6 these layouts are:
+* TITLE&lowbar;PLUS&lowbar;CHART
+* TITLE&lowbar;PLUS&lowbar;2&lowbar;CHART 
+* TITLE&lowbar;LEFT&lowbar;CHART&lowbar;RIGHT&lowbar;OUTLINE 
+* TITLE&lowbar;PLUS&lowbar;3&lowbar;OBJECT 
+* TITLE&lowbar;PLUS&lowbar;4&lowbar;OBJECT
+
+Different layout can own different count of charts. Please be sure you know that, otherwise chart insert would be failed.
+For slide, you needn't set the chart size or position, Simple ODF will do it automatically. 
+Finally, the data document is closed and the new created document is saved.
 
 	private static void generatePresentationChart() {
 		try {
@@ -133,9 +146,8 @@ The following codes show how to generate the text document format report. Differ
 			e.printStackTrace();
 		}
 	}
-
 Lastly, let's have a look at how to add chart to spreadsheet document. It's similar with text and presentation documents. On the other hand, it also has a special feature. You can specify a cell as the position where the chart should be located.    
- 
+
 	private static void generateSpreadsheetDocument() {
 		try {
 			SpreadsheetDocument spreadsheetDoc = SpreadsheetDocument.loadDocument("demo9_data.ods");

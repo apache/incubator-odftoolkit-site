@@ -12,7 +12,7 @@ You can download the Javadoc of different versions on the [Downloads Page][1].
 
 **Cook Book**  
   
-[Cookbook][2] provides simple codes to help developers know how to use Simple API.</p>
+[Cookbook][2] provides simple codes to help developers know how to use Simple API.
 
 **Frequently Asked Questions**     
 
